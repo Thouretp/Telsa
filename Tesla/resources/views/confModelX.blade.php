@@ -11,6 +11,27 @@
 </head>
 
 <body>
+    <header>
+        <div class="left">
+            <a href="/"><img src="{{asset('Models/teslalogo.png')}}" alt="logo_tesla"></a>
+        </div>
+        <div class="right">
+            <img class="see" src="{{asset('Models/Userv2.png')}}">
+            <img class="see" src="{{asset('Models/bagv2.png')}}">
+            <button class="hamburgeur">
+                <div class="bar"></div>
+        </div>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="#modelS">Model S</a>
+        <a href="#model3">Model 3</a>
+        <a href="#modelX">Model X</a>
+        <a href="#modelY">Model Y</a>
+        <a href="#shop">Shop</a>
+        <a href="#help">Assistance</a>
+        <span class="ajt-mobile-nav"><a href="#Login">Se Connecter</a></span>
+    </nav>
     <div class="container">
         <div class="scroll">
             <div class="menu">
@@ -141,8 +162,8 @@
         </div>
 
     </div>
+    <script src="{{asset('js/hamburgeur.js')}}"></script>
     <script src="{{asset('js/confModelX.js')}}"></script>
-
 </body>
 
 </html>
