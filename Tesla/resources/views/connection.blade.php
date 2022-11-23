@@ -32,15 +32,22 @@
         <span class="ajt-mobile-nav"><a href="/connection">Se Connecter</a></span>
     </nav>
     <div class="container">
-        <form action="" class="form_login">
+        <form action="/connection"  method="post" class="form_login">
+            {{ csrf_field() }}
             <h1>Connexion</h1>
             <div class="login">
                 <h3>Email</h3>
-                <input type="text" placeholder="Entrer votre email" name="username" required class="input_login">
+                <input type="email" name="email" placeholder="Entrer votre email" value="{{ old('email')}}" >
+                @if($errors->has('email'))
+                    <p>{{ $errors->first('email') }}</p>
+                @endif
             </div>
             <div class="login">
                 <h3>Mot de passe</h3>
-                <input type="password" placeholder="Entrer votre mot de passe" name="password" required class="input_login">
+                <input type="password" placeholder="Entrer votre mot de passe" name="password" >
+                @if($errors->has('password'))
+                    <p>{{ $errors->first('password') }}</p>
+                @endif
             </div>
             <div id="blabla">
                 <div class="remember">
