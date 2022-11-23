@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'showMotorisation']);
+//Route::get('/', [HomeController::class, 'showMotorisationModelS']);
+// Route::get('/', [HomeController::class, 'showMotorisationModel3']);
+// Route::get('/', [HomeController::class, 'showMotorisationModelX']);
+// Route::get('/', [HomeController::class, 'showMotorisationModelY']);
 Route::get('/confModelX', [HomeController::class, 'goToConf']);

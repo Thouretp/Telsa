@@ -11,4 +11,6 @@ class Motorisation extends Model
     protected $table = "motorisation";
     protected $primaryKey = "nummoteur";
     public $timestamps = false;
+
+    
 }

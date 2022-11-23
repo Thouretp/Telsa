@@ -42,11 +42,6 @@
         <div class="point"></div>
         <div id="GP"></div>
     </div>
-
-
-
-
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
@@ -54,26 +49,32 @@
         <p id="lienModelY" class="menuLat"><a href="#modelY">Model Y</a></p>
     </nav>
 
+    <?php
+    $time = strtotime($motorisationMS->puissancemoteur);
+    ?>
+
+
+
     <div class="container">
 
         <div class="slider" id="modelS">
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMS->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                    <h2><span class="big">{{dd(idate('s', $time))}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span> </h2>
+                    <p>Classe energetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
