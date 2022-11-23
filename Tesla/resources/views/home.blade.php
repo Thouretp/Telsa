@@ -43,10 +43,6 @@
         <div id="GP"></div>
     </div>
 
-
-
-
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
