@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
     <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/hamburgeur.css')}}" type="text/css">
     <title>LaTes Botta</title>
 </head>
 
@@ -25,13 +26,13 @@
     </header>
 
     <nav class="mobile-nav">
-        <a href="#modelS">Model S</a>
-        <a href="#model3">Model 3</a>
-        <a href="#modelX">Model X</a>
-        <a href="#modelY">Model Y</a>
+        <a href="/#modelS">Model S</a>
+        <a href="/#model3">Model 3</a>
+        <a href="/#modelX">Model X</a>
+        <a href="/#modelY">Model Y</a>
         <a href="#shop">Shop</a>
         <a href="#help">Assistance</a>
-        <span class="ajt-mobile-nav"><a href="#Login">Se Connecter</a></span>
+        <span class="ajt-mobile-nav"><a href="/connection">Se Connecter</a></span>
     </nav>
 
     <div id="bar">

@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ConnectionController;
 
 Route::get('/', function () {
     return view('home');
 });
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
+Route::get('/connection', [ConnectionController::class, 'goToConnection']);
