@@ -37,7 +37,7 @@
             <h1>Connexion</h1>
             <div class="login">
                 <h3>Email</h3>
-                <input type="email" name="email" placeholder="Entrer votre email" value="{{ old('email')}}" >
+                <input type="email" name="email" placeholder="Entrer votre email" value="{{ old('email')}} " >
                 @if($errors->has('email'))
                     <p>{{ $errors->first('email') }}</p>
                 @endif
