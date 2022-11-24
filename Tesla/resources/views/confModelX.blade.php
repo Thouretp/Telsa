@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+@include('header')
     <link rel="stylesheet" href="{{asset('css/confModelX.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/hamburgeur.css')}}" type="text/css">
     <title>ConfigurationModelX</title>
-</head>
-
-<body>
-    <header>
-        <div class="left">
-            <a href="/"><img src="{{asset('Models/teslalogo.png')}}" alt="logo_tesla"></a>
-        </div>
-        <div class="right">
-            <img class="see" src="{{asset('Models/Userv2.png')}}">
-            <img class="see" src="{{asset('Models/bagv2.png')}}">
-            <button class="hamburgeur">
-                <div class="bar"></div>
-        </div>
-        </div>
-    </header>
-    <nav class="mobile-nav">
-        <a href="/#modelS">Model S</a>
-        <a href="/#model3">Model 3</a>
-        <a href="/#modelX">Model X</a>
-        <a href="/#modelY">Model Y</a>
-        <a href="#shop">Shop</a>
-        <a href="#help">Assistance</a>
-        <span class="ajt-mobile-nav"><a href="/connection">Se Connecter</a></span>
-    </nav>
     <div class="container">
         <div class="scroll">
             <div class="menu">

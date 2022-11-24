@@ -9,4 +9,8 @@ class ConnectionController extends Controller
     {
         return view('connection');
     }
+    public function traitement()
+    {
+        return 'Traitement formulaire connexion';
+    }
 }

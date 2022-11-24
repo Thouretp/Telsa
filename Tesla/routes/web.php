@@ -20,6 +20,8 @@ Route::get('/', function () {
 });
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
 Route::get('/connection', [ConnectionController::class, 'goToConnection']);
+Route::post('/connection', [ConnectionController::class, 'traitement']);
+
 Route::post('/connection',function (){
     request() -> validate ([
         'email' => ['required','email'],
