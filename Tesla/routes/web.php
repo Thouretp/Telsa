@@ -19,8 +19,12 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
+
+Route::get('/inscription', [InscriptionController::class, 'goToSignUp']);
+
 Route::get('/connection', [ConnectionController::class, 'goToConnection']);
 Route::post('/connection', [ConnectionController::class, 'traitement']);
+
 
 Route::post('/connection',function (){
     request() -> validate ([
