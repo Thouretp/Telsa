@@ -1,7 +1,7 @@
-@include('head')
-<link rel="stylesheet" href="{{asset('css/connection.css')}}"/>
+@include('header')
+    <link rel="stylesheet" href="{{asset('css/connection.css')}}">
     <div class="container">
-        <form action="/connection"  method="post" class="form_login">
+        <form action="/inscription"  method="post" class="form_login">
             {{ csrf_field() }}
             <h1>Connexion</h1>
             <div class="login">

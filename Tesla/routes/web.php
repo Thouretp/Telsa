@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConnectionController;
+use App\Http\Controllers\InscriptionController;
 
 Route::get('/', function () {
     return view('home');
