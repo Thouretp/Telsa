@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
     <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css">
-    <title>LaTes Pierre</title>
+    <title>LaTes Maxence</title>
 </head>
 
 <body>
@@ -42,11 +42,6 @@
         <div class="point"></div>
         <div id="GP"></div>
     </div>
-
-
-
-
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
@@ -54,26 +49,48 @@
         <p id="lienModelY" class="menuLat"><a href="#modelY">Model Y</a></p>
     </nav>
 
+    <?php
+    // $time = $motorisationMS->puissancemoteur;
+    // $time = str_replace(":", "", $time);
+    // $time = floatval($time);
+    
+    function RecupTime($var){
+        $time = $var->puissancemoteur;
+        $time = str_replace(":", "", $time);
+        $time = floatval($time);
+
+        return $time;
+    }
+
+
+
+    //$time = strtotime($time);
+    
+    
+    ?>
+
+
+
     <div class="container">
 
         <div class="slider" id="modelS">
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMS->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                <h2><span class="big">{{RecupTime($motorisationMS)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span> </h2>
+                    <p>Classe energetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
@@ -93,20 +110,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">491</span> km</h2>
+                        <h2><span class="big">{{$motorisationM3->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">225</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationM3->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">6,1</span> secondes</h2>
+                        <h2><span class="big">{{RecupTime($motorisationM3)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">590</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationM3->codeclasseenergetique}}</span></h2>
+                        <p>Classe energetique</p>
                     </div>
                 </div>
             </div>
@@ -121,20 +138,20 @@
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMX->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMX->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                    <h2><span class="big">{{RecupTime($motorisationMX)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMX->codeclasseenergetique}}</span></h2>
+                    <p>Classe energetique</p>
                 </div>
             </div>
             <div class="circle"></div>
@@ -152,20 +169,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">543</span> km</h2>
+                        <h2><span class="big">{{$motorisationMY->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">543</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationMY->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">2,6</span> secondes</h2>
+                        <h2><span class="big">{{RecupTime($motorisationMY)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">300</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationMY->codeclasseenergetique}}</span></h2>
+                        <p>Classe energetique</p>
                     </div>
                 </div>
             </div>
