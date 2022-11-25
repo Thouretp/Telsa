@@ -28,18 +28,6 @@
                 <h1 class="title" id="correction_titre">Model X</h1>
                 <img src="{{asset('Models/Model X.jpg')}}" id="MS" />
 
-                <!-- <div id="caroussel">
-                    <div class="images">
-                           <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio">
-                        <img src="images/01.png" alt="voituuuuuuuuuuu">
-                        <img src="images/02.png" alt="voituuuuuuuuuuu">
-                        <img src="images/03.png" alt="voituuuuuuuuuuu">
-                        <img src="images/04.png" alt="voituuuuuuuuuuu">
-                    </div>
-                </div> -->
 
             </div>
             <div class="caracteristiques">

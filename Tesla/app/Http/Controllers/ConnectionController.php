@@ -11,6 +11,10 @@ class ConnectionController extends Controller
     }
     public function traitement()
     {
+        auth()->attempt([
+            'email'=> request('email'),
+            'password'=> request('password'),
+        ]);
         return 'Traitement formulaire connexion';
     }
 }

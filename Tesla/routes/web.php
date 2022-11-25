@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
 
 Route::get('/inscription', [InscriptionController::class, 'goToSignUp']);
+Route::post('/inscription', [InscriptionController::class, 'traitement']);
+
 
 Route::get('/connection', [ConnectionController::class, 'goToConnection']);
 Route::post('/connection', [ConnectionController::class, 'traitement']);
@@ -30,9 +32,9 @@ Route::post('/connection', [ConnectionController::class, 'traitement']);
 Route::post('/connection',function (){
     request() -> validate ([
         'email' => ['required','email'],
-        'password' => ['required','min:8'],
+        'password' => ['required',/*'min:8'*/],
     ], [
         'password.min' => 'Pour des raisons de securité, motre mot de passe doit faire :min caractères.'
     ]);
-    return "nous avons reçu votre email qui est " . request('email') . ' et mdp' . request('password');
+    return "nous avons reçu votre email qui est " . request('email') . ' et mdp' . bcrypt(request('password'));
 });
