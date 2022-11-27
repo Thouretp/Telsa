@@ -1,8 +1,9 @@
 @include('header')
     <link rel="stylesheet" href="{{asset('css/connection.css')}}"/>
-
+    <title>Connexion</title>
     <div class="container">
-        <form action="/connection"  method="post" class="form_login">
+        <form action="{{route('login-user')}}"  method="post" class="form_login">
+            @csrf
             {{ csrf_field() }}
             <h1>Connexion</h1>
             <div class="login">
@@ -29,7 +30,7 @@
 
             <div class="signup">
                 <a>Vous n'avez pas de compte ?</a>
-                <a href="">Créer un compte</a>
+                <a href="/inscription">Créer un compte</a>
             </div>
 
 

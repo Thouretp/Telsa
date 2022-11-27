@@ -9,12 +9,16 @@ class ConnectionController extends Controller
     {
         return view('connection');
     }
-    public function traitement()
+    public function loginUser(Request $request)
     {
-        auth()->attempt([
-            'email'=> request('email'),
-            'password'=> request('password'),
-        ]);
-        return 'Traitement formulaire connexion';
+        dump($request->all());
+        die;
     }
 }
+
+
+// auth()->attempt([
+//     'email'=> request('email'),
+//     'password'=> request('password'),
+// ]);
+// return 'Traitement formulaire connexion';

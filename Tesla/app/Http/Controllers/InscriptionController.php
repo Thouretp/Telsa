@@ -9,4 +9,13 @@ class InscriptionController extends Controller
     {
         return view('inscription');
     }
+    public function RegisterUser(Request $request){
+        User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>Hash::make($request->password)
+        ]);
+
+        return back()-> with('success','Utilisateur crée');
+    }
 }
