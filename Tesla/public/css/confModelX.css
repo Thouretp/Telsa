@@ -276,8 +276,23 @@ img{
     align-items: center;
     
 }
-.couleur {
+.selectionneColor{
     margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkedColor{margin-top:10px;
+    color: rgb(101, 77, 255);
+    border: solid 6px;
+    border-radius: 10px;}
+
+.couleur {
+    position: relative;
     background-color: white;
     width: 40px;
     height: 40px;
@@ -589,7 +604,14 @@ button{
 
 
 
-
+fieldset{
+    padding: 5%;
+}
+legend {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 3px 6px;
+}
 
 .buttonToggle{
     display: flex;

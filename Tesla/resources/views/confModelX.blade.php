@@ -76,6 +76,9 @@
 
         
         <div class="options">
+            <form action="" method="post">
+
+            
 
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">
@@ -90,6 +93,23 @@
                     </div>
                     <p>Disponible en 2023</p>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
+                   
+                   
+
+  <fieldset id="zebi">
+    <legend>Choisir le modèle</legend>
+
+    <input type="radio" name="model" id="modelPlaid" value="modelXPlaid" checked="checked">
+    <label for="modelPlaid">Model X PLAID</label><br>
+
+    <input type="radio" name="model" d="modelXstandart" value="modelX">
+    <label for="modelXstandart">Model X</label><br>
+
+  </fieldset>
+
+
+               
+               
                 </div>
                 
                 
@@ -97,22 +117,65 @@
 
             <h2 id="color">Couleur</h2>
             <div class="couleurs">
-                <div class="couleur" id="W"></div>
-                <div class="couleur" id="Blue"></div>
-                <div class="couleur" id="G"></div>
-                <div class="couleur" id="Black"></div>
-                <div class="couleur" id="R"></div>
+                <div  class="selectionneColor"  >
+                    <div class="couleur" id="W"></div>
+                </div>
+                <div class="selectionneColor" >
+                    <div class="couleur" id="Blue"></div>
+                </div>
+                <div class="selectionneColor" >
+                    <div class="couleur" id="G"></div>
+                </div>
+                <div class="selectionneColor" >
+                    <div class="couleur" id="Black"></div>
+                </div>
+                <div class="selectionneColor" class="checkedColor"  >
+                    <div class="couleur" id="R"></div>
+                </div>
             <div id="desc2" class="invisible">Sélectionner une couleur</div>
+
+
+            <fieldset>
+    <legend>Choisir la couleur</legend>
+
+    <input type="radio" id="blanc" name="monster" value="K" checked="checked">
+    <label for="kraken">BLANC</label><br>
+
+    <input type="radio" id="bleu" name="monster" value="S">
+    <label for="sasquatch">BLEU</label><br>
+
+    <input type="radio" id="gris" name="monster" value="K" >
+    <label for="kraken">GRIS</label><br>
+
+    <input type="radio" id="noir" name="monster" value="S">
+    <label for="sasquatch">NOIR</label><br>
+
+    <input type="radio" id="rouge" name="monster" value="K" >
+    <label for="kraken">ROUGE</label><br>
+
+
+  </fieldset>
 
             </div>
 
             
             <div class="jantes">
                 <h2 id="Wheels">Jantes</h2>
-                <div><img src="images/Jantes1.png" alt="jante"></div>
-                <div><img src="images/Jantes2.png" alt="jante"></div>
+                <div><img src="{{asset('Models/Jantes1.png')}}" alt="jante"></div>
+                <div><img src="{{asset('Models/Jantes2.png')}}" alt="jante"></div>
                 <p>nom de jante</p>
                 <div id="desc3" class="invisible">Sélectionner un type de jante</div>
+                <fieldset>
+
+    <legend>Choisir les jantes</legend>
+
+    <input type="radio" id="jante1" name="monster" value="K" checked="checked">
+    <label for="kraken">Jantes 1</label><br>
+
+    <input type="radio" id="jante2" name="monster" value="S">
+    <label for="sasquatch">Jantes 2</label><br>
+
+  </fieldset>
                
             </div>
 
@@ -123,8 +186,22 @@
                 <div class="couleur" id="W"></div>
                 <div class="couleur" id="Black"></div>
                 <div class="couleur" id="Beige"></div>
-                <p>nom de jante</p>
+                <p>nom de couleur</p>
                 <div id="desc4" class="invisible">Sélectionner une couleur</div>
+                <fieldset>
+
+    <legend>Choisir l'intérieur</legend>
+
+    <input type="radio" id="interieur1" name="monster" value="K" checked="checked">
+    <label for="kraken">BLANC</label><br>
+
+    <input type="radio" id="interieur2" name="monster" value="S">
+    <label for="sasquatch">NOIR</label><br>
+
+    <input type="radio" id="interieur3" name="monster" value="S">
+    <label for="sasquatch">BEIGE</label><br>
+
+  </fieldset>
             </div>
             
             
@@ -184,7 +261,16 @@
 
             
             <div class="commander" >
-                <h2 id="Commander">Finaliser la commande</h2> 
+                <h2 id="Commander">Finaliser la commande</h2>
+                <?php
+                     if(isset($_POST['submit'])){
+                        if(!empty($_POST['model'])) {
+                            echo '  ' . $_POST['model'];
+                        } else {
+                            echo 'Please select the value.';
+                        }
+                        }
+                ?> 
                 <div id="wrapper">
                     <section>
                         <div class="btn-container">
@@ -195,6 +281,8 @@
                 </div>
             </div>
         </div>
+
+        </form>
        
     </div>
     <script src="{{asset('js/confModelX.js')}}"></script>

@@ -11,11 +11,11 @@ window.addEventListener('scroll', function(){
     document.getElementById("movement").style.height = barre/2.6987477201895126 + "%"
     document.getElementById("GP").style.top = barre/2.6987477201895126 + "%" 
 
-   console.log(barre)
+   
 })
 
 let j=0
-setInterval(function(){ console.log(carrouselModelX[j])
+setInterval(function(){ 
     document.getElementById("MS").src = carrouselModelX[j]; 
     j = (j+1)%(carrouselModelX.length);
 },1000000)
@@ -40,33 +40,35 @@ btnInfo.addEventListener("click", function(){
     infos7.classList.toggle("invisible")
 })
 
-let white = document.getElementById("W")
-let blue = document.getElementById("Blue")
-let grey = document.getElementById("G")
-let black = document.getElementById("Black")
-let red = document.getElementById("R")
 
-let colors = [white,blue,grey,black,red]
 
-for(i of colors)
-{
-    console.log(i)
-    i.addEventListener("click",function(){
-        for(j of colors)
-        {
-            
-            if(i==j)
-            {
-                j.classList.add("invisible")
+
+// let white = document.getElementById("W")
+// let blue = document.getElementById("Blue")
+// let grey = document.getElementById("G")
+// let black = document.getElementById("Black")
+// let red = document.getElementById("R")
+
+// let colors = [white,blue,grey,black,red]
+
+// console.log(white)
+
+// for(let i = 0; i < colors.length; i++)
+// {
+    
+//     colors[i].addEventListener("click",function(){
+//         for(let j = 0; j < colors.length; j++)
+//         {
+//             i.classList.remove("checkedColor")
+//             if(i==j)
+//             {
+//                 i.classList.add("checkedColor")
+//                 console.log(i)
+//             }
                 
-            }
-            else{
-                j.classList.remove("invisible")
-                console.log(j)
-            }
-        }
+//         }
         
 
         
-    })
-}
+//     })
+// }
