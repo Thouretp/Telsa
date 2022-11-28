@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{asset('css/inscription.css')}}">
     <title>Inscription</title>
     <div class="container">
-        <form action="{{route('register-user')}}"  method="post" class="form_signup">
+        <form action="/inscription"  method="post" class="form_signup">
             @csrf
             {{ csrf_field() }}
             <h1>Créer un compte</h1>

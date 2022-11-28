@@ -1,6 +1,6 @@
 @include('header')
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
-    <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('css/dashboard.css')}}" type="text/css"/>
 
     <div id="bar">
         <div id="movement"></div>

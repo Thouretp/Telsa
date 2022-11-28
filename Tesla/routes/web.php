@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,29 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ConnectionController;
-use App\Http\Controllers\InscriptionController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
-Route::get('/confModelX', [HomeController::class, 'goToConf']);
 
-Route::get('/inscription', [InscriptionController::class, 'goToSignUp']);
-Route::post('/inscription', [InscriptionController::class, 'RegisterUser'])->name('registerUser');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/connection', [ConnectionController::class, 'goToConnection']);
-Route::post('/connection', [ConnectionController::class, 'LoginUser'])->name('loginUser');
-
-
-//Route::post('/connection',function (){
-    // request() -> validate ([
-    //     'email' => ['required','email'],
-    //     'password' => ['required',/*'min:8'*/],
-    // ], [
-    //     'password.min' => 'Pour des raisons de securité, motre mot de passe doit faire :min caractères.'
-    // ]);
-    // return "nous avons reçu votre email qui est " . request('email') . ' et mdp' . bcrypt(request('password'));
-//});
+require __DIR__.'/auth.php';
