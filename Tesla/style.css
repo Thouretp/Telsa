@@ -1,0 +1,441 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 400vh;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{ /* On cache la barre de scroll*/
+    display: none;
+}
+
+/*-----LE SCROLL-----*/
+
+.container{
+    /* height: 100vh;
+    scroll-snap-type:y mandatory;
+    overflow-y: scroll; */
+    display: flex;
+    
+}
+.scroll{
+    width: 20%;
+}
+.main{
+    width: 40%;
+    
+    justify-content: center;
+}
+
+.slider{
+    position: fixed;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    bottom: 20px;
+    height: 100vh;
+    left: 40%;
+    scroll-snap-align: center;
+    flex-direction: column;
+}
+
+/*-----LE SCROLL-----*/
+
+.title{/* les titres de models*/
+    position: absolute;
+    z-index: 3;
+    font-size: 45px;
+    top: 10%;
+    text-align: center;
+    color: #FFF;
+}
+
+/*-----MENU-----*/
+.menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 10%;
+    height: 75.8%;
+    
+    z-index: 4;
+    top: 11.7%;
+    color: #FFF;
+    background-color: transparent;
+}
+.menuLat a{
+    position: relative;
+    background-color: transparent;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.menuLat a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.menuLat a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/*-----MENU-----*/
+
+
+/*----IMAGES-----*/
+img{
+    z-index: 1;
+}
+
+#MS{height: 225px;}
+#M3{height: 200px;}
+#MX{height: 234px;}
+#MY{height: 234px;}
+/*----IMAGES-----*/
+
+
+/*-----LA BARRE DE SUIVI-----*/
+#bar{
+    position: fixed;
+    left: 8%;
+    z-index: 4;
+    top: 13%;
+    width: 1px;
+    height: 74%;
+    border-radius: 40px;
+    background-color: rgb(132, 132, 132);
+}
+
+#movement{
+    width: 2px;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 40px;
+    transform: translate(-50%, 0%);
+}
+/*-----LA BARRE DE SUIVI-----*/
+
+
+/*-----LES POINTS DE SUIVI-----*/
+.point{
+    z-index: 8;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 50%;
+    border: solid 4px black;
+    background-color: #FFF;
+    height: 14px;
+    width: 14px;
+    transform: translate(-50%, -50%);
+}
+.point:nth-child(1){top:0%;}
+.point:nth-child(2){top:11.625%;}
+.point:nth-child(3){top:24.25%;}
+.point:nth-child(4){top:36.875%;}
+.point:nth-child(5){top:49.5%;}
+.point:nth-child(6){top:62.125%;}
+.point:nth-child(7){top:74.75%;}
+.point:nth-child(8){top:87.375%;}
+.point:nth-child(9){top:100%;}
+
+#GP{
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    border: solid 3px #FFF;
+    height: 20px;
+    width: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle{
+    z-index: 0;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    left:50%;
+    top: 65%;
+    height: 70px;
+    width: 450px;
+    border: solid 3px #FFF;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 8px 5px 1px rgb(255, 255, 255);
+}
+
+
+/*-----LES POINTS DE SUIVI-----*/
+
+/*-----BOUTONS DE VISUALISATION-----*/
+.visu{
+    z-index: 6;
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px ;
+    border: solid 2px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    width: 225px;
+    height: 35px;
+}
+
+.caracteristiques {
+    color: #FFF;
+    position: fixed;
+    bottom: 15%;
+    display: flex;
+    justify-content:center;
+}
+.caracteristiques p{
+    margin-right: 5%;
+}
+/*-----BOUTONS DE VISUALISATION-----*/
+
+
+.btn{
+    background-color: transparent;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    color: #FFF;
+    border: solid 2px;
+    margin-top: 40px;
+}
+
+
+/*-----CORRECTIONS-----*/
+/* #btn{
+    top:26% ;
+} */
+
+
+
+#correction_titre{
+    position: fixed;
+
+    top: 13%;
+} 
+/*-----CORRECTIONS-----*/
+
+
+/* ------------------------------------------------ Partie droite les options ------------------------------------------------ */
+.options{
+    color: white;
+    width: 40%;
+    font-size: 18px;
+}
+
+.options h2{
+    padding-top: 35px;
+    margin-top: 0px;
+    text-align: center;
+}
+.options h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 35px ;
+    text-align: center;
+}
+.options .motorisation{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.options .couleurs{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.couleur {
+    margin-top: 15px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#W{
+    background-color: #FFF;
+    border: solid 1px white;
+}
+#Black{
+    background-color: black;
+    border: solid 1px white;
+}
+#G{
+    background-color: rgb(78,80,86);
+    border: solid 1px white;
+}
+#Blue{
+    background-color: rgb(2, 41, 98);
+    border: solid 1px white;
+}
+#R{
+    background-color: rgb(121, 0, 0);
+    border: solid 1px white;
+}
+#Beige{
+    background-color: rgb(235, 226, 212);
+    border: solid 1px white;
+}
+button{
+    cursor: pointer;
+}
+
+.options .jantes{
+    height: 100vh;
+}
+.options .jantes .lesjantes{
+    display: flex;
+    justify-content: center;
+}
+.options .jantes .lesjantes img{
+    width: 60px;
+    margin-left: 10px;
+}
+ 
+.interieur {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.interieur p{
+    flex-wrap: wrap;
+}
+
+#butcommande{
+    display: flex;
+    justify-content: center;
+}
+.autopilot{
+    height: 100vh;
+    text-align: center;
+}
+
+.Self-Driving{
+    height: 100vh;
+    text-align: center;
+}
+.recharge {
+    height: 100vh;
+}
+.fin{
+    height: 100vh;
+}
+.fin h3{
+    padding-top: 0px;
+}
+.commander{
+    height: 100vh;
+}
+#butcommande button{
+    font-size: 16px;
+}
+
+#desc1{ 
+    margin-top: 5px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    color: #FFF;
+    
+}
+
+#desc2{ 
+    margin-top: 5px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    color: #FFF;
+    
+}
+
+.more_info{
+    position: fixed;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    top: 1%;
+    right: 1%;
+    background-color: transparent;
+    color: #FFF;
+    border-radius: 50%;
+    border:solid #FFF;
+    font-size: 30px;
+    
+}
+
+.invisible{opacity: 0;}
+
+.contenu{
+    position: absolute  ;
+    display: flex;
+    flex-direction: column;
+}
+.infos{
+    
+    display: flex;
+    align-items: center;
+   
+}
+.infos .info{
+    color: white;
+    
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.infos .info h2{
+    font-size: 20px;
+}
+.infos .info h2 .big{
+    font-size: 30px;
+}
+.infos .info p{
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+}
+
+

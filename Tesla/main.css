@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+}
+
+
+::-webkit-scrollbar{ /* On cache la barre de scroll*/
+    display: none;
+}
+
+/*-----LE SCROLL-----*/
+.container{
+    height: 100vh;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+}
+
+.slider{
+    position: relative;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    height: 100vh;
+    scroll-snap-align: center;
+    flex-direction: column;
+}
+/*-----LE SCROLL-----*/
+
+
+
+
+.title{/* les titres de models*/
+    position: absolute;
+    z-index: 3;
+    top: 15%;
+    text-align: center;
+    color: #FFF;
+}
+
+/*-----LA BARRE DE SUIVI-----*/
+#bar{
+    position: absolute;
+    left: 12%;
+    z-index: 4;
+    top: 13%;
+    width: 1px;
+    height: 74%;
+    border-radius: 40px;
+    background-color: #FFF;
+}
+/*-----LA BARRE DE SUIVI-----*/
+
+
+
+
