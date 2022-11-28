@@ -42,18 +42,6 @@
                 <h1 class="title" id="correction_titre">Model X</h1>
                 <img src="Models/Model X.jpg"id="MS"/>
 
-             <!-- <div id="caroussel">
-                    <div class="images">
-                           <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio">
-                        <img src="images/01.png" alt="voituuuuuuuuuuu">
-                        <img src="images/02.png" alt="voituuuuuuuuuuu">
-                        <img src="images/03.png" alt="voituuuuuuuuuuu">
-                        <img src="images/04.png" alt="voituuuuuuuuuuu">
-                    </div>
-                </div> -->
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
@@ -99,10 +87,10 @@
   <fieldset id="zebi">
     <legend>Choisir le modèle</legend>
 
-    <input type="radio" name="model" id="modelPlaid" value="modelXPlaid" checked="checked">
+    <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
     <label for="modelPlaid">Model X PLAID</label><br>
 
-    <input type="radio" name="model" d="modelXstandart" value="modelX">
+    <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
     <label for="modelXstandart">Model X</label><br>
 
   </fieldset>
@@ -138,21 +126,20 @@
             <fieldset>
     <legend>Choisir la couleur</legend>
 
-    <input type="radio" id="blanc" name="monster" value="K" checked="checked">
-    <label for="kraken">BLANC</label><br>
+    <input type="radio" name="color" id="blanc" value="blanc" checked="checked">
+    <label for="blanc">Blanc</label><br>
 
-    <input type="radio" id="bleu" name="monster" value="S">
-    <label for="sasquatch">BLEU</label><br>
+    <input type="radio" name="color" id="bleu" value="bleu" >
+    <label for="bleu">Bleu</label><br>
 
-    <input type="radio" id="gris" name="monster" value="K" >
-    <label for="kraken">GRIS</label><br>
+    <input type="radio" name="color" id="gris" value="gris" >
+    <label for="gris">Gris</label><br>
 
-    <input type="radio" id="noir" name="monster" value="S">
-    <label for="sasquatch">NOIR</label><br>
+    <input type="radio" name="color" id="noir" value="noir" >
+    <label for="noir">Noir</label><br>
 
-    <input type="radio" id="rouge" name="monster" value="K" >
-    <label for="kraken">ROUGE</label><br>
-
+    <input type="radio" name="color" id="rouge" value="rouge" >
+    <label for="rouge">Rouge</label><br>
 
   </fieldset>
 
@@ -165,15 +152,15 @@
                 <div><img src="{{asset('Models/Jantes2.png')}}" alt="jante"></div>
                 <p>nom de jante</p>
                 <div id="desc3" class="invisible">Sélectionner un type de jante</div>
-                <fieldset>
 
+                <fieldset>
     <legend>Choisir les jantes</legend>
 
-    <input type="radio" id="jante1" name="monster" value="K" checked="checked">
-    <label for="kraken">Jantes 1</label><br>
+    <input type="radio" name="jantes" id="jantes1" value="jantes 1" checked="checked">
+    <label for="jantes1">Jantes 1</label><br>
 
-    <input type="radio" id="jante2" name="monster" value="S">
-    <label for="sasquatch">Jantes 2</label><br>
+    <input type="radio" name="jantes" id="jantes2" value="jantes 2" >
+    <label for="jantes2">Jantes2</label><br>
 
   </fieldset>
                
@@ -188,18 +175,18 @@
                 <div class="couleur" id="Beige"></div>
                 <p>nom de couleur</p>
                 <div id="desc4" class="invisible">Sélectionner une couleur</div>
+            
                 <fieldset>
-
     <legend>Choisir l'intérieur</legend>
 
-    <input type="radio" id="interieur1" name="monster" value="K" checked="checked">
-    <label for="kraken">BLANC</label><br>
+    <input type="radio" name="interieur" id="interieur1" value="blanc" checked="checked">
+    <label for="interieur1">Blanc</label><br>
 
-    <input type="radio" id="interieur2" name="monster" value="S">
-    <label for="sasquatch">NOIR</label><br>
+    <input type="radio" name="interieur" id="interieur2" value="noir">
+    <label for="interieur2">Noir</label><br>
 
-    <input type="radio" id="interieur3" name="monster" value="S">
-    <label for="sasquatch">BEIGE</label><br>
+    <input type="radio" name="interieur" id="interieur3" value="beige">
+    <label for="interieur3">Beige</label><br>
 
   </fieldset>
             </div>
@@ -262,16 +249,14 @@
             
             <div class="commander" >
                 <h2 id="Commander">Finaliser la commande</h2>
-                <?php
-                     if(isset($_POST['submit'])){
-                        if(!empty($_POST['model'])) {
-                            echo '  ' . $_POST['model'];
-                        } else {
-                            echo 'Please select the value.';
-                        }
-                        }
-                ?> 
-                <div id="wrapper">
+
+                <p >Modèle choisi : <span id="afficheModel" ></span></p>
+                <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
+                <p >Jantes choisies : <span id="afficheJante" ></span></p>
+                <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
+                
+
+                 <div id="wrapper"> <!--BOUTONCOMMANDER -->
                     <section>
                         <div class="btn-container">
                             <input type="submit" value="Procéder au paiement" id="button-blue"/>
@@ -279,6 +264,13 @@
                         </div>
                     </section>
                 </div>
+
+                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
+                
+                
+
+
+
             </div>
         </div>
 
@@ -286,6 +278,7 @@
        
     </div>
     <script src="{{asset('js/confModelX.js')}}"></script>
+    <script src="{{asset('js/generatePDF.js')}}"></script>
     
 </body>
 </html>

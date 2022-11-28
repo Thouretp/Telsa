@@ -40,6 +40,154 @@ btnInfo.addEventListener("click", function(){
     infos7.classList.toggle("invisible")
 })
 
+//Affichage des options cochées//
+let modeleChoisi;
+let couleurChoisie;
+let janteschoisies; 
+let interieurChoisi;
+
+        //SOLUTION PAS OPTIMALE MAIS CA MARCHE : JE FAIS TOUS LES TESTS AU CHARGEMENT PUIS JE LES REFAIT QUAND UN ELEMENT CHANGE//
+if(document.getElementById('modelPlaid').checked){
+    modeleChoisi = document.getElementById('modelPlaid').value;
+    document.getElementById('afficheModel').innerHTML = modeleChoisi
+    
+}
+if(document.getElementById('modelXstandart').checked){
+    modeleChoisi = document.getElementById('modelXstandart').value;
+    document.getElementById('afficheModel').innerHTML = modeleChoisi
+}
+
+
+
+if(document.getElementById('blanc').checked){
+    couleurChoisie = document.getElementById('blanc').value;
+    document.getElementById('afficheCouleur').innerHTML = couleurChoisie
+}
+if(document.getElementById('bleu').checked){
+    couleurChoisie = document.getElementById('bleu').value;
+    document.getElementById('afficheCouleur').innerHTML = couleurChoisie
+}
+if(document.getElementById('gris').checked){
+    couleurChoisie = document.getElementById('gris').value;
+    document.getElementById('afficheCouleur').innerHTML = couleurChoisie
+}
+if(document.getElementById('noir').checked){
+    couleurChoisie = document.getElementById('noir').value;
+    document.getElementById('afficheCouleur').innerHTML = couleurChoisie
+}
+if(document.getElementById('rouge').checked){
+    couleurChoisie = document.getElementById('rouge').value;
+    document.getElementById('afficheCouleur').innerHTML = couleurChoisie
+}
+
+
+if(document.getElementById('jantes1').checked){
+    janteschoisies = document.getElementById('jantes1').value;
+    document.getElementById('afficheJante').innerHTML = janteschoisies
+}
+if(document.getElementById('jantes2').checked){
+    janteschoisies = document.getElementById('jantes2').value;
+    document.getElementById('afficheJante').innerHTML = janteschoisies
+}
+
+if(document.getElementById('interieur1').checked){
+    interieurChoisi = document.getElementById('interieur1').value;
+    document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+}
+if(document.getElementById('interieur2').checked){
+    interieurChoisi = document.getElementById('interieur2').value;
+    document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+}
+if(document.getElementById('interieur3').checked){
+    interieurChoisi = document.getElementById('interieur3').value;
+    document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+}
+
+
+
+
+
+
+
+
+
+
+window.addEventListener('change',function(){
+    if(document.getElementById('modelPlaid').checked){
+        modeleChoisi = document.getElementById('modelPlaid').value;
+        document.getElementById('afficheModel').innerHTML = modeleChoisi
+        
+    }
+    if(document.getElementById('modelXstandart').checked){
+        modeleChoisi = document.getElementById('modelXstandart').value;
+        document.getElementById('afficheModel').innerHTML = modeleChoisi
+        
+    }
+
+    if(document.getElementById('blanc').checked){
+        modeleChoisi = document.getElementById('blanc').value;
+        document.getElementById('afficheCouleur').innerHTML = modeleChoisi
+    }
+    if(document.getElementById('bleu').checked){
+        modeleChoisi = document.getElementById('bleu').value;
+        document.getElementById('afficheCouleur').innerHTML = modeleChoisi
+    }
+    if(document.getElementById('gris').checked){
+        modeleChoisi = document.getElementById('gris').value;
+        document.getElementById('afficheCouleur').innerHTML = modeleChoisi
+    }
+    if(document.getElementById('noir').checked){
+        modeleChoisi = document.getElementById('noir').value;
+        document.getElementById('afficheCouleur').innerHTML = modeleChoisi
+    }
+    if(document.getElementById('rouge').checked){
+        modeleChoisi = document.getElementById('rouge').value;
+        document.getElementById('afficheCouleur').innerHTML = modeleChoisi
+    }
+    if(document.getElementById('jantes1').checked){
+        janteschoisies = document.getElementById('jantes1').value;
+        document.getElementById('afficheJante').innerHTML = janteschoisies
+    }
+    if(document.getElementById('jantes2').checked){
+        janteschoisies = document.getElementById('jantes2').value;
+        document.getElementById('afficheJante').innerHTML = janteschoisies
+    }
+
+    if(document.getElementById('interieur1').checked){
+        interieurChoisi = document.getElementById('interieur1').value;
+        document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+    }
+    if(document.getElementById('interieur2').checked){
+        interieurChoisi = document.getElementById('interieur2').value;
+        document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+    }
+    if(document.getElementById('interieur3').checked){
+        interieurChoisi = document.getElementById('interieur3').value;
+        document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+    }
+})
+
+
+//GENERER PDF//
+const pdfkit = require('pdfkit');
+const fs = require('fs')
+
+const pdfDocument = new pdfkit
+
+pdfDocument.pipe(fs.createWriteStream("commande.pdf"))
+
+pdfDocument.text("Hello World")
+    .fontSize(25)
+
+pdfDocument.end()
+
+ 
+
+
+
+
+
+
 
 
 
