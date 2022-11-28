@@ -18,3 +18,5 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
+
+Route::get('/confModelX_PDF', [HomeController::class,'confModelX_PDF'])->name('confModelX_PDF'); //GENERER PDF

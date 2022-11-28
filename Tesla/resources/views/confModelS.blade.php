@@ -1,1 +1,0 @@
-confModelS.blade.php
