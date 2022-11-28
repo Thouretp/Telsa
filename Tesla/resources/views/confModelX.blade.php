@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+@include('header')
     <link rel="stylesheet" href="{{asset('css/confModelX.css')}}" type="text/css">
     <title>ConfigurationModelX</title>
-</head>
-
-<body>
     <div class="container">
         <div class="scroll">
             <div class="menu">
@@ -38,18 +28,6 @@
                 <h1 class="title" id="correction_titre">Model X</h1>
                 <img src="{{asset('Models/Model X.jpg')}}" id="MS" />
 
-                <!-- <div id="caroussel">
-                    <div class="images">
-                           <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio">
-                        <img src="images/01.png" alt="voituuuuuuuuuuu">
-                        <img src="images/02.png" alt="voituuuuuuuuuuu">
-                        <img src="images/03.png" alt="voituuuuuuuuuuu">
-                        <img src="images/04.png" alt="voituuuuuuuuuuu">
-                    </div>
-                </div> -->
 
             </div>
             <div class="caracteristiques">
@@ -141,8 +119,8 @@
         </div>
 
     </div>
+    <script src="{{asset('js/hamburgeur.js')}}"></script>
     <script src="{{asset('js/confModelX.js')}}"></script>
-
 </body>
 
 </html>
