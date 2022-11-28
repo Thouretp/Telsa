@@ -5,15 +5,12 @@
 </head>
 <body>
     
-</body>
-</html>
-
 <header>
         <div class="left">
-            <a href="/"><img src="{{asset('Models/teslalogo.png')}}" alt="logo_tesla"></a>
+            <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
         </div>
         <div class="right">
-            <img class="see" src="{{asset('Models/Userv2.png')}}">
+            <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
             <img class="see" src="{{asset('Models/bagv2.png')}}">
             <button class="hamburgeur">
                 <div class="bar"></div>
@@ -42,4 +39,7 @@
             @endif
         </span>
     </nav>
+</body>
+</html>
+
 

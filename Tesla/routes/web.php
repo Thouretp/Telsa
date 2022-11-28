@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConfModelsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/confModelX',[ConfModelsController::class,'confMX']);
+Route::get('/confModelX_PDF', [ConfModelsController::class,'confModelX_PDF'])->name('confModelX_PDF');

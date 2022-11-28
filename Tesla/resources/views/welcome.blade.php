@@ -1,6 +1,6 @@
 @include('header')
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
-    <link rel="stylesheet" href="{{asset('css/dashboard.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css"/>
 
     <div id="bar">
         <div id="movement"></div>
@@ -43,7 +43,8 @@
             <div class="circle" id="cercle1"></div>
             <h1 class="title" id="correction_titre">Model S</h1>
             <img src="Models/Model S.jpg" id="MS" />
-            <input type="button" class="visu" id="btn1" value="Configuration personalisée"></input>
+            <a href="/confModelS"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
+            
 
             <div class="img">
                 <img src="Models/MS_1.jpeg" alt="">
@@ -77,7 +78,8 @@
             <div class="circle"></div>
             <h1 class="title">Model 3</h1>
             <img src="Models/Model 3.jpg" id="M3">
-            <input type="button" class="visu" id="btn1" value="Configuration personalisée"></input>
+            <a href="/confModel3"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
+            
 
         </div>
 
@@ -104,10 +106,8 @@
             <div class="circle"></div>
             <h1 class="title">Model X</h1>
             <img src="Models/Model X.jpg" id="MX">
-            <form action="confModelX">
-                <input type="submit" class="visu" id="btnModX" value="Configuration personalisée"></input>
-            </form>
-
+            <a href="/confModelX"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
+            
 
         </div>
 
@@ -136,12 +136,12 @@
             <div class="circle"></div>
             <h1 class="title">Model Y</h1>
             <img src="Models/Model Y.jpg" id="MY">
-            <form action="confModelX">
-                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
-            </form>
+            <a href="/confModelY"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
+            
         </div>
     </div>
 
     <script src="{{asset('js/hamburgeur.js')}}"></script>
+    <script src="{{asset('js/home.js')}}"></script>
 </body>
 </html>
