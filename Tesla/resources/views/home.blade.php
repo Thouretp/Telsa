@@ -79,7 +79,9 @@
             <div class="circle" id="cercle1"></div>
             <h1 class="title" id="correction_titre">Model S</h1>
             <img src="Models/Model S.jpg" id="MS" />
-            <input type="button" class="visu" id="btn1" value="Configuration personalisée"></input>
+            <form action="confModelS">
+                <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
+            </form>
 
             <div class="img">
                 <img src="Models/MS_1.jpeg" alt="">
@@ -113,7 +115,9 @@
             <div class="circle"></div>
             <h1 class="title">Model 3</h1>
             <img src="Models/Model 3.jpg" id="M3">
-            <input type="button" class="visu" id="btn1" value="Configuration personalisée"></input>
+            <form action="confModel3">
+                <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
+            </form>
 
         </div>
 
@@ -172,7 +176,7 @@
             <div class="circle"></div>
             <h1 class="title">Model Y</h1>
             <img src="Models/Model Y.jpg" id="MY">
-            <form action="confModelX">
+            <form action="confModelY">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
         </div>

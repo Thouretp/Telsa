@@ -17,6 +17,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/confModelX', [HomeController::class, 'goToConf']);
+Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
+Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
+Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
+Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 
 Route::get('/confModelX_PDF', [HomeController::class,'confModelX_PDF'])->name('confModelX_PDF'); //GENERER PDF
