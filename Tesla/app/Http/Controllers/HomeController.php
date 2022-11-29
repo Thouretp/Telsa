@@ -8,7 +8,7 @@ use App\Models\Motorisation;
 class HomeController extends Controller
 {
     public function showInfo(){
-        return view('home',[
+        return view('welcome',[
             'motorisations'=> Motorisation::all(),
             'motorisationMS'=> Motorisation::find(1),
             'motorisationM3'=> Motorisation::find(2),
