@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+@include('header')
     <link rel="stylesheet" href="{{asset('css/confModelS.css')}}" type="text/css">
     <title>Model S</title>
-</head>
-<body>
+
     <div class="container">
         <div class="scroll">
             <div class="menu">
@@ -40,12 +33,12 @@
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
                 <h1 class="title" id="correction_titre">Model S</h1>
-                <img src="Models/Model X.jpg"id="MS"/>
+                <img src="Models/Model S.jpg"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">{{dd($modelS->detailcaract)}}</span> km</h2>
+                            <h2><span class="big">550</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
@@ -76,8 +69,8 @@
                     
                     
                     <div class="boutons">
-                        <button class="btn">Model X plaid <a>141 900€</a></button> <br>
-                        <button class="btn">Model X </button>
+                        <button class="btn">Model S plaid <a>200 900€</a></button> <br>
+                        <button class="btn">Model S </button>
                     </div>
                     <p>Disponible en 2023</p>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
@@ -88,10 +81,10 @@
     <legend>Choisir le modèle</legend>
 
     <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
-    <label for="modelPlaid">Model X PLAID</label><br>
+    <label for="modelPlaid">Model S PLAID</label><br>
 
     <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
-    <label for="modelXstandart">Model X</label><br>
+    <label for="modelXstandart">Model S</label><br>
 
   </fieldset>
 
@@ -279,6 +272,6 @@
     </div>
     <script src="{{asset('js/confModel3.js')}}"></script>
     <script src="{{asset('js/generatePDF.js')}}"></script>
-    
+    <script src="{{asset('js/hamburgeur.js')}}"></script>
 </body>
 </html>

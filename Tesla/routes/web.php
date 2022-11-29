@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [ConfMSController::class, 'showOptions']);
+Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
 Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 
