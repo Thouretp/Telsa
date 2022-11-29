@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -19,4 +20,8 @@ Route::get('/', function () {
 });
 Route::get('/confModelX', [HomeController::class, 'goToConf']);
 
-Route::get('/confModelX_PDF', [HomeController::class,'confModelX_PDF'])->name('confModelX_PDF'); //GENERER PDF
+Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF'); //GENERER PDF
+
+Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+

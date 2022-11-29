@@ -10,9 +10,4 @@ class HomeController extends Controller
     {
         return view('confModelX');
     }
-
-    public function confModelX_PDF(){
-        $pdf = PDF::loadView('pdf.generationPdf');
-        return $pdf->download('generationPdf.pdf');
-    }
 }
