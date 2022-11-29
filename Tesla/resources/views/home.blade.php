@@ -60,7 +60,7 @@
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMS->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
