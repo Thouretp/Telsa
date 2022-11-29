@@ -180,3 +180,43 @@ pdfDocument.text("Hello World")
     .fontSize(25)
 
 pdfDocument.end()
+
+ 
+
+
+
+
+
+
+
+
+
+// let white = document.getElementById("W")
+// let blue = document.getElementById("Blue")
+// let grey = document.getElementById("G")
+// let black = document.getElementById("Black")
+// let red = document.getElementById("R")
+
+// let colors = [white,blue,grey,black,red]
+
+// console.log(white)
+
+// for(let i = 0; i < colors.length; i++)
+// {
+    
+//     colors[i].addEventListener("click",function(){
+//         for(let j = 0; j < colors.length; j++)
+//         {
+//             i.classList.remove("checkedColor")
+//             if(i==j)
+//             {
+//                 i.classList.add("checkedColor")
+//                 console.log(i)
+//             }
+                
+//         }
+        
+
+        
+//     })
+// }

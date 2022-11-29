@@ -1,6 +1,12 @@
-@include('header')
-    <link rel="stylesheet" href="{{asset('css/confModelX.css')}}" type="text/css">
-    <title>Model X</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{asset('css/confModelS.css')}}" type="text/css">
+    <title>Model S</title>
 </head>
 <body>
     <div class="container">
@@ -33,13 +39,13 @@
         <div class="main">
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
-                <h1 class="title" id="correction_titre">Model X</h1>
+                <h1 class="title" id="correction_titre">Model S</h1>
                 <img src="Models/Model X.jpg"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">543</span> km</h2>
+                            <h2><span class="big">{{dd($modelS->detailcaract)}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
@@ -261,14 +267,18 @@
 
                 <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
                 
+                
+
+
+
             </div>
         </div>
 
         </form>
        
     </div>
-    <script src="{{asset('js/confModelX.js')}}"></script>
-    <script src="{{asset('js/hamburgeur.js')}}"></script>
+    <script src="{{asset('js/confModel3.js')}}"></script>
     <script src="{{asset('js/generatePDF.js')}}"></script>
+    
 </body>
 </html>

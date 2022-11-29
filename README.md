@@ -1,2 +1,0 @@
-# Telsa
-Tesla repo project

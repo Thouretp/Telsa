@@ -1,4 +1,4 @@
-include('header')
+@include('header')
     <title>Generation PDF</title>
 
     <h1>Récap commande</h1>
