@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfModelsController;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\ConfModelXController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,5 +39,6 @@ Route::get('/confModelS', [ConfMSController::class, 'showOptions']);
 Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 
-Route::get('/confModelX',[ConfModelsController::class,'confMX']);
-Route::get('/confModelX_PDF', [ConfModelsController::class,'confModelX_PDF'])->name('confModelX_PDF');
+Route::get('/confModelX',[ConfModelsController::class,'goToConf']);
+Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
+Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);

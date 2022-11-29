@@ -58,7 +58,7 @@
 
         
         <div class="options">
-            <form action="" method="post">
+            <form action="generation" method="POST">
 
             
 
@@ -78,7 +78,7 @@
                    
                    
 
-  <fieldset id="zebi">
+  <fieldset >
     <legend>Choisir le modèle</legend>
 
     <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
@@ -196,6 +196,13 @@
                     <li>Sortie auto</li>
                     <li>Sortie auto intelligente</li>
                 </ul>
+
+                <div class="buttonToggle">
+                    <label class="switch">
+                        <input type="checkbox" id="checkAutoPilot" value="Sélectionné">
+                        <span class="slider-toggle round"></span>
+                    </label>
+                </div>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
 
@@ -208,6 +215,12 @@
                     <li>Toutes les fonctionnalités de l'Autopilot de base et de l'Autopilot amélioré</li>
                     <li>Reconnaissance et réaction aux feux de signalisation et aux panneaux stop</li>
                 </ul>
+                <div class="buttonToggle">
+                    <label class="switch">
+                        <input type="checkbox" id="checkSelfDriving" value="Sélectionné">
+                        <span class="slider-toggle round"></span>
+                    </label>
+                </div>
                 <div id="desc6" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
 
@@ -218,7 +231,7 @@
                 <h3>Chargeur mural</h3>
                 <div class="buttonToggle">
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkRecharge" value="Sélectionné"> 
                         <span class="slider-toggle round"></span>
                     </label>
                 </div>
@@ -248,6 +261,10 @@
                 <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
                 <p >Jantes choisies : <span id="afficheJante" ></span></p>
                 <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
+                <br>
+                <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
+                <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
+                <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
                 
 
                  <div id="wrapper"> <!--BOUTONCOMMANDER -->

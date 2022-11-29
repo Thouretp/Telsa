@@ -45,6 +45,9 @@ let modeleChoisi;
 let couleurChoisie;
 let janteschoisies; 
 let interieurChoisi;
+let autopilotchoisi;
+let autonomeChoisi;
+let rechargeChoisi;
 
         //SOLUTION PAS OPTIMALE MAIS CA MARCHE : JE FAIS TOUS LES TESTS AU CHARGEMENT PUIS JE LES REFAIT QUAND UN ELEMENT CHANGE//
 if(document.getElementById('modelPlaid').checked){
@@ -102,6 +105,21 @@ if(document.getElementById('interieur3').checked){
     interieurChoisi = document.getElementById('interieur3').value;
     document.getElementById('afficheInterieur').innerHTML = interieurChoisi
 }
+
+if(document.getElementById('checkAutoPilot').checked){
+    autopilotchoisi = document.getElementById('checkAutoPilot').value;
+    document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
+}
+if(document.getElementById('checkSelfDriving').checked){
+    autonomeChoisi = document.getElementById('checkSelfDriving').value;
+    document.getElementById('afficheConduite').innerHTML = autonomeChoisi
+}
+
+if(document.getElementById('checkRecharge').checked){
+    rechargeChoisi = document.getElementById('checkRecharge').value;
+    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+}
+
 
 
 
@@ -164,6 +182,20 @@ window.addEventListener('change',function(){
     if(document.getElementById('interieur3').checked){
         interieurChoisi = document.getElementById('interieur3').value;
         document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+    }
+
+    if(document.getElementById('checkAutoPilot').checked){
+        autopilotchoisi = document.getElementById('checkAutoPilot').value;
+        document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
+    }
+    if(document.getElementById('checkSelfDriving').checked){
+        autonomeChoisi = document.getElementById('checkSelfDriving').value;
+        document.getElementById('afficheConduite').innerHTML = autonomeChoisi
+    }
+    
+    if(document.getElementById('checkRecharge').checked){
+        rechargeChoisi = document.getElementById('checkRecharge').value;
+        document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
     }
 })
 
