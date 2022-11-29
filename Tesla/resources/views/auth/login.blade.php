@@ -6,7 +6,6 @@
                 <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
             </a>
         </x-slot>
-
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
