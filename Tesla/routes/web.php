@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ConfMSController;
 
 Route::get('/', [HomeController::class, 'showInfo', 'RecupTime']);
 Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
+Route::get('/confModelS', [ConfMSController::class, 'showOptions']);
 Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 

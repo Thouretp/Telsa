@@ -45,7 +45,7 @@
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">543</span> km</h2>
+                            <h2><span class="big">{{dd($modelS->detailcaract)}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">

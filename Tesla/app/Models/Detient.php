@@ -9,6 +9,6 @@ class Detient extends Model
 {
     use HasFactory;
     protected $table = "detient";
-    protected $primaryKey = "numoption";
+    protected $primaryKey = "nummoteur";
     public $timestamps = false;
 }
