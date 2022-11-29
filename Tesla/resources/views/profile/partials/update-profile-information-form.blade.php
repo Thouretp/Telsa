@@ -24,6 +24,12 @@
         </div>
 
         <div>
+            <x-input-label for="numerotelephone" :value="__('Numero de Telephone')" />
+            <x-text-input id="numerotelephone" name="numerotelephone" type="text" class="mt-1 block w-full" :value="old('numerotelephone', $user->numerotelephone)" required autofocus autocomplete="numerotelephone" />
+            <x-input-error class="mt-2" :messages="$errors->get('numerotelephone')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Adresse mail')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
