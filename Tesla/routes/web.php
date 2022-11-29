@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConfModelsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +14,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\HomeController;
 
-Route::get('/', [HomeController::class, 'showMotorisation']);
-//Route::get('/', [HomeController::class, 'showMotorisationModelS']);
-// Route::get('/', [HomeController::class, 'showMotorisationModel3']);
-// Route::get('/', [HomeController::class, 'showMotorisationModelX']);
-// Route::get('/', [HomeController::class, 'showMotorisationModelY']);
-Route::get('/confModelX', [HomeController::class, 'goToConf']);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
+Route::get('/confModelX',[ConfModelsController::class,'confMX']);
+Route::get('/confModelX_PDF', [ConfModelsController::class,'confModelX_PDF'])->name('confModelX_PDF');
