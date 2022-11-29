@@ -17,6 +17,7 @@ class HomeController extends Controller
         ]);
     }
 
+
     public function goToConfModelX()
     {
         return view('confModelX');

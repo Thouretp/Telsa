@@ -43,6 +43,14 @@
         <div id="GP"></div>
     </div>
 
+<?php
+    function RecupTime($var){
+        $time = $var->puissancemoteur;
+        $time = str_replace(":", "", $time);
+        $time = floatval($time);
+        return $time;
+    }
+?>
 
 
 
@@ -68,7 +76,7 @@
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                    <h2><span class="big">{{RecupTime($motorisationMS)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
