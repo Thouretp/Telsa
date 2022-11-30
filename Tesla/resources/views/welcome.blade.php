@@ -40,7 +40,7 @@
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
@@ -48,8 +48,8 @@
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span></h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
