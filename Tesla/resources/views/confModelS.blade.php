@@ -38,6 +38,9 @@
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
+                            @foreach($typeModelS as $unModelS)
+                                <p>{{$unModelS->autonomie}} </p>
+                            @endforeach
                             <h2><span class="big">550</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
