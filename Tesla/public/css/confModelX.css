@@ -546,7 +546,7 @@ button{
 
 .more_info{
     position: fixed;
-    z-index: 9;
+    z-index: 500;
     width: 40px;
     height: 40px;
     top: 1%;
@@ -765,4 +765,3 @@ section{
 	background-color: rgb(101, 77, 255);
 	border: 0;
 }
-

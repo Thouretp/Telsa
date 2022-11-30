@@ -11,7 +11,7 @@ window.addEventListener('scroll', function(){
     document.getElementById("movement").style.height = barre/2.6987477201895126 + "%"
     document.getElementById("GP").style.top = barre/2.6987477201895126 + "%" 
 
-    
+   
 })
 
 let j=0
@@ -48,6 +48,7 @@ let interieurChoisi;
 let autopilotchoisi;
 let autonomeChoisi;
 let rechargeChoisi;
+let crochetChoisi;
 
         //SOLUTION PAS OPTIMALE MAIS CA MARCHE : JE FAIS TOUS LES TESTS AU CHARGEMENT PUIS JE LES REFAIT QUAND UN ELEMENT CHANGE//
 if(document.getElementById('modelPlaid').checked){
@@ -120,6 +121,10 @@ if(document.getElementById('checkRecharge').checked){
     document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
 }
 
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
 
 
 
@@ -197,6 +202,10 @@ window.addEventListener('change',function(){
         rechargeChoisi = document.getElementById('checkRecharge').value;
         document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
     }
+    if(document.getElementById('checkCrochet').checked){
+        crochetChoisi = document.getElementById('checkCrochet').value;
+        document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+    }
 })
 
 
@@ -212,43 +221,3 @@ pdfDocument.text("Hello World")
     .fontSize(25)
 
 pdfDocument.end()
-
- 
-
-
-
-
-
-
-
-
-
-// let white = document.getElementById("W")
-// let blue = document.getElementById("Blue")
-// let grey = document.getElementById("G")
-// let black = document.getElementById("Black")
-// let red = document.getElementById("R")
-
-// let colors = [white,blue,grey,black,red]
-
-// console.log(white)
-
-// for(let i = 0; i < colors.length; i++)
-// {
-    
-//     colors[i].addEventListener("click",function(){
-//         for(let j = 0; j < colors.length; j++)
-//         {
-//             i.classList.remove("checkedColor")
-//             if(i==j)
-//             {
-//                 i.classList.add("checkedColor")
-//                 console.log(i)
-//             }
-                
-//         }
-        
-
-        
-//     })
-// }
