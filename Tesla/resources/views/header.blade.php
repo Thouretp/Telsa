@@ -5,15 +5,12 @@
 </head>
 <body>
     
-</body>
-</html>
-
 <header>
         <div class="left">
-            <a href="/"><img src="{{asset('Models/teslalogo.png')}}" alt="logo_tesla"></a>
+            <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
         </div>
         <div class="right">
-            <img class="see" src="{{asset('Models/Userv2.png')}}">
+            <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
             <img class="see" src="{{asset('Models/bagv2.png')}}">
             <button class="hamburgeur">
                 <div class="bar"></div>
@@ -28,6 +25,21 @@
         <a href="/#modelY">Model Y</a>
         <a href="#shop">Shop</a>
         <a href="#help">Assistance</a>
-        <span class="ajt-mobile-nav"><a href="/connection">Se Connecter</a></span>
+        <span class="ajt-mobile-nav">
+            @if (Route::has('login'))
+                @auth
+                    <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
+                    @endif
+                @endauth
+            @endif
+        </span>
     </nav>
+</body>
+</html>
+
 

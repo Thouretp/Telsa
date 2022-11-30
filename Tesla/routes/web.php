@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ConfModelsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ConfModelXController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeController::class, 'showInfo', 'RecupTime']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,3 +33,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
+Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
+Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
+Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
+
+Route::get('/confModelX',[ConfModelsController::class,'goToConf']);
+Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
+Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);

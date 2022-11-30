@@ -45,9 +45,6 @@ let modeleChoisi;
 let couleurChoisie;
 let janteschoisies; 
 let interieurChoisi;
-let autopilotchoisi;
-let autonomeChoisi;
-let rechargeChoisi;
 
         //SOLUTION PAS OPTIMALE MAIS CA MARCHE : JE FAIS TOUS LES TESTS AU CHARGEMENT PUIS JE LES REFAIT QUAND UN ELEMENT CHANGE//
 if(document.getElementById('modelPlaid').checked){
@@ -105,21 +102,6 @@ if(document.getElementById('interieur3').checked){
     interieurChoisi = document.getElementById('interieur3').value;
     document.getElementById('afficheInterieur').innerHTML = interieurChoisi
 }
-
-if(document.getElementById('checkAutoPilot').checked){
-    autopilotchoisi = document.getElementById('checkAutoPilot').value;
-    document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
-}
-if(document.getElementById('checkSelfDriving').checked){
-    autonomeChoisi = document.getElementById('checkSelfDriving').value;
-    document.getElementById('afficheConduite').innerHTML = autonomeChoisi
-}
-
-if(document.getElementById('checkRecharge').checked){
-    rechargeChoisi = document.getElementById('checkRecharge').value;
-    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
-}
-
 
 
 
@@ -183,20 +165,6 @@ window.addEventListener('change',function(){
         interieurChoisi = document.getElementById('interieur3').value;
         document.getElementById('afficheInterieur').innerHTML = interieurChoisi
     }
-
-    if(document.getElementById('checkAutoPilot').checked){
-        autopilotchoisi = document.getElementById('checkAutoPilot').value;
-        document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
-    }
-    if(document.getElementById('checkSelfDriving').checked){
-        autonomeChoisi = document.getElementById('checkSelfDriving').value;
-        document.getElementById('afficheConduite').innerHTML = autonomeChoisi
-    }
-    
-    if(document.getElementById('checkRecharge').checked){
-        rechargeChoisi = document.getElementById('checkRecharge').value;
-        document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
-    }
 })
 
 
@@ -212,3 +180,43 @@ pdfDocument.text("Hello World")
     .fontSize(25)
 
 pdfDocument.end()
+
+ 
+
+
+
+
+
+
+
+
+
+// let white = document.getElementById("W")
+// let blue = document.getElementById("Blue")
+// let grey = document.getElementById("G")
+// let black = document.getElementById("Black")
+// let red = document.getElementById("R")
+
+// let colors = [white,blue,grey,black,red]
+
+// console.log(white)
+
+// for(let i = 0; i < colors.length; i++)
+// {
+    
+//     colors[i].addEventListener("click",function(){
+//         for(let j = 0; j < colors.length; j++)
+//         {
+//             i.classList.remove("checkedColor")
+//             if(i==j)
+//             {
+//                 i.classList.add("checkedColor")
+//                 console.log(i)
+//             }
+                
+//         }
+        
+
+        
+//     })
+// }

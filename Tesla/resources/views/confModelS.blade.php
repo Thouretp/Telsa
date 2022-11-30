@@ -1,8 +1,7 @@
 @include('header')
-    <link rel="stylesheet" href="{{asset('css/confModelX.css')}}" type="text/css">
-    <title>Model X</title>
-</head>
-<body>
+    <link rel="stylesheet" href="{{asset('css/confModelS.css')}}" type="text/css">
+    <title>Model S</title>
+
     <div class="container">
         <div class="scroll">
             <div class="menu">
@@ -33,13 +32,13 @@
         <div class="main">
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
-                <h1 class="title" id="correction_titre">Model X</h1>
-                <img src="Models/Model X.jpg"id="MS"/>
+                <h1 class="title" id="correction_titre">Model S</h1>
+                <img src="Models/Model S.jpg"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">543</span> km</h2>
+                            <h2><span class="big">550</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
@@ -58,7 +57,7 @@
 
         
         <div class="options">
-            <form action="generation" method="POST">
+            <form action="" method="post">
 
             
 
@@ -70,22 +69,22 @@
                     
                     
                     <div class="boutons">
-                        <button class="btn">Model X plaid <a>141 900€</a></button> <br>
-                        <button class="btn">Model X </button>
+                        <button class="btn">Model S plaid <a>200 900€</a></button> <br>
+                        <button class="btn">Model S </button>
                     </div>
                     <p>Disponible en 2023</p>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
                    
                    
 
-  <fieldset >
+  <fieldset id="zebi">
     <legend>Choisir le modèle</legend>
 
     <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
-    <label for="modelPlaid">Model X PLAID</label><br>
+    <label for="modelPlaid">Model S PLAID</label><br>
 
     <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
-    <label for="modelXstandart">Model X</label><br>
+    <label for="modelXstandart">Model S</label><br>
 
   </fieldset>
 
@@ -196,13 +195,6 @@
                     <li>Sortie auto</li>
                     <li>Sortie auto intelligente</li>
                 </ul>
-
-                <div class="buttonToggle">
-                    <label class="switch">
-                        <input type="checkbox" id="checkAutoPilot" value="Sélectionné">
-                        <span class="slider-toggle round"></span>
-                    </label>
-                </div>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
 
@@ -215,12 +207,6 @@
                     <li>Toutes les fonctionnalités de l'Autopilot de base et de l'Autopilot amélioré</li>
                     <li>Reconnaissance et réaction aux feux de signalisation et aux panneaux stop</li>
                 </ul>
-                <div class="buttonToggle">
-                    <label class="switch">
-                        <input type="checkbox" id="checkSelfDriving" value="Sélectionné">
-                        <span class="slider-toggle round"></span>
-                    </label>
-                </div>
                 <div id="desc6" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
 
@@ -231,7 +217,7 @@
                 <h3>Chargeur mural</h3>
                 <div class="buttonToggle">
                     <label class="switch">
-                        <input type="checkbox" id="checkRecharge" value="Sélectionné"> 
+                        <input type="checkbox">
                         <span class="slider-toggle round"></span>
                     </label>
                 </div>
@@ -261,10 +247,6 @@
                 <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
                 <p >Jantes choisies : <span id="afficheJante" ></span></p>
                 <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
-                <br>
-                <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
-                <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
-                <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
                 
 
                  <div id="wrapper"> <!--BOUTONCOMMANDER -->
@@ -278,14 +260,18 @@
 
                 <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
                 
+                
+
+
+
             </div>
         </div>
 
         </form>
        
     </div>
-    <script src="{{asset('js/confModelX.js')}}"></script>
-    <script src="{{asset('js/hamburgeur.js')}}"></script>
+    <script src="{{asset('js/confModel3.js')}}"></script>
     <script src="{{asset('js/generatePDF.js')}}"></script>
+    <script src="{{asset('js/hamburgeur.js')}}"></script>
 </body>
 </html>

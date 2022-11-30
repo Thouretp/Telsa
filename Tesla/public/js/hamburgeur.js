@@ -1,4 +1,3 @@
-
 let menuHamburgeur = document.querySelector(".menuH")
 
 window.onload = function () {

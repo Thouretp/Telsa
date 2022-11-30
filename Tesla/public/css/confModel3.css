@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -152,13 +153,13 @@ img{
     transform: translate(-50%, -50%);
 }
 .point:nth-child(1){top:0%;}
-.point:nth-child(2){top:11.625%;}
-.point:nth-child(3){top:24.25%;}
-.point:nth-child(4){top:36.875%;}
-.point:nth-child(5){top:49.5%;}
-.point:nth-child(6){top:62.125%;}
-.point:nth-child(7){top:74.75%;}
-.point:nth-child(8){top:87.375%;}
+.point:nth-child(2){top:12.4%;}
+.point:nth-child(3){top:26%;}
+.point:nth-child(4){top:38.2%;}
+.point:nth-child(5){top:50.6%;}
+.point:nth-child(6){top:63%;}
+.point:nth-child(7){top:75.4%;}
+.point:nth-child(8){top:87.5%;}
 .point:nth-child(9){top:100%;}
 
 #GP{
@@ -230,6 +231,7 @@ img{
 }
 
 
+
 /*-----CORRECTIONS-----*/
 /* #btn{
     top:26% ;
@@ -257,12 +259,7 @@ img{
     margin-top: 0px;
     text-align: center;
 }
-.options h3{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 35px ;
-    text-align: center;
-}
+
 .options .motorisation{
     height: 100vh;
     display: flex;
@@ -279,8 +276,23 @@ img{
     align-items: center;
     
 }
-.couleur {
+.selectionneColor{
     margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkedColor{margin-top:10px;
+    color: rgb(101, 77, 255);
+    border: solid 6px;
+    border-radius: 10px;}
+
+.couleur {
+    position: relative;
     background-color: white;
     width: 40px;
     height: 40px;
@@ -315,74 +327,219 @@ button{
     cursor: pointer;
 }
 
-.options .jantes{
+
+.options .jantes {
     height: 100vh;
-}
-.options .jantes .lesjantes{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.options .jantes .lesjantes img{
-    width: 60px;
-    margin-left: 10px;
+
+#Wheels{
+    margin-bottom: 20px ;
+}
+
+
+.options .jantes p{
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: solid #fff;
+    width: fit-content;
+    
+}
+
+.options .jantes  img{
+    padding: 10px;
+    width: 120px;
 }
  
 .interieur {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#Interior{
+    margin-bottom: 20px;
 }
 .interieur p{
-    flex-wrap: wrap;
+    margin-top: 10px;
+    text-align: center;
+    border-bottom: solid #fff;
+    width: fit-content;
 }
 
+
+.interieur div{
+    
+    margin: 5px;
+}
 #butcommande{
     display: flex;
     justify-content: center;
 }
 .autopilot{
     height: 100vh;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#autopilot{
+    margin-bottom: 20px;
+}
+.autopilot p{
+    margin-bottom: 20px;
 }
 
 .Self-Driving{
     height: 100vh;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+#Self-Driving{
+    margin-bottom: 20px;
+}
+.Self-Driving p{
+    margin-bottom: 20px;
+}
+.Self-Driving ul{
+    width: 350px;
+}
+.Self-Driving ul li{
+    margin-bottom: 10px;
+}
+
+
 .recharge {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    position: relative;
 }
+.recharge h3{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#recharge{
+    margin-bottom: 20px;
+}
+
+
+
 .fin{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .fin h3{
-    padding-top: 0px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.crochet p{
+    width: 360px;
 }
 .commander{
     height: 100vh;
-}
-#butcommande button{
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 #desc1{ 
-    margin-top: 5px;
+    margin-top: 30px;
+    padding: 15px;
     height: fit-content;
-    width: fit-content;
+    text-align: center;
+    width: 200px;
     font-size: 15px;
     font-style: italic;
     background-color: transparent;
+    border: solid #FFF 1px;
     color: #FFF;
     
 }
 
 #desc2{ 
-    margin-top: 5px;
+    margin-top: 30px;
+    padding: 15px;
     height: fit-content;
-    width: fit-content;
+    text-align: center;
+    width: 200px;
     font-size: 15px;
     font-style: italic;
     background-color: transparent;
+    border: solid #FFF 1px;
+    color: #FFF;
+    
+}
+
+#desc3{ 
+    margin-top: 30px;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+    width: 220px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border: solid #FFF 1px;
+    color: #FFF;
+    
+}
+#desc4{ 
+    margin-top: 30px;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border: solid #FFF 1px;
+    color: #FFF;
+    
+}
+#desc5{ 
+    margin-top: 30px;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+    width: 300px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border: solid #FFF 1px;
+    color: #FFF;
+    
+}
+#desc6{ 
+    margin-top: 30px;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+    width: 300px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border: solid #FFF 1px;
+    color: #FFF;
+    
+}
+#desc7{ 
+    margin-top: 30px;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+    width: 300px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border: solid #FFF 1px;
     color: #FFF;
     
 }
@@ -408,6 +565,12 @@ button{
     position: absolute  ;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.contenu p{
+    width: fit-content;
+    margin-top: 10px;
+    border-bottom:solid #FFF;
 }
 .infos{
     
@@ -438,4 +601,168 @@ button{
     text-align: center;
 }
 
+
+
+
+fieldset{
+    padding: 5%;
+}
+legend {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 3px 6px;
+}
+
+.buttonToggle{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider-toggle {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgb(255, 255, 255);
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider-toggle:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: rgb(0, 0, 0);
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider-toggle {
+background-color: rgb(101, 77, 255);
+}
+
+input:focus + .slider-toggle {
+box-shadow: 0 0 1px rgb(101, 77, 255);
+}
+
+input:checked + .slider-toggle:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+background-color: rgb(255, 255, 255);
+}
+
+/* Rounded sliders */
+.slider-toggle.round {
+border-radius: 34px;
+}
+
+.slider-toggle.round:before {
+border-radius: 50%;
+}
+
+.submit{
+    display: flex;
+    padding: 20px;
+}
+.submit input{
+    width: 332px;
+    cursor: pointer;
+    margin-left: 2px;
+    height: 40px;
+    border: solid 2px rgb(101, 77, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.clasic{
+    background: white;
+}
+.check{
+    background: rgb(101, 77, 255);
+    color: rgb(0, 0, 0);
+}
+
+
+#wrapper{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Floats button in the middle */
+section{
+	margin: 50px 0;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The button */
+#button-blue{
+	float:left;
+	width: 100%;
+	max-width:500px;
+	border: white solid 4px;
+	cursor: pointer;
+	background-color: transparent;
+	margin-top: -4px;
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	letter-spacing: .1em;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	font-weight: 500;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Change text color & background opacity on hover*/
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: rgb(255, 255, 255);
+}
+
+/* The white hover effect */
+.ease {
+	width: 0px;
+	height: 70px;
+	background-color: rgb(101, 77, 255);
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+/* Make visable when hover */
+.btn-container:hover .ease{
+	width: 100%;
+	max-width: 500px;
+	background-color: rgb(101, 77, 255);
+	border: 0;
+}
 
