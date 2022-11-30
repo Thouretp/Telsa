@@ -12,11 +12,15 @@ class ConfMSController extends Controller
 {
     public function showOptions(){
 
-        $getInfoMS = DB::table('detient')
-                    -> leftJoin('option', 'detient.nummoteur', '=', 'option.detient.nummoteur')
-                    ->get();
+        $getInfoMS = DB::table('detient')-> leftJoin('option', 'detient.numoption', '=', 'option.numoption')->get();
+        $getModelSMoto = Motorisation::where('nummodel', '=', 1)->get();
 
         return view('confModelS', [
-            'modelS'=> $getInfoMS ]);
+            'modelS'=> $getInfoMS,
+            'typeModelS'=> $getModelSMoto,
+            'motorisations'=> Motorisation::all(),
+            'motorisationMS'=> Motorisation::find(8)
+            
+        ]);
     }
 }

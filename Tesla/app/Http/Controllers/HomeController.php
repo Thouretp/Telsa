@@ -16,24 +16,13 @@ class HomeController extends Controller
             'motorisationMY'=> Motorisation::find(1)
         ]);
     }
+    public static function RecupTime($var){
+            $time = $var->puissancemoteur;
+            $time = str_replace(":", "", $time);
+            $time = floatval($time);
+            return $time;
+        }
 
-
-    public function goToConfModelX()
-    {
-        return view('confModelX');
-    }
-    public function goToConfModelS()
-    {
-        return view('confModelS');
-    }
-    public function goToConfModel3()
-    {
-        return view('confModel3');
-    }
-    public function goToConfModelY()
-    {
-        return view('confModelY');
-    }
 
     public function confModelX_PDF(){
         $pdf = PDF::loadView('pdf.generationPdf');

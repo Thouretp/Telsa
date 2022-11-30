@@ -11,14 +11,14 @@
         <div id="GP"></div>
     </div>
 
-<?php
-    function RecupTime($var){
-        $time = $var->puissancemoteur;
-        $time = str_replace(":", "", $time);
-        $time = floatval($time);
-        return $time;
-    }
-?>
+<!-- <?php
+    // function RecupTime($var){
+    //     $time = $var->puissancemoteur;
+    //     $time = str_replace(":", "", $time);
+    //     $time = floatval($time);
+    //     return $time;
+    // }
+?> -->
 
 
 
@@ -40,16 +40,16 @@
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">{{RecupTime($motorisationMS)}}</span> secondes</h2>
+                    <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMS)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span></h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
