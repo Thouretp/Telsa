@@ -22,7 +22,17 @@
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
+        <div>
+            <x-input-label for="surname" :value="__('Prenom')" />
+            <x-text-input id="surname" name="surname" type="text" class="mt-1 block w-full" :value="old('surname', $user->surname)" required autofocus autocomplete="surname" />
+            <x-input-error class="mt-2" :messages="$errors->get('surname')" />
+        </div>
 
+        <div>
+            <x-input-label for="secondprenom" :value="__('Deuxieme prenom')" />
+            <x-text-input id="secondprenom" name="secondprenom" type="text" class="mt-1 block w-full" :value="old('secondprenom', $user->secondprenom)" required autofocus autocomplete="secondprenom" />
+            <x-input-error class="mt-2" :messages="$errors->get('secondprenom')" />
+        </div>
         <div>
             <x-input-label for="numerotelephone" :value="__('Numero de Telephone')" />
             <x-text-input id="numerotelephone" name="numerotelephone" type="text" class="mt-1 block w-full" :value="old('numerotelephone', $user->numerotelephone)" required autofocus autocomplete="numerotelephone" />
