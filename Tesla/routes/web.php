@@ -39,6 +39,5 @@ Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
 Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 
-Route::get('/confModelX',[ConfModelsController::class,'goToConf']);
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);

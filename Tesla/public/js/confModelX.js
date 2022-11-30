@@ -48,6 +48,7 @@ let interieurChoisi;
 let autopilotchoisi;
 let autonomeChoisi;
 let rechargeChoisi;
+let crochetChoisi;
 
         //SOLUTION PAS OPTIMALE MAIS CA MARCHE : JE FAIS TOUS LES TESTS AU CHARGEMENT PUIS JE LES REFAIT QUAND UN ELEMENT CHANGE//
 if(document.getElementById('modelPlaid').checked){
@@ -120,6 +121,10 @@ if(document.getElementById('checkRecharge').checked){
     document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
 }
 
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
 
 
 
@@ -196,6 +201,10 @@ window.addEventListener('change',function(){
     if(document.getElementById('checkRecharge').checked){
         rechargeChoisi = document.getElementById('checkRecharge').value;
         document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+    }
+    if(document.getElementById('checkCrochet').checked){
+        crochetChoisi = document.getElementById('checkCrochet').value;
+        document.getElementById('afficheCrochet').innerHTML = crochetChoisi
     }
 })
 
