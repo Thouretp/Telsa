@@ -250,6 +250,12 @@
                     <p>Barre d’attelage en acier haute résistance de classe II, capable de tracter jusqu'à 2 250 kg</p>
                     
                 </div>
+                <div class="buttonToggle">
+                    <label class="switch">
+                        <input type="checkbox" id="checkCrochet" value="Sélectionné">
+                        <span class="slider-toggle round"></span>
+                    </label>
+                </div>
             </div>
 
 
@@ -265,6 +271,7 @@
                 <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
                 <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
                 <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
+                <p >Crochet d'attelage : <span id="afficheCrochet" >Non sélectionné</span></p>
                 
 
                  <div id="wrapper"> <!--BOUTONCOMMANDER -->
