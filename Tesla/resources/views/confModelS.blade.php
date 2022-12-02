@@ -112,18 +112,18 @@
     <legend>Choisir la couleur</legend>
     
     <input type="radio" name="color" value="" checked="checked">
-    <label for="blanc">{{$optionCouleurMS[0]->detailcaracteristique}</label><br>
+    <label for="blanc">{{$optionCouleurMS[0]->detailcaracteristique}}</label><br>
     <input type="radio" name="color" id="bleu" value="bleu" >
-    <label for="bleu">{{$optionCouleurMS[1]}}</label><br>
+    <label for="bleu">{{$optionCouleurMS[1]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="gris" value="gris" >
-    <label for="gris">{{$optionCouleurMS[2]}}</label><br>
+    <label for="gris">{{$optionCouleurMS[2]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="noir" value="noir" >
-    <label for="noir">{{$optionCouleurMS[3]}}</label><br>
+    <label for="noir">{{$optionCouleurMS[3]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="rouge" value="rouge" >
-    <label for="rouge">{{$optionCouleurMS[4]}}</label><br>
+    <label for="rouge">{{$optionCouleurMS[4]->detailcaracteristique}}</label><br>
     
     
   </fieldset>
