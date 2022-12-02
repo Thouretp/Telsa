@@ -23,7 +23,7 @@
         <a href="/#model3">Model 3</a>
         <a href="/#modelX">Model X</a>
         <a href="/#modelY">Model Y</a>
-        <a href="#shop">Shop</a>
+        <a href="#shop">Sexshop</a>
         <a href="#help">Assistance</a>
         <span class="ajt-mobile-nav">
             @if (Route::has('login'))
