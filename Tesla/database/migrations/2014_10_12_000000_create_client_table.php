@@ -13,16 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
+
         Schema::create('client', function (Blueprint $table) {
-            $table->id();
+            $table->id('numclient');
+            $table->integer('numcompte');
             $table->string('prenomclient');
             $table->string('nomclient');
             $table->string('adressemailclient')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            //$table->numeric('numerotelephone');
+            $table->numeric('numerotelephone');
             $table->string('secondprenom');
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

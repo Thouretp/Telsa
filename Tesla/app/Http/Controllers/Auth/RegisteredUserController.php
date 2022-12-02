@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Client;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -34,19 +34,20 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'numerotelephone' => ['string', 'max:255'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'prenomclient' => ['required', 'string', 'max:255'],
+            'nomclient' => ['required', 'string', 'max:255'],
+            'adressemailclient' => ['required', 'string', 'email', 'max:255', 'unique:'.Client::class],
+            'numerotelephone' => ['required', 'string', 'max:255'],
+            'secondprenom' => ['required', 'string', 'max:255'],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
+        $user = Client::create([
+            'numcompte' => 200,
+            'prenomclient' => $request->prenomclient,
+            'nomclient' => $request->nomclient,
+            'adressemailclient' => $request->adressemailclient,
             'numerotelephone' =>$request->numerotelephone,
-            'password' => Hash::make($request->password),
+            'secondprenom' => $request->secondprenom,
         ]);
 
         event(new Registered($user));
