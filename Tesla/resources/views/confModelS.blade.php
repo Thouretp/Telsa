@@ -88,14 +88,6 @@
 
   </fieldset>
 
-
-               
-               
-                </div>
-                
-                
-            </div>
-
             <h2 id="color">Couleur</h2>
             <div class="couleurs">
                 <div  class="selectionneColor"  >
@@ -116,24 +108,24 @@
             <div id="desc2" class="invisible">Sélectionner une couleur</div>
 
 
-            <fieldset>
+    <fieldset>
     <legend>Choisir la couleur</legend>
-    @foreach
+    
     <input type="radio" name="color" value="" checked="checked">
-    <label for="blanc">{{$optionsMS->}}</label><br>
-
+    <label for="blanc">{{$optionCouleurMS[0]->detailcaracteristique}</label><br>
     <input type="radio" name="color" id="bleu" value="bleu" >
-    <label for="bleu">Bleu</label><br>
+    <label for="bleu">{{$optionCouleurMS[1]}}</label><br>
 
     <input type="radio" name="color" id="gris" value="gris" >
-    <label for="gris">Gris</label><br>
+    <label for="gris">{{$optionCouleurMS[2]}}</label><br>
 
     <input type="radio" name="color" id="noir" value="noir" >
-    <label for="noir">Noir</label><br>
+    <label for="noir">{{$optionCouleurMS[3]}}</label><br>
 
     <input type="radio" name="color" id="rouge" value="rouge" >
-    <label for="rouge">Rouge</label><br>
-    @endforeach
+    <label for="rouge">{{$optionCouleurMS[4]}}</label><br>
+    
+    
   </fieldset>
 
             </div>
@@ -180,11 +172,7 @@
 
     <input type="radio" name="interieur" id="interieur3" value="beige">
     <label for="interieur3">Beige</label><br>
-
-  </fieldset>
             </div>
-            
-            
             <div class="autopilot">
                 <h2 id="autopilot">Autopilot amélioré</h2>
                 <p>3 800 €</p>
@@ -197,9 +185,6 @@
                 </ul>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
-
-
-            
             <div class="Self-Driving">
                 <h2 id="Self-Driving">Capacité de conduite entièrement autonome</h2>
                 <p>7 500 €</p>
@@ -209,9 +194,6 @@
                 </ul>
                 <div id="desc6" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
-
-
-            
             <div class="recharge">
                 <h2 id="recharge">Recharger</h2>
                 <h3>Chargeur mural</h3>
@@ -222,12 +204,7 @@
                     </label>
                 </div>
                 <div id="desc7" class="invisible">Notre solution de recharge à domicile recommandée. Avec une vitesse de recharge allant jusqu'à 71 kilomètres d'autonomie supplémentaire par heure en fonction du modèle de véhicule, une conception polyvalente pour l'intérieur et l'extérieur ainsi qu'un câble de 7,3 mètres, le Wall Connector est notre moyen le plus rapide et le plus pratique de recharger son véhicule à domicile. Installation requise et non incluse.</div>
-                
             </div>
-
-
-
-            
             <div class="fin">
                 <H2 id="Option-Sup">Option Supplémentaire</H2>
                 <h3>Crochet d'attelage</h3>
