@@ -142,10 +142,10 @@
     <legend>Choisir les jantes</legend>
 
     <input type="radio" name="jantes" id="jantes1" value="jantes 1" checked="checked">
-    <label for="jantes1">Jantes 1</label><br>
+    <label for="jantes1">{{$optionDescMS[5]->description_option}}</label><br>
 
     <input type="radio" name="jantes" id="jantes2" value="jantes 2" >
-    <label for="jantes2">Jantes2</label><br>
+    <label for="jantes2">{{$optionDescMS[6]->description_option}}</label><br>
 
   </fieldset>
                
@@ -165,13 +165,13 @@
     <legend>Choisir l'intérieur</legend>
 
     <input type="radio" name="interieur" id="interieur1" value="blanc" checked="checked">
-    <label for="interieur1">Blanc</label><br>
+    <label for="interieur1">{{$optionCouleurMS[8]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur2" value="noir">
-    <label for="interieur2">Noir</label><br>
+    <label for="interieur2">{{$optionCouleurMS[9]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur3" value="beige">
-    <label for="interieur3">Beige</label><br>
+    <label for="interieur3">{{$optionCouleurMS[10]->detailcaracteristique}}</label><br>
             </div>
             <div class="autopilot">
                 <h2 id="autopilot">Autopilot amélioré</h2>
