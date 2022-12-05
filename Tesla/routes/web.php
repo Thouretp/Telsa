@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConfModelsController;
+use App\Http\Controllers\ConfMSController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConfModelXController;
 /*
@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
+Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 

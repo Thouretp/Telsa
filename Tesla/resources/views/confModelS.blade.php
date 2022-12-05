@@ -38,15 +38,15 @@
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">550</span> km</h2>
+                            <h2><span class="big">{{$motorisationMS->autonomie}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">262</span> km/h</h2>
+                            <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                             <p>Vitesse maximale</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">2,6</span> s</h2>
+                            <h2><span class="big">{{App\Http\Controllers\ConfMSController::RecupTime($motorisationMS)}}</span> s</h2>
                             <p>0 à 100 km/h</p>
                         </div>
                     </div>
@@ -118,9 +118,9 @@
 
             <fieldset>
     <legend>Choisir la couleur</legend>
-
-    <input type="radio" name="color" id="blanc" value="blanc" checked="checked">
-    <label for="blanc">Blanc</label><br>
+    @foreach
+    <input type="radio" name="color" value="" checked="checked">
+    <label for="blanc">{{$optionsMS->}}</label><br>
 
     <input type="radio" name="color" id="bleu" value="bleu" >
     <label for="bleu">Bleu</label><br>
@@ -133,7 +133,7 @@
 
     <input type="radio" name="color" id="rouge" value="rouge" >
     <label for="rouge">Rouge</label><br>
-
+    @endforeach
   </fieldset>
 
             </div>
