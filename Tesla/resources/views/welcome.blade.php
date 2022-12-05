@@ -11,16 +11,6 @@
         <div id="GP"></div>
     </div>
 
-<?php
-    function RecupTime($var){
-        $time = $var->puissancemoteur;
-        $time = str_replace(":", "", $time);
-        $time = floatval($time);
-        return $time;
-    }
-?>
-
-
 
 
     <nav class="menu">
@@ -40,16 +30,16 @@
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">{{RecupTime($motorisationMS)}}</span> secondes</h2>
+                    <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMS)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span></h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
@@ -71,20 +61,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">491</span> km</h2>
+                        <h2><span class="big">{{$motorisationM3->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">225</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationM3->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">6,1</span> secondes</h2>
+                        <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationM3)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">590</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationM3->codeclasseenergetique}}</span> </h2>
+                        <p>Classe énergetique</p>
                     </div>
                 </div>
             </div>
@@ -101,20 +91,20 @@
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMX->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMX->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                    <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMX)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMX->codeclasseenergetique}}</span> </h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle"></div>
@@ -130,20 +120,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">543</span> km</h2>
+                        <h2><span class="big">{{$motorisationMY->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">543</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationMY->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">2,6</span> secondes</h2>
+                        <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMY)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">300</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationMY->codeclasseenergetique}}</span> </h2>
+                        <p>Classe énergetique</p>
                     </div>
                 </div>
             </div>
