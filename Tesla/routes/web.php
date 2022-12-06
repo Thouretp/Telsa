@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
+use App\Http\Controllers\EssaiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,5 @@ Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime'])
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+Route::get('/essai',[EssaiController::class, 'showEssai']);

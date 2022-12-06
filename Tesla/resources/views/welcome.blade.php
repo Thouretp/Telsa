@@ -47,6 +47,7 @@
             <img src="Models/Model S.jpg" id="MS" />
             <form action="confModelS">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
+                
             </form>
 
             <div class="img">
@@ -83,6 +84,9 @@
             <img src="Models/Model 3.jpg" id="M3">
             <form action="confModel3">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
+            </form>
+            <form action="essai">
+                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
             </form>
 
         </div>
