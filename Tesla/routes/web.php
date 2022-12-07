@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConfModelsController;
+use App\Http\Controllers\ConfMSController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConfModelXController;
+use App\Http\Controllers\ConfM3Controller;
+use App\Http\Controllers\ConfMYController;
+use App\Http\Controllers\EssaiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,10 +37,12 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
-Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
-Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
+Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+Route::get('/essai',[EssaiController::class, 'showEssai']);
