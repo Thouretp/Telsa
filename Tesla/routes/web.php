@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfMSController;
@@ -43,3 +44,5 @@ Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime'])
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
