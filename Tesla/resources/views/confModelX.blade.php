@@ -58,7 +58,7 @@
 
         
         <div class="options">
-            <form action="generation" method="POST">
+            <form action="FormController.php" method="post">
 
             
 
@@ -69,9 +69,9 @@
                     <h2>Motorisation</h2>   
                     
                     
-                    <div class="boutons">
-                        <button class="btn">Model X plaid <a>141 900€</a></button> <br>
-                        <button class="btn">Model X </button>
+                    <div>
+                        <button class="optModel">Model X plaid <a>141 900€</a></button> <br>
+                        <button class="optModel">Model X </button>
                     </div>
                     <p>Disponible en 2023</p>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
@@ -261,17 +261,20 @@
 
             
             <div class="commander" >
-                <h2 id="Commander">Finaliser la commande</h2>
+                <div class="testpdf">
+                <h2 id="Commander">Recap Commande</h2>
 
-                <p >Modèle choisi : <span id="afficheModel" ></span></p>
-                <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
-                <p >Jantes choisies : <span id="afficheJante" ></span></p>
-                <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
-                <br>
-                <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
-                <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
-                <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
-                <p >Crochet d'attelage : <span id="afficheCrochet" >Non sélectionné</span></p>
+                    <p >Modèle choisi : <span id="afficheModel" ></span></p>
+<p >Couleur choisie : <span id="afficheCouleur" ></span></p>
+<p >Jantes choisies : <span id="afficheJante" ></span></p>
+<p >intérieur choisi : <span id="afficheInterieur" ></span></p>
+<br>
+<p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
+<p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
+<p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
+<p >Crochet d'attelage : <span id="afficheCrochet" >Non sélectionné</span></p>
+                </div>
+                
                 
 
                  <div id="wrapper"> <!--BOUTONCOMMANDER -->
@@ -283,7 +286,8 @@
                     </section>
                 </div>
 
-                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
+                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a>
+               
                 
             </div>
         </div>

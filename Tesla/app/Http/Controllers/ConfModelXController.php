@@ -7,11 +7,11 @@ use PDF;
 
 class ConfModelXController extends Controller
 {
-
     
     public function confModelX_PDF(){
         
         $pdf = PDF::loadView('pdf.generation');
-        return $pdf->download('generation.pdf');
+        return $pdf->download('configuration_personnelle.pdf');
     }
 }
+

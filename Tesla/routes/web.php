@@ -40,4 +40,10 @@ Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
 Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
-Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+// Route::get('confModelX_PDF/{myModel}', 'MyController@show');
+// Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+//Essai 2
+// Route::get('/pdf',function(){
+//     return view('pdf.generation');
+// });
