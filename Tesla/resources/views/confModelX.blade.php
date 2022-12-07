@@ -39,15 +39,15 @@
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">543</span> km</h2>
+                            <h2><span class="big">{{$motorisationMX->autonomie}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">262</span> km/h</h2>
+                            <h2><span class="big">{{$motorisationMX->vitessemax}}</span> km/h</h2>
                             <p>Vitesse maximale</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">2,6</span> s</h2>
+                            <h2><span class="big">{{App\Http\Controllers\ConfModelXController::RecupTime($motorisationMX)}}</span> s</h2>
                             <p>0 à 100 km/h</p>
                         </div>
                     </div>
@@ -121,19 +121,19 @@
     <legend>Choisir la couleur</legend>
 
     <input type="radio" name="color" id="blanc" value="blanc" checked="checked">
-    <label for="blanc">Blanc</label><br>
+    <label for="blanc">{{$optionCouleurMX[0]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="bleu" value="bleu" >
-    <label for="bleu">Bleu</label><br>
+    <label for="bleu">{{$optionCouleurMX[1]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="gris" value="gris" >
-    <label for="gris">Gris</label><br>
+    <label for="gris">{{$optionCouleurMX[2]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="noir" value="noir" >
-    <label for="noir">Noir</label><br>
+    <label for="noir">{{$optionCouleurMX[3]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="rouge" value="rouge" >
-    <label for="rouge">Rouge</label><br>
+    <label for="rouge">{{$optionCouleurMX[4]->detailcaracteristique}}</label><br>
 
   </fieldset>
 
@@ -151,10 +151,10 @@
     <legend>Choisir les jantes</legend>
 
     <input type="radio" name="jantes" id="jantes1" value="jantes 1" checked="checked">
-    <label for="jantes1">Jantes 1</label><br>
+    <label for="jantes1">{{$optionDescMX[5]->description_option}}</label><br>
 
     <input type="radio" name="jantes" id="jantes2" value="jantes 2" >
-    <label for="jantes2">Jantes2</label><br>
+    <label for="jantes2">{{$optionDescMX[6]->description_option}}</label><br>
 
   </fieldset>
                
@@ -174,13 +174,13 @@
     <legend>Choisir l'intérieur</legend>
 
     <input type="radio" name="interieur" id="interieur1" value="blanc" checked="checked">
-    <label for="interieur1">Blanc</label><br>
+    <label for="interieur1">{{$optionCouleurMX[8]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur2" value="noir">
-    <label for="interieur2">Noir</label><br>
+    <label for="interieur2">{{$optionCouleurMX[9]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur3" value="beige">
-    <label for="interieur3">Beige</label><br>
+    <label for="interieur3">{{$optionCouleurMX[10]->detailcaracteristique}}</label><br>
 
   </fieldset>
             </div>
