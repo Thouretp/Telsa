@@ -13,35 +13,35 @@
         @csrf
     </form>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('adresse.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Nom')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-label for="adresserue1" :value="__('Adresse rue')" />
+            <x-text-input id="adresserue1" name="adresserue1" type="text" class="mt-1 block w-full" :value="old('name', $adresse[0]->adresserue1)" required autofocus autocomplete="adresserue1" />
+            <x-input-error class="mt-2" :messages="$errors->get('adresserue1')" />
         </div>
         <div>
-            <x-input-label for="surname" :value="__('Prenom')" />
-            <x-text-input id="surname" name="surname" type="text" class="mt-1 block w-full" :value="old('surname', $user->surname)" required autofocus autocomplete="surname" />
-            <x-input-error class="mt-2" :messages="$errors->get('surname')" />
-        </div>
-
-        <div>
-            <x-input-label for="secondprenom" :value="__('Deuxieme prenom')" />
-            <x-text-input id="secondprenom" name="secondprenom" type="text" class="mt-1 block w-full" :value="old('secondprenom', $user->secondprenom)" autofocus autocomplete="secondprenom" />
-            <x-input-error class="mt-2" :messages="$errors->get('secondprenom')" />
-        </div>
-        <div>
-            <x-input-label for="numerotelephone" :value="__('Numero de Telephone')" />
-            <x-text-input id="numerotelephone" name="numerotelephone" type="text" class="mt-1 block w-full" :value="old('numerotelephone', $user->numerotelephone)" required autofocus autocomplete="numerotelephone" />
-            <x-input-error class="mt-2" :messages="$errors->get('numerotelephone')" />
+            <x-input-label for="adresserue2" :value="__('Adresse rue 2')" />
+            <x-text-input id="adresserue2" name="adresserue2" type="text" class="mt-1 block w-full" :value="old('adresserue2', $adresse[0]->adresserue2)" autofocus autocomplete="adresserue2" />
+            <x-input-error class="mt-2" :messages="$errors->get('adresserue2')" />
         </div>
 
         <div>
-            <x-input-label for="email" :value="__('Adresse mail')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
+            <x-input-label for="ville" :value="__('Ville')" />
+            <x-text-input id="ville" name="ville" type="text" class="mt-1 block w-full" :value="old('ville', $adresse[0]->ville)" autofocus autocomplete="ville" />
+            <x-input-error class="mt-2" :messages="$errors->get('ville')" />
+        </div>
+        <div>
+            <x-input-label for="cp" :value="__('cp')" />
+            <x-text-input id="cp" name="cp" type="text"  pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" class="mt-1 block w-full" :value="old('cp',  $adresse[0]->cp)" required autofocus autocomplete="cp" />
+            <x-input-error class="mt-2" :messages="$errors->get('cp')" />
+        </div>
+
+        <div>
+            <x-input-label for="pays" :value="__('Pays')" />
+            <x-text-input id="pays" name="pays" type="text" class="mt-1 block w-full" :value="old('email',  $adresse[0]->pays)" required autocomplete="email" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())

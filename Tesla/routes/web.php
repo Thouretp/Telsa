@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfMSController;
@@ -48,3 +49,4 @@ Route::get('/essai',[EssaiController::class, 'showEssai']);
 
 Route::post('/EssaiController', [EssaiController::class, 'imageOkRDV']);
 Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
+Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
