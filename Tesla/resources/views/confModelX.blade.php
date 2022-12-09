@@ -81,7 +81,7 @@
     <legend>Choisir le modèle</legend>
 
     <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
-    <label for="modelPlaid"></label><br>
+    <label for="modelPlaid">Model X Plaid</label><br>
 
     <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
     <label for="modelXstandart">Model X</label><br>
@@ -115,8 +115,17 @@
             <fieldset>
     <legend>Choisir la couleur</legend>
 
+    <input type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}}" checked="checked">
+      <label for="blanc">{{$optionCouleurMX[0]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="bleu" value="{{$optionCouleurMX[3]->detailcaracteristique}}" >
+      <label for="bleu">{{$optionCouleurMX[3]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="gris" value="{{$optionCouleurMX[2]->detailcaracteristique}}" >
+      <label for="gris">{{$optionCouleurMX[2]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="noir" value="{{$optionCouleurMX[1]->detailcaracteristique}}" >
+      <label for="noir">{{$optionCouleurMX[1]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="rouge" value="{{$optionCouleurMX[4]->detailcaracteristique}}" >
+      <label for="rouge">{{$optionCouleurMX[4]->detailcaracteristique}}</label><br>
   </fieldset>
-
             </div>
 
             
@@ -265,8 +274,8 @@
                     </section>
                 </div>
 
-                <input type="submit" name="bouton_valid" id="btn_valid" value="Valider options choisies">
-                <!-- <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a> -->
+                <input type="submit" name="bouton_valid" id="btn_valid" value="Afficher récap commande">
+                
                 
 
                 
