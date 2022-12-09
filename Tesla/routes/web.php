@@ -46,3 +46,5 @@ Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->n
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
+
+Route::post('/EssaiController', [EssaiController::class, 'imageOkRDV']);
