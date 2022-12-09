@@ -164,6 +164,7 @@
                 <h2 id="Interior">Intérieur</h2>
                 <div class="couleur" id="W"></div>
                 <div class="couleur" id="Black"></div>
+                <div class="couleur" id="Beige"></div>
                 <p>nom de couleur</p>
                 <div id="desc4" class="invisible">Sélectionner une couleur</div>
             

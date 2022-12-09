@@ -42,9 +42,9 @@ Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime'])
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
 
-Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
 
 Route::post('/EssaiController', [EssaiController::class, 'imageOkRDV']);
+Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
