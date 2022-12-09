@@ -43,13 +43,8 @@ Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime'])
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
-// Route::get('confModelX_PDF/{myModel}', 'MyController@show');
-// Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
 
-//Essai 2
-// Route::get('/pdf',function(){
-//     return view('pdf.generation');
-// });
+Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
 
