@@ -18,7 +18,7 @@ class ProfileController extends Controller
      */
     public function edit(Request $request)
     {
-        $getAddress = DB::table('adresse')->join('se_situe', 'adresse.numadresse', '=', 'se_situe.numadresse')->get();
+        $getAddress = DB::table('adresse')->join('se_situe', 'adresse.numadresse', '=', 'se_situe.numadresse')->where('numclient','=', $request->user()->id)->get();
 
         return view('profile.edit', [
             'user' => $request->user(),

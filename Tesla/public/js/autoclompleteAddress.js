@@ -1,9 +1,9 @@
-$("#inputRue").keyup(function(event) {
+$("#Rue").keyup(function(event) {
     // Stop la propagation par défaut
           event.preventDefault();
           event.stopPropagation();
   
-          let rue = $("#inputRue").val();
+          let rue = $("#Rue").val();
           $.get('https://api-adresse.data.gouv.fr/search/', {
               q: rue,
               limit: 15,
@@ -26,9 +26,9 @@ $("#inputRue").keyup(function(event) {
   
                   let adresse = $(this).attr("name");
   
-                  $("#inputRue").val($(this).attr("data-name"));
-                  $("#inputCodePostal").val($(this).attr("data-postcode"));
-                  $("#inputVille").val($(this).attr("data-city"));
+                  $("#Rue").val($(this).attr("data-name"));
+                  $("#CodePostal").val($(this).attr("data-postcode"));
+                  $("#Ville").val($(this).attr("data-city"));
   
                   $('.adress-feedback ul').empty();
               });
