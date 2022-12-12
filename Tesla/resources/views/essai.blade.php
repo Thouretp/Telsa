@@ -62,39 +62,80 @@
         </div>
         <div class="form-essai">
             <h1 class="title-form-essai">Nous Contacter</h1>
-            <form action="/EssaiController" method="post">
+            <form action="/EssaiController" method="post" name="envoyer">
+                @csrf
                 <div class="container-form-essai">
                     <div class="left-form">
                         <div>
-                            <label class="label-form-essai"> Prénom</label>
-                            <input type="text" placeholder="Pierre" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Prénom</label>
+                            </div>
                         </div>
                         <div>
-                            <label class="label-form-essai"> Adresse e-mail</label>
-                            <input type="text" placeholder="pierredupond@gmail.com" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Nom</label>
+                            </div>
                         </div>
                         <div>
-                            <label class="label-form-essai"> Code Postal</label>
-                            <input type="text" placeholder="75665" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">E-mail</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Télephone</label>
+                            </div>
                         </div>
                     </div>
                     <div class="right-form">
                         <div>
-                            <label class="label-form-essai"> Nom</label>
-                            <input type="text" placeholder="Dupond" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Adresse</label>
+                            </div>
                         </div>
                         <div>
-                            <label class="label-form-essai">Téléphone</label>
-                            <input type="text" placeholder="06 76 62 17 90" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Code Postal</label>
+                            </div>
                         </div>
                         <div>
-                            <label class="label-form-essai">Région</label>
-                            <input type="text" placeholder="Ile de France" class="text-area-form-essai" required="required">
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Ville</label>
+                            </div>
                         </div>
-                    </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required readonly>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Modele</label>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
                 <div class="btn-submit-form-essai">
-                    <input type="submit" value="Envoyer" class="btn-submit">
+                <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
                 </div>
             </form>
         </div>
