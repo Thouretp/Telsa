@@ -126,10 +126,10 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required readonly>
+                                <input type="text" class="text-area-form-essai" id="TextModel" required readonly>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label class="label-form-essai">Modele</label>
+                                <label id="modelLabel" class="label-form-essai">Modele</label>
                             </div>
                         </div>
                     </div>  
