@@ -84,7 +84,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" id="textEmail" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
@@ -92,7 +92,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="tel" class="text-area-form-essai" max-lenght=5 required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Télephone</label>
@@ -136,6 +136,9 @@
                 </div>
                 <div class="btn-submit-form-essai">
                 <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
+                </div>
+                <div class="erreurs">
+                    
                 </div>
             </form>
         </div>
