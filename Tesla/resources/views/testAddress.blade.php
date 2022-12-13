@@ -10,7 +10,7 @@
     <table>
         <th>
             <h2>Adresse rue 1</h2>
-            <p>{{$adresse[0]->cp}}</p>
+            <p>{{$adresse[0]->adresserue1}}</p>
         </th>
     </table>
 </body>
