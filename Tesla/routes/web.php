@@ -46,7 +46,10 @@ Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime'])
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
 
-Route::post('/EssaiController', [EssaiController::class, 'imageOkRDV']);
 Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
