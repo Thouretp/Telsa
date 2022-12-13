@@ -62,13 +62,13 @@
         </div>
         <div class="form-essai">
             <h1 class="title-form-essai">Nous Contacter</h1>
-            <form action="/EssaiController" method="post" name="envoyer">
+            <form action="{{url('essai')}}" method="post" name="envoyer">
                 @csrf
                 <div class="container-form-essai">
                     <div class="left-form">
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" name="prenom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Prénom</label>
@@ -76,7 +76,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" name="nom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Nom</label>
@@ -84,7 +84,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" id="textEmail" required>
+                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
@@ -92,7 +92,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="tel" class="text-area-form-essai" max-lenght=5 required>
+                                <input type="tel" class="text-area-form-essai" name="tel" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Télephone</label>
@@ -102,7 +102,7 @@
                     <div class="right-form">
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" name="adresse" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Adresse</label>
@@ -110,7 +110,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" name="cp" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Code Postal</label>
@@ -118,7 +118,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" required>
+                                <input type="text" class="text-area-form-essai" name="ville" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Ville</label>
@@ -126,7 +126,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" id="TextModel" required readonly>
+                                <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label id="modelLabel" class="label-form-essai">Modele</label>

@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1> Votre réservation a bien été prise en compte</h1>
+    <a href="{{url('/')}}">Back Home</a>
 </body>
 </html>
