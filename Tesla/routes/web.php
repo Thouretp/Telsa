@@ -8,6 +8,7 @@ use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\ShopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +42,8 @@ Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTim
 Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
+Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+
 
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 
@@ -48,4 +51,4 @@ Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
 
-Route::get('/essai',[EssaiController::class, 'showEssai']);
+Route::get('/essai',[EssaiController::class, 'showEssai']); 
