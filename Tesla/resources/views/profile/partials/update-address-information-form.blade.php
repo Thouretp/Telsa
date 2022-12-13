@@ -47,7 +47,7 @@
             <!-- cp -->
             <div>
                 <x-input-label for="cp" :value="__('Code postal')" />
-                <x-text-input id="CodePostal"  name="cp" type="text"  pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" class="mt-1 block w-full" :value="old('cp',  $adresse[0]->cp)" required autofocus autocomplete="cp" />
+                <x-text-input id="CodePostal"  name="cp" type="text" pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" class="mt-1 block w-full" :value="old('cp',  $adresse[0]->cp)" required autofocus autocomplete="cp" />
                 <x-input-error :messages="$errors->get('cp')" class="mt-2" />
             </div>
             <div>
