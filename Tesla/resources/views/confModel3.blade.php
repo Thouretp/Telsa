@@ -1,5 +1,5 @@
 @include('header')
-    <link rel="stylesheet" href="{{asset('css/confModelS.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/confModel3.css')}}" type="text/css">
     <title>Model 3</title>
 
     <div class="container">
@@ -266,7 +266,7 @@
         </form>
        
     </div>
-    <script src="{{asset('js/confModelS.js')}}"></script>
+    <script src="{{asset('js/confModel3.js')}}"></script>
     <script src="{{asset('js/generatePDF.js')}}"></script>
     <script src="{{asset('js/hamburgeur.js')}}"></script>
     
