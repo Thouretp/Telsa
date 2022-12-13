@@ -11,6 +11,7 @@ use App\Models\Option;
 use Illuminate\Http\Request;
 
 
+
 class ConfModelXController extends Controller
 {
     
@@ -48,10 +49,14 @@ class ConfModelXController extends Controller
         </html>');
         return $pdf->stream();
     }
-
-
-
     
+    public static function RecupTime($var){
+        $time = $var->puissancemoteur;
+        $time = str_replace(":", "", $time);
+        $time = floatval($time);
+        return $time;
+    }
+
     public function showOptions(){
 
         $getInfoMX = DB::table('detient')-> leftJoin('option', 'detient.numoption', '=', 'option.numoption')->get();
@@ -69,11 +74,4 @@ class ConfModelXController extends Controller
             'optionDescMX'=>$getOptionDescription
         ]);
     }
-    public static function RecupTime($var){
-        $time = $var->puissancemoteur;
-        $time = str_replace(":", "", $time);
-        $time = floatval($time);
-        return $time;
-    }
 }
-

@@ -52,18 +52,98 @@
                 d'un permis de conduire valide</p>
         </div>
         <div class="image-voiture">
-            <img src="" alt="" srcset="">
+            <img src="{{asset('Models/model3_essai.png')}}" alt="model3_essai" srcset="">
         </div>
         <div class="essai-button-model">
             <form action="/EssaiController" method="post">
-                <input type="button" name="btn-model3" value="Model 3" class="button-choix-model">
-                <input type="button" name="btn-modelY" value="Model Y" class="button-choix-model">
+                <input id='btn-model3' type="button" data-model="model3" value="Model 3" class="button-choix-model">
+                <input id="btn-modelY" type="button" data-model="modely"value="Model Y" class="button-choix-model">
             </form>
         </div>
         <div class="form-essai">
-
+            <h1 class="title-form-essai">Nous Contacter</h1>
+            <form action="/EssaiController" method="post" name="envoyer">
+                @csrf
+                <div class="container-form-essai">
+                    <div class="left-form">
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Prénom</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Nom</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" id="textEmail" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">E-mail</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="tel" class="text-area-form-essai" max-lenght=5 required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Télephone</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-form">
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Adresse</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Code Postal</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form-essai">Ville</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" id="TextModel" required readonly>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label id="modelLabel" class="label-form-essai">Modele</label>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="btn-submit-form-essai">
+                <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
+                </div>
+                <div class="erreurs">
+                    
+                </div>
+            </form>
         </div>
     </div>
     <script src="{{asset('js/hamburgeur.js')}}"></script>
+    <script src="{{asset('js/essai.js')}}"></script>
 </body>
 </html>

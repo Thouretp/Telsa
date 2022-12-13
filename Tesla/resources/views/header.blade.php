@@ -10,7 +10,7 @@
             <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
         </div>
         <div class="right">
-            <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
+            <a href="/profile"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
             <img class="see" src="{{asset('Models/bagv2.png')}}">
             <button class="hamburgeur">
                 <div class="bar"></div>
@@ -29,6 +29,15 @@
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+                   <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Se deconnecter') }}
+                    </x-responsive-nav-link>
+                </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
 

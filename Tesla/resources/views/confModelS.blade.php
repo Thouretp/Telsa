@@ -33,7 +33,7 @@
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
                 <h1 class="title" id="correction_titre">Model S</h1>
-                <img src="Models/Model S.jpg"id="MS"/>
+                <img src="{{asset('Models/Model S.jpg')}}"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
@@ -87,14 +87,6 @@
     <label for="modelXstandart">Model S</label><br>
 
   </fieldset>
-
-
-               
-               
-                </div>
-                
-                
-            </div>
 
             <h2 id="color">Couleur</h2>
             <div class="couleurs">
@@ -193,9 +185,6 @@
                 </ul>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
-
-
-            
             <div class="Self-Driving">
                 <h2 id="Self-Driving">Capacité de conduite entièrement autonome</h2>
                 <p>7 500 €</p>

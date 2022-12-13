@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfMSController;
@@ -42,13 +43,13 @@ Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTim
 Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
-Route::get('/shop', [ShopController::class, 'showOptions'])->name('shop');;
-
-
-Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
-
-Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
+Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
-
-Route::get('/essai',[EssaiController::class, 'showEssai']); 
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
+Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
+Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
+Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
