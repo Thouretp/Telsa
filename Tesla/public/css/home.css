@@ -284,3 +284,9 @@ img {
 .img img:hover {
     transform: scale(1.1);
 }
+
+.test-drive {
+    position: relative;
+    top: 60%;
+    text-align: center;
+}

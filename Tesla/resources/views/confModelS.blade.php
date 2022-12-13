@@ -33,7 +33,7 @@
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
                 <h1 class="title" id="correction_titre">Model S</h1>
-                <img src="Models/Model S.jpg"id="MS"/>
+                <img src="{{asset('Models/Model S.jpg')}}"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
