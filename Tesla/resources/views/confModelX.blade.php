@@ -275,12 +275,6 @@
                 </div>
 
                 <input type="submit" name="bouton_valid" id="btn_valid" value="Afficher récap commande">
-                
-                
-
-                
-               
-                
             </div>
         </div>
 

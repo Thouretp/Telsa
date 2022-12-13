@@ -27,6 +27,7 @@ class ConfModelXController extends Controller
 
         
         $pdf = PDF::loadHTML('<html>
+        <link rel="stylesheet" href="{{asset("css/confModelX.css")}}" type="text/css">
         
         <head>
         <title>Config Perso</title>
@@ -45,9 +46,6 @@ class ConfModelXController extends Controller
         </html>');
         return $pdf->stream();
     }
-
-
-
     
     public static function RecupTime($var){
         $time = $var->puissancemoteur;

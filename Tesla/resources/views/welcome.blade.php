@@ -11,8 +11,6 @@
         <div id="GP"></div>
     </div>
 
-
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
@@ -47,7 +45,6 @@
             <img src="Models/Model S.jpg" id="MS" />
             <form action="confModelS">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
-                
             </form>
 
             <div class="img">
@@ -115,8 +112,6 @@
             <h1 class="title">Model X</h1>
             <img src="Models/Model X.jpg" id="MX">
             <a href="/confModelX"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
-            
-
         </div>
 
         <div class="slider" id="modelY">
@@ -147,6 +142,12 @@
             <form action="confModelY">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
+
+            <div class="img">
+                <img src="Models/MY_1.jpg" alt="">
+                <img src="Models/MY_2.jpg" alt="">
+                <img src="Models/MY_3.jpg" alt="">
+            </div>
         </div>
     </div>
 
