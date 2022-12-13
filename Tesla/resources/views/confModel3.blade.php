@@ -254,7 +254,6 @@
                     </section>
                 </div>
 
-                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
                 
                 
 
