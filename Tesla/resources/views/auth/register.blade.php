@@ -1,8 +1,10 @@
+  <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
+  <link rel="stylesheet" href="{{asset('buildPhone/css/demo.css')}}">
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-            <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
+                <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
             </a>
         </x-slot>
 
@@ -30,7 +32,9 @@
             <!-- Telephone -->
             <div>
                 <x-input-label for="numerotelephone" :value="__('Numero de telephone')" />
-                <x-text-input id="numerotelephone" class="block mt-1 w-full" type="text" name="numerotelephone" :value="old('numerotelephone')" autofocus/>
+                <x-text-input id="phone" class="block mt-1 w-full" type="tel" name="numerotelephone" :value="old('numerotelephone')" autofocus />
+                <span id="valid-msg" class="hide">✓ Valid</span>
+                <span id="error-msg" class="hide"></span>
                 <x-input-error :messages="$errors->get('numerotelephone')" class="mt-2" />
             </div>
 
@@ -38,10 +42,7 @@
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Mot de passe')" />
 
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
@@ -50,9 +51,7 @@
             <div class="mt-4">
                 <x-input-label for="password_confirmation" :value="__('Mot de passe de confirmation')" />
 
-                <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
+                <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>
@@ -67,5 +66,67 @@
                 </x-primary-button>
             </div>
         </form>
+<script src="{{asset('buildPhone/js/intlTelInput.js')}}"></script>
+<script>
+    var input = document.querySelector("#phone"),
+      errorMsg = document.querySelector("#error-msg"),
+      validMsg = document.querySelector("#valid-msg");
+
+    // here, the index maps to the error code returned from getValidationError - see readme
+    var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+    // initialise plugin
+    var iti = window.intlTelInput(input, {
+      utilsScript: "{{asset('buildPhone/js/utils.js')}}",
+      // allowExtension: true,
+      formatOnDisplay: true,
+      // allowDropdown: false,
+      autoHideDialCode: true,
+      // autoPlaceholder: true,
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+    //    geoIpLookup: function(callback) {
+    //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    //       var countryCode = (resp && resp.country) ? resp.country : "";
+    //       callback(countryCode);
+    //     });
+    //   },
+      //hiddenInput: "full_number",
+       initialCountry: "FR",
+      // localizedCountries: { 'de': 'Deutschland' },
+      nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      //placeholderNumberType: "MOBILE",
+      preferredCountries: ['FR', 'GB','US'],
+      separateDialCode: true,
+    });
+
+    var reset = function() {
+        input.classList.remove("error");
+        errorMsg.innerHTML = "";
+        errorMsg.classList.add("hide");
+        validMsg.classList.add("hide");
+    };
+
+    // on blur: validate
+    input.addEventListener('blur', function() {
+        reset();
+        if (input.value.trim()) {
+            if (iti.isValidNumber()) {
+                validMsg.classList.remove("hide");
+            } else {
+                input.classList.add("error");
+                var errorCode = iti.getValidationError();
+                errorMsg.innerHTML = errorMap[errorCode];
+                errorMsg.classList.remove("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    input.addEventListener('change', reset);
+    input.addEventListener('keyup', reset);    
+  </script>
     </x-auth-card>
 </x-guest-layout>

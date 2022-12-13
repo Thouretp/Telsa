@@ -33,23 +33,20 @@
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
                 <h1 class="title" id="correction_titre">Model S</h1>
-                <img src="Models/Model S.jpg"id="MS"/>
+                <img src="{{asset('Models/Model S.jpg')}}"id="MS"/>
 
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            @foreach($typeModelS as $unModelS)
-                                <p>{{$unModelS->autonomie}} </p>
-                            @endforeach
-                            <h2><span class="big">550</span> km</h2>
+                            <h2><span class="big">{{$motorisationMS->autonomie}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">262</span> km/h</h2>
+                            <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                             <p>Vitesse maximale</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">2,6</span> s</h2>
+                            <h2><span class="big">{{App\Http\Controllers\ConfMSController::RecupTime($motorisationMS)}}</span> s</h2>
                             <p>0 à 100 km/h</p>
                         </div>
                     </div>
@@ -91,14 +88,6 @@
 
   </fieldset>
 
-
-               
-               
-                </div>
-                
-                
-            </div>
-
             <h2 id="color">Couleur</h2>
             <div class="couleurs">
                 <div  class="selectionneColor"  >
@@ -119,24 +108,24 @@
             <div id="desc2" class="invisible">Sélectionner une couleur</div>
 
 
-            <fieldset>
+    <fieldset>
     <legend>Choisir la couleur</legend>
-
-    <input type="radio" name="color" id="blanc" value="blanc" checked="checked">
-    <label for="blanc">Blanc</label><br>
-
+    
+    <input type="radio" name="color" value="" checked="checked">
+    <label for="blanc">{{$optionCouleurMS[0]->detailcaracteristique}}</label><br>
     <input type="radio" name="color" id="bleu" value="bleu" >
-    <label for="bleu">Bleu</label><br>
+    <label for="bleu">{{$optionCouleurMS[1]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="gris" value="gris" >
-    <label for="gris">Gris</label><br>
+    <label for="gris">{{$optionCouleurMS[2]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="noir" value="noir" >
-    <label for="noir">Noir</label><br>
+    <label for="noir">{{$optionCouleurMS[3]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="color" id="rouge" value="rouge" >
-    <label for="rouge">Rouge</label><br>
-
+    <label for="rouge">{{$optionCouleurMS[4]->detailcaracteristique}}</label><br>
+    
+    
   </fieldset>
 
             </div>
@@ -153,10 +142,10 @@
     <legend>Choisir les jantes</legend>
 
     <input type="radio" name="jantes" id="jantes1" value="jantes 1" checked="checked">
-    <label for="jantes1">Jantes 1</label><br>
+    <label for="jantes1">{{$optionDescMS[5]->description_option}}</label><br>
 
     <input type="radio" name="jantes" id="jantes2" value="jantes 2" >
-    <label for="jantes2">Jantes2</label><br>
+    <label for="jantes2">{{$optionDescMS[6]->description_option}}</label><br>
 
   </fieldset>
                
@@ -176,18 +165,14 @@
     <legend>Choisir l'intérieur</legend>
 
     <input type="radio" name="interieur" id="interieur1" value="blanc" checked="checked">
-    <label for="interieur1">Blanc</label><br>
+    <label for="interieur1">{{$optionCouleurMS[8]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur2" value="noir">
-    <label for="interieur2">Noir</label><br>
+    <label for="interieur2">{{$optionCouleurMS[9]->detailcaracteristique}}</label><br>
 
     <input type="radio" name="interieur" id="interieur3" value="beige">
-    <label for="interieur3">Beige</label><br>
-
-  </fieldset>
+    <label for="interieur3">{{$optionCouleurMS[10]->detailcaracteristique}}</label><br>
             </div>
-            
-            
             <div class="autopilot">
                 <h2 id="autopilot">Autopilot amélioré</h2>
                 <p>3 800 €</p>
@@ -200,9 +185,6 @@
                 </ul>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
-
-
-            
             <div class="Self-Driving">
                 <h2 id="Self-Driving">Capacité de conduite entièrement autonome</h2>
                 <p>7 500 €</p>
@@ -212,9 +194,6 @@
                 </ul>
                 <div id="desc6" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
-
-
-            
             <div class="recharge">
                 <h2 id="recharge">Recharger</h2>
                 <h3>Chargeur mural</h3>
@@ -225,12 +204,7 @@
                     </label>
                 </div>
                 <div id="desc7" class="invisible">Notre solution de recharge à domicile recommandée. Avec une vitesse de recharge allant jusqu'à 71 kilomètres d'autonomie supplémentaire par heure en fonction du modèle de véhicule, une conception polyvalente pour l'intérieur et l'extérieur ainsi qu'un câble de 7,3 mètres, le Wall Connector est notre moyen le plus rapide et le plus pratique de recharger son véhicule à domicile. Installation requise et non incluse.</div>
-                
             </div>
-
-
-
-            
             <div class="fin">
                 <H2 id="Option-Sup">Option Supplémentaire</H2>
                 <h3>Crochet d'attelage</h3>
