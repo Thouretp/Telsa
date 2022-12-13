@@ -47,7 +47,6 @@ textEmail.addEventListener('change', function () {
     }
 
 })
-uneErreur.remove()
 
 function isValidEmail(email) {
     // Vérifiez si l'adresse e-mail contient un signe "@", des points (.) et des chiffres
