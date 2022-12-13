@@ -30,7 +30,7 @@ class ConfModelXController extends Controller
         <link rel="stylesheet" href="{{asset("css/confModelX.css")}}" type="text/css">
         
         <head>
-        <title>Config Perso</title>
+        <title class="title">Config Perso</title>
         </head>
         <body>
         <h3>Modèle</h3>
@@ -41,6 +41,8 @@ class ConfModelXController extends Controller
         <p>'.$janteChoisie.'</p>
         <h3>Intérieur</h3>
         <p>'.$interieurChoisi.'</p>
+        <h3>Prix</h3>
+        <p>'.$interieurChoisi.' euros</p>
         
         </body>
         </html>');
