@@ -301,7 +301,7 @@ header {
 
 .group {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 
 .text-area-form-essai {
@@ -379,3 +379,18 @@ header {
 }
 
 /* --------------------------------------------------------------------------- */
+.proposition {
+    height: 0;
+    z-index: 1000;
+}
+.adress-feedback ul{
+    list-style-type: none;
+    background-color: white;
+    border-color: solid 2px #000 ;
+    
+}
+.adress-feedback ul a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}

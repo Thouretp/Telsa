@@ -6,7 +6,7 @@ $("#Rue").keyup(function(event) {
           let rue = $("#Rue").val();
           $.get('https://api-adresse.data.gouv.fr/search/', {
               q: rue,
-              limit: 15,
+              limit: 10,
               autocomplete: 1
           }, function (data, status, xhr) {
               let liste = "";
@@ -32,6 +32,7 @@ $("#Rue").keyup(function(event) {
   
                   $('.adress-feedback ul').empty();
               });
+              
   
           }).error(function () {
               // alert( "error" );
