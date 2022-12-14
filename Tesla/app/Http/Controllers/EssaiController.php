@@ -62,7 +62,7 @@ class EssaiController extends Controller
             echo "L'email n'est pas valide !";
         }
 
-        if(preg_match('#^0[6-7]{1}\d{8}$#', $newClient['tel'])){
+        if(preg_match("#/^[0-9-]*$/#", $newClient['tel'])){
           $verifTel = true;  
         }else{
             echo "Le tel n'est pas valide ";
