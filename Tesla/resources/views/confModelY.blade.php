@@ -1,5 +1,5 @@
 @include('header')
-    <link rel="stylesheet" href="{{asset('css/confModelS.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/confModelY.css')}}" type="text/css">
     <title>Model Y</title>
 
     <div class="container">

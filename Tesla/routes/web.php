@@ -50,9 +50,11 @@ Route::get('/okFormulaire', function(){
     return view('okFormulaire');
 });
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
+Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
 Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 //Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
-
 
 Route::post('essai', [EssaiController::class, 'store']);

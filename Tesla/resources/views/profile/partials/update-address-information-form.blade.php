@@ -23,7 +23,7 @@
         <!-- adresserue -->
         <div>
             <x-input-label for="adresserue" :value="__('Adresse rue')" />
-            <x-text-input id="Rue" name="adresserue1" type="text" class="mt-1 block w-full" :value="old('name', $adresse[0]->adresserue1)" required autofocus autocomplete="adresserue1"/>
+            <x-text-input id="Rue" name="adresserue1" type="text" class="mt-1 block w-full" :value="old('name', $adresse[0]->adresserue1)" required autofocus autocomplete="adresserue1" />
             <x-input-error :messages="$errors->get('adresserue')" class="mt-2" />
         </div>
         <div class="col-6 proposition">
@@ -33,7 +33,7 @@
             <!-- adresserue2 -->
             <div>
                 <x-input-label for="adresserue2" :value="__('Adresse rue 2')" />
-                <x-text-input id="rue2" name="adresserue2" type="text" class="mt-1 block w-full" :value="old('adresserue2', $adresse[0]->adresserue2)" autofocus autocomplete="adresserue2"/>
+                <x-text-input id="rue2" name="adresserue2" type="text" class="mt-1 block w-full" :value="old('adresserue2', $adresse[0]->adresserue2)" autofocus autocomplete="adresserue2" />
                 <x-input-error :messages="$errors->get('adresserue2')" class="mt-2" />
             </div>
 
@@ -47,7 +47,7 @@
             <!-- cp -->
             <div>
                 <x-input-label for="cp" :value="__('Code postal')" />
-                <x-text-input id="CodePostal"  name="cp" type="text" pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" class="mt-1 block w-full" :value="old('cp',  $adresse[0]->cp)" required autofocus autocomplete="cp" />
+                <x-text-input id="CodePostal" name="cp" type="text" pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" class="mt-1 block w-full" :value="old('cp',  $adresse[0]->cp)" required autofocus autocomplete="cp" />
                 <x-input-error :messages="$errors->get('cp')" class="mt-2" />
             </div>
             <div>
@@ -254,21 +254,21 @@
                 </select>
             </div>
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
-                <div>
-                    <p class="text-sm mt-2 text-gray-800">
-                        {{ __('Votre adresse mail n\'est pas vérifiée.') }}
+            <div>
+                <p class="text-sm mt-2 text-gray-800">
+                    {{ __('Votre adresse mail n\'est pas vérifiée.') }}
 
-                        <button form="send-verification" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            {{ __('Cliquez ici pour renvoyer le mail de vérification.') }}
-                        </button>
-                    </p>
+                    <button form="send-verification" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        {{ __('Cliquez ici pour renvoyer le mail de vérification.') }}
+                    </button>
+                </p>
 
-                    @if (session('status') === 'verification-link-sent')
-                        <p class="mt-2 font-medium text-sm text-green-600">
-                            {{ __('Un nouveau lien de vérification a été envoyé à votre adresse électronique.') }}
-                        </p>
-                    @endif
-                </div>
+                @if (session('status') === 'verification-link-sent')
+                <p class="mt-2 font-medium text-sm text-green-600">
+                    {{ __('Un nouveau lien de vérification a été envoyé à votre adresse électronique.') }}
+                </p>
+                @endif
+            </div>
             @endif
         </div>
 
@@ -276,13 +276,7 @@
             <x-primary-button>{{ __('Enregistrer') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
-                >{{ __('Sauvegardé.') }}</p>
+            <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" class="text-sm text-gray-600">{{ __('Sauvegardé.') }}</p>
             @endif
         </div>
     </form>

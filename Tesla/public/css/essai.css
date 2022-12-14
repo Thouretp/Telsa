@@ -239,12 +239,12 @@ header {
     margin-left: 50px;
 }
 
-.left-form div,
+/* .left-form div,
 .right-form div {
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
+     flex-direction: column;   
+     margin-top: 10px; 
+} */
 
 .left-form label,
 .right-form label {
@@ -301,7 +301,7 @@ header {
 
 .group {
     position: relative;
-    margin-bottom: 45px;
+    margin-top: 45px;
 }
 
 .text-area-form-essai {
@@ -379,3 +379,25 @@ header {
 }
 
 /* --------------------------------------------------------------------------- */
+.proposition {
+    height: 0;  
+    z-index: 20;
+    
+}
+.adress-feedback ul{
+    list-style-type: none;
+    background-color: white;
+    /* border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;  */
+    
+}
+.adress-feedback ul a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+} 
+
+.adress-feedback ul a:hover{
+    color: blue;
+} 

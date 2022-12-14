@@ -247,7 +247,7 @@
         </form>
        
     </div>
-    <script src="{{asset('js/confModel3.js')}}"></script>
+    <script src="{{asset('js/confModelS.js')}}"></script>
     <script src="{{asset('js/generatePDF.js')}}"></script>
     <script src="{{asset('js/hamburgeur.js')}}"></script>
 </body>

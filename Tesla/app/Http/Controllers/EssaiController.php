@@ -108,8 +108,6 @@ class EssaiController extends Controller
             'nummodel' => EssaiController::RecupIdModel($newClient['modele'])
         ]);
 
-
-
         if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
             return view('okFormulaire');
         }
