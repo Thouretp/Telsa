@@ -99,6 +99,36 @@
         <h3>PRIX</h3>
     </div>
 </main>
+<div class=affiche__accessoires>
+    <table class="tableau-style">
+    <thead>
+        <tr>
+            <td>Nom</td>
+            <td>DESC</td>
+            <td>PRIX</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($accessoires as $accessoire)
+        <tr>
+            <td>{{$accessoire->nomaccessoire}}</td>
+            <td>{{$accessoire->desciptionaccessoire}}</td>
+            <td>{{$accessoire->prixaccessoire}}</td>
+        </tr>
+        @endforeach
+        
+    </tbody>
+
+    </table>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
 
 
 
