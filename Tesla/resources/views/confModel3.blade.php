@@ -33,7 +33,7 @@
             <div class="slider" id="modelX">
                 <div class="circle" id="cercle1"></div>
                 <h1 class="title" id="correction_titre">Model 3</h1>
-                <img src="{{asset('Models/Models/Model_3/Model3_black._19.png')}}"id="MS"/>
+                <img src="{{asset('Models/Models/Model_3/Model3_black._19.png')}}" id="MS"/>
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
@@ -254,7 +254,6 @@
                     </section>
                 </div>
 
-                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
                 
                 
 

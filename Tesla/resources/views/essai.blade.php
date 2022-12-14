@@ -36,15 +36,15 @@
         <a href="#help">Assistance</a>
         <span class="ajt-mobile-nav">
             @if (Route::has('login'))
-            @auth
-            <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
-            @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
+                @auth
+                    <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
 
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
-            @endif
-            @endauth
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
+                    @endif
+                @endauth
             @endif
         </span>
     </nav>
@@ -66,29 +66,29 @@
         </div>
         <div class="form-essai">
             <h1 class="title-form-essai">Nous Contacter</h1>
-            <form action="/EssaiController" method="post" name="envoyer">
+            <form action="{{url('essai')}}" method="post" name="envoyer">
                 @csrf
                 <div class="container-form-essai">
                     <div class="left-form">
                         <div>
-                            <div class="group">
-                                <input type="text" class="text-area-form-essai" required>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" name="prenom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Prénom</label>
                             </div>
                         </div>
                         <div>
-                            <div class="group">
-                                <input type="text" class="text-area-form-essai" required>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" name="nom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Nom</label>
                             </div>
                         </div>
                         <div>
-                            <div class="group">
-                                <input type="text" class="text-area-form-essai" id="textEmail" required>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
@@ -99,7 +99,7 @@
                         <div>
                             <div class="group">
                                 <!-- <label for="numerotelephone" :value="__('Numero de telephone')"> -->
-                                <input id="phone" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
+                                <input id="phone" name="tel" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
                                 <span id="valid-msg" class="hide">✓ Valid</span>
                                 <span id="error-msg" class="hide"></span>
                                 <!-- <input id="phone" type="tel" class="text-area-form-essai" required>
@@ -142,20 +142,18 @@
                             </div>
                         </div>
                         <div>
-                            <div class="group">
-                                <input type="text" class="text-area-form-essai" id="TextModel" required readonly>
+                            <div class="group">      
+                                <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label id="modelLabel" class="label-form-essai">Modele</label>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                    </div>
+                    </div>  
                 </div>
                 <div class="btn-submit-form-essai">
-                    <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
-                </div>
+                <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
+                
             </form>
         </div>
     </div>
