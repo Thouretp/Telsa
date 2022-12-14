@@ -198,7 +198,7 @@
             preferredCountries: ['FR', 'GB', 'US'],
             separateDialCode: true,
         });
-
+        
         var reset = function() {
             input.classList.remove("error");
             errorMsg.innerHTML = "";
@@ -212,6 +212,7 @@
             if (input.value.trim()) {
                 if (iti.isValidNumber()) {
                     validMsg.classList.remove("hide");
+                    input.value = iti.selectedCountryData.dialCode + " " + input.value;
                 } else {
                     input.classList.add("error");
                     var errorCode = iti.getValidationError();
@@ -220,7 +221,7 @@
                 }
             }
         });
-
+        console.log(iti.selectedCountryData.dialCode);
         // on keyup / change flag: reset
         input.addEventListener('change', reset);
         input.addEventListener('keyup', reset);
