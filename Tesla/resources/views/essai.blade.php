@@ -99,7 +99,7 @@
                         <div>
                             <div class="group">
                                 <!-- <label for="numerotelephone" :value="__('Numero de telephone')"> -->
-                                <input id="phone" class="text-area-form-essai" type="tel" :value="old('numerotelephone')" autofocus required />
+                                <input id="phone" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
                                 <span id="valid-msg" class="hide">✓ Valid</span>
                                 <span id="error-msg" class="hide"></span>
                                 <!-- <input id="phone" type="tel" class="text-area-form-essai" required>

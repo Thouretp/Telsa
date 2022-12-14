@@ -33,6 +33,7 @@ $("#Rue").keyup(function(event) {
                   $('.adress-feedback ul').empty();
               });
               
+              
   
           }).error(function () {
               // alert( "error" );
