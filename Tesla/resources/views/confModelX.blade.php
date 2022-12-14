@@ -39,15 +39,15 @@
                 <div class="caracteristiques">
                     <div class="infos">
                         <div class="info">
-                            <h2><span class="big">543</span> km</h2>
+                            <h2><span class="big">{{$motorisationMX->autonomie}}</span> km</h2>
                             <p>Autonomie (WLTP est.)</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">262</span> km/h</h2>
+                            <h2><span class="big">{{$motorisationMX->vitessemax}}</span> km/h</h2>
                             <p>Vitesse maximale</p>
                         </div>
                         <div class="info">
-                            <h2><span class="big">2,6</span> s</h2>
+                            <h2><span class="big">{{App\Http\Controllers\ConfModelXController::RecupTime($motorisationMX)}}</span> s</h2>
                             <p>0 à 100 km/h</p>
                         </div>
                     </div>
@@ -58,10 +58,9 @@
 
         
         <div class="options">
-            <form action="generation" method="POST">
-
+            <form action="{{'modif'}}" method="post">
+            @csrf
             
-
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">
                 
@@ -69,9 +68,9 @@
                     <h2>Motorisation</h2>   
                     
                     
-                    <div class="boutons">
-                        <button class="btn">Model X plaid <a>141 900€</a></button> <br>
-                        <button class="btn">Model X </button>
+                    <div>
+                        <button class="optModel" id="btn__model_1">Model X plaid <a>141 900€</a></button> <br>
+                        <button class="optModel" id="btn__model_2">Model X </button>
                     </div>
                     <p>Disponible en 2023</p>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
@@ -82,16 +81,12 @@
     <legend>Choisir le modèle</legend>
 
     <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked">
-    <label for="modelPlaid">Model X PLAID</label><br>
+    <label for="modelPlaid">Model X Plaid</label><br>
 
     <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
     <label for="modelXstandart">Model X</label><br>
 
   </fieldset>
-
-
-               
-               
                 </div>
                 
                 
@@ -120,23 +115,17 @@
             <fieldset>
     <legend>Choisir la couleur</legend>
 
-    <input type="radio" name="color" id="blanc" value="blanc" checked="checked">
-    <label for="blanc">Blanc</label><br>
-
-    <input type="radio" name="color" id="bleu" value="bleu" >
-    <label for="bleu">Bleu</label><br>
-
-    <input type="radio" name="color" id="gris" value="gris" >
-    <label for="gris">Gris</label><br>
-
-    <input type="radio" name="color" id="noir" value="noir" >
-    <label for="noir">Noir</label><br>
-
-    <input type="radio" name="color" id="rouge" value="rouge" >
-    <label for="rouge">Rouge</label><br>
-
+    <input type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}}" checked="checked">
+      <label for="blanc">{{$optionCouleurMX[0]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="bleu" value="{{$optionCouleurMX[3]->detailcaracteristique}}" >
+      <label for="bleu">{{$optionCouleurMX[3]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="gris" value="{{$optionCouleurMX[2]->detailcaracteristique}}" >
+      <label for="gris">{{$optionCouleurMX[2]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="noir" value="{{$optionCouleurMX[1]->detailcaracteristique}}" >
+      <label for="noir">{{$optionCouleurMX[1]->detailcaracteristique}}</label><br>
+      <input type="radio" name="color" id="rouge" value="{{$optionCouleurMX[4]->detailcaracteristique}}" >
+      <label for="rouge">{{$optionCouleurMX[4]->detailcaracteristique}}</label><br>
   </fieldset>
-
             </div>
 
             
@@ -148,13 +137,12 @@
                 <div id="desc3" class="invisible">Sélectionner un type de jante</div>
 
                 <fieldset>
-    <legend>Choisir les jantes</legend>
 
-    <input type="radio" name="jantes" id="jantes1" value="jantes 1" checked="checked">
-    <label for="jantes1">Jantes 1</label><br>
+    <input type="radio" name="jantes" id="jantes1" value="{{$optionDescMX[5]->description_option}}" checked="checked">
+    <label for="jantes1">{{$optionDescMX[5]->description_option}}</label><br>
 
-    <input type="radio" name="jantes" id="jantes2" value="jantes 2" >
-    <label for="jantes2">Jantes2</label><br>
+    <input type="radio" name="jantes" id="jantes2" value="{{$optionDescMX[6]->description_option}}" >
+    <label for="jantes2">{{$optionDescMX[6]->description_option}}</label><br>
 
   </fieldset>
                
@@ -173,14 +161,14 @@
                 <fieldset>
     <legend>Choisir l'intérieur</legend>
 
-    <input type="radio" name="interieur" id="interieur1" value="blanc" checked="checked">
-    <label for="interieur1">Blanc</label><br>
+    <input type="radio" name="interieur" id="interieur1" value="{{$optionCouleurMX[8]->detailcaracteristique}}" checked="checked">
+    <label for="interieur1">{{$optionCouleurMX[8]->detailcaracteristique}}</label><br>
 
-    <input type="radio" name="interieur" id="interieur2" value="noir">
-    <label for="interieur2">Noir</label><br>
+    <input type="radio" name="interieur" id="interieur2" value="{{$optionCouleurMX[9]->detailcaracteristique}}">
+    <label for="interieur2">{{$optionCouleurMX[9]->detailcaracteristique}}</label><br>
 
-    <input type="radio" name="interieur" id="interieur3" value="beige">
-    <label for="interieur3">Beige</label><br>
+    <input type="radio" name="interieur" id="interieur3" value="{{$optionCouleurMX[10]->detailcaracteristique}}">
+    <label for="interieur3">{{$optionCouleurMX[10]->detailcaracteristique}}</label><br>
 
   </fieldset>
             </div>
@@ -261,17 +249,20 @@
 
             
             <div class="commander" >
-                <h2 id="Commander">Finaliser la commande</h2>
+                <div class="testpdf">
+                <h2 id="Commander">Recap Commande</h2>
 
-                <p >Modèle choisi : <span id="afficheModel" ></span></p>
-                <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
-                <p >Jantes choisies : <span id="afficheJante" ></span></p>
-                <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
-                <br>
-                <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
-                <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
-                <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
-                <p >Crochet d'attelage : <span id="afficheCrochet" >Non sélectionné</span></p>
+                    <p >Modèle choisi : <span id="afficheModel" ></span></p>
+                    <p >Couleur choisie : <span id="afficheCouleur" ></span></p>
+                    <p >Jantes choisies : <span id="afficheJante" ></span></p>
+                    <p >intérieur choisi : <span id="afficheInterieur" ></span></p>
+                    <br>
+                    <p >Autopilot amélioré : <span id="afficheAutoPilot" >Non sélectionné</span></p>
+                    <p >Conduite autonome : <span id="afficheConduite" >Non sélectionné</span></p>
+                    <p >Chargeur mural : <span id="afficheRecharge" >Non sélectionné</span></p>
+                    <p >Crochet d'attelage : <span id="afficheCrochet" >Non sélectionné</span></p>
+                </div>
+                
                 
 
                  <div id="wrapper"> <!--BOUTONCOMMANDER -->
@@ -283,8 +274,7 @@
                     </section>
                 </div>
 
-                <a href="{{route('confModelX_PDF')}}">Générer un pdf de la commande</a><!--GENERER PDF -->
-                
+                <input type="submit" name="bouton_valid" id="btn_valid" value="Afficher récap commande">
             </div>
         </div>
 

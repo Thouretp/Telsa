@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConfModelsController;
+use App\Http\Controllers\ConfMSController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConfModelXController;
+use App\Http\Controllers\ConfM3Controller;
+use App\Http\Controllers\ConfMYController;
+use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\ShopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,10 +39,20 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
-Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
-Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
+Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
+Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
 
+Route::get('/essai',[EssaiController::class, 'showEssai']);
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
 Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
 Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+
+Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
+Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
+

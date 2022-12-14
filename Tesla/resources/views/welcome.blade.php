@@ -11,18 +11,6 @@
         <div id="GP"></div>
     </div>
 
-<?php
-    function RecupTime($var){
-        $time = $var->puissancemoteur;
-        $time = str_replace(":", "", $time);
-        $time = floatval($time);
-        return $time;
-    }
-?>
-
-
-
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
@@ -40,16 +28,16 @@
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMS->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">{{RecupTime($motorisationMS)}}</span> secondes</h2>
+                    <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMS)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMS->codeclasseenergetique}}</span></h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle" id="cercle1"></div>
@@ -71,20 +59,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">491</span> km</h2>
+                        <h2><span class="big">{{$motorisationM3->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">225</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationM3->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">6,1</span> secondes</h2>
+                        <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationM3)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">590</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationM3->codeclasseenergetique}}</span> </h2>
+                        <p>Classe énergetique</p>
                     </div>
                 </div>
             </div>
@@ -94,6 +82,9 @@
             <form action="confModel3">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
             </form>
+            <form action="essai">
+                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
+            </form>
 
         </div>
 
@@ -101,28 +92,26 @@
 
             <div class="infos_card">
                 <div class="infos">
-                    <h2><span class="big">543</span> km</h2>
+                    <h2><span class="big">{{$motorisationMX->autonomie}}</span> km</h2>
                     <p>Autonomie (WLTP est.)</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">543</span> km/h</h2>
+                    <h2><span class="big">{{$motorisationMX->vitessemax}}</span> km/h</h2>
                     <p>Vitesse maximale</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">2,6</span> secondes</h2>
+                    <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMX)}}</span> secondes</h2>
                     <p>0 à 100 km/h</p>
                 </div>
                 <div class="infos">
-                    <h2><span class="big">300</span> ch</h2>
-                    <p>Puissance</p>
+                    <h2><span class="big">{{$motorisationMX->codeclasseenergetique}}</span> </h2>
+                    <p>Classe énergetique</p>
                 </div>
             </div>
             <div class="circle"></div>
             <h1 class="title">Model X</h1>
             <img src="Models/Model X.jpg" id="MX">
             <a href="/confModelX"><input type="button" class="visu" id="btn1" value="Configuration personalisée"></input></a>
-            
-
         </div>
 
         <div class="slider" id="modelY">
@@ -130,20 +119,20 @@
             <div class="infos_card">
                 <div class="infos_card">
                     <div class="infos">
-                        <h2><span class="big">543</span> km</h2>
+                        <h2><span class="big">{{$motorisationMY->autonomie}}</span> km</h2>
                         <p>Autonomie (WLTP est.)</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">543</span> km/h</h2>
+                        <h2><span class="big">{{$motorisationMY->vitessemax}}</span> km/h</h2>
                         <p>Vitesse maximale</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">2,6</span> secondes</h2>
+                        <h2><span class="big">{{App\Http\Controllers\HomeController::RecupTime($motorisationMY)}}</span> secondes</h2>
                         <p>0 à 100 km/h</p>
                     </div>
                     <div class="infos">
-                        <h2><span class="big">300</span> ch</h2>
-                        <p>Puissance</p>
+                        <h2><span class="big">{{$motorisationMY->codeclasseenergetique}}</span> </h2>
+                        <p>Classe énergetique</p>
                     </div>
                 </div>
             </div>
@@ -153,6 +142,12 @@
             <form action="confModelY">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
+
+            <div class="img">
+                <img src="Models/MY_1.jpg" alt="">
+                <img src="Models/MY_2.jpg" alt="">
+                <img src="Models/MY_3.jpg" alt="">
+            </div>
         </div>
     </div>
 
