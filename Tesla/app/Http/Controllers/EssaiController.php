@@ -12,9 +12,6 @@ class EssaiController extends Controller
     public function showEssai(){
         return view('essai');
     }
-    public function imageOkRDV(Request $request){
-        return redirect('okFormulaire');
-    }
 
     public function store(Request $request){
         $newClient = array(                                 // Récupération des données du formulaire Essai 
@@ -29,11 +26,11 @@ class EssaiController extends Controller
 
         );
 
+        // dd($newClient["tel"]);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
         $numadresse_max = EssaiController::RecupNumMax("adresse", "numadresse");
-
 
 
         // Vérification des données récolés : 
@@ -62,13 +59,11 @@ class EssaiController extends Controller
             echo "L'email n'est pas valide !";
         }
 
-        if(preg_match("#/^[0-9-]*$/#", $newClient['tel'])){
+        if(preg_match('#^0[6-7]{1}\d{8}$#', $newClient['tel'])){
           $verifTel = true;  
         }else{
             echo "Le tel n'est pas valide ";
         }
-
-
 
         // INSERT DANS LA BASE DE DONNEE si les données ont été vérifié
             // INSERT CLIENT
@@ -111,12 +106,10 @@ class EssaiController extends Controller
         if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
             return view('okFormulaire');
         }
-
-        
     }
 
     public function RecupNumMax($nameTable, $id){ // Fonction qui permet de déterminer le prochain numcompte de la table client
-        $val = DB::table($nameTable)->max($id);         // on va chercher l'id max de la table demandé
+        $val = DB::table($nameTable)->max($id);  // on va chercher l'id max de la table demandé
         return $val + 1;                           // On retourne la valeur + 1
     }
     public function RecupIdModel($nameModel){   // Fonction qui permet de récuper l'id du model selectionner dans l'esssai 

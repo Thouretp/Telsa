@@ -21,7 +21,7 @@
 
 
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
-            <img class="see" src="{{asset('Models/bagv2.png')}}">
+            <a href="#"><img class="see" src="{{asset('Models/cart_icon.png')}}"></a>
             <button class="hamburgeur">
                 <div class="bar"></div>
         </div>

@@ -11,7 +11,7 @@
         </div>
         <div class="right">
             <a href="/profile"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
-            <img class="see" src="{{asset('Models/bagv2.png')}}">
+            <a href="/shop"><img class="see" src="{{asset('Models/bagv2.png')}}"></a>
             <button class="hamburgeur">
                 <div class="bar"></div>
         </div>

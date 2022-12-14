@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/essai.css')}}">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
     <title>essaiTesla</title>
@@ -38,6 +38,15 @@
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Se deconnecter') }}
+                    </x-responsive-nav-link>
+                </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
 
@@ -152,81 +161,16 @@
                     </div>  
                 </div>
                 <div class="btn-submit-form-essai">
-                <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
-                
+                    <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a>
+                </div>
             </form>
         </div>
     </div>
-    </div>
-    </div>
 
-    <script src="{{asset('js/hamburgeur.js')}}"></script>
-    <script src="{{asset('js/essai.js')}}"></script>
+    <script src="{{asset('js/hamburgeur.js')}}" defer></script>
+    <script src="{{asset('js/essai.js')}}" defer></script>
 
-    <script src="{{asset('buildPhone/js/intlTelInput.js')}}"></script>
-    <script>
-        var input = document.querySelector("#phone"),
-            errorMsg = document.querySelector("#error-msg"),
-            validMsg = document.querySelector("#valid-msg");
-
-        // here, the index maps to the error code returned from getValidationError - see readme
-        var errorMap = ["Numéro invalide", "Code pays invalide", "Trop court", "Trop long", "Numéro invalide"];
-
-        // initialise plugin
-        var iti = window.intlTelInput(input, {
-            utilsScript: "{{asset('buildPhone/js/utils.js')}}",
-            // allowExtension: true,
-            formatOnDisplay: true,
-            // allowDropdown: false,
-            autoHideDialCode: true,
-            // autoPlaceholder: true,
-            // dropdownContainer: document.body,
-            // excludeCountries: ["us"],
-            // formatOnDisplay: false,
-            //    geoIpLookup: function(callback) {
-            //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-            //       var countryCode = (resp && resp.country) ? resp.country : "";
-            //       callback(countryCode);
-            //     });
-            //   },
-            //hiddenInput: "full_number",
-            initialCountry: "FR",
-            // localizedCountries: { 'de': 'Deutschland' },
-            nationalMode: false,
-            // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            //placeholderNumberType: "MOBILE",
-            preferredCountries: ['FR', 'GB', 'US'],
-            separateDialCode: true,
-        });
-        
-        var reset = function() {
-            input.classList.remove("error");
-            errorMsg.innerHTML = "";
-            errorMsg.classList.add("hide");
-            validMsg.classList.add("hide");
-        };
-
-        // on blur: validate
-        input.addEventListener('blur', function() {
-            reset();
-            if (input.value.trim()) {
-                if (iti.isValidNumber()) {
-                    validMsg.classList.remove("hide");
-                    input.value = iti.selectedCountryData.dialCode + " " + input.value;
-                } else {
-                    input.classList.add("error");
-                    var errorCode = iti.getValidationError();
-                    errorMsg.innerHTML = errorMap[errorCode];
-                    errorMsg.classList.remove("hide");
-                }
-            }
-        });
-        console.log(iti.selectedCountryData.dialCode);
-        // on keyup / change flag: reset
-        input.addEventListener('change', reset);
-        input.addEventListener('keyup', reset);
-    </script>
 </body>
 
 </html>
-<script src="{{asset('js/autoclompleteAddress.js')}}"></script>
+
