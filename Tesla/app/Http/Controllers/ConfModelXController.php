@@ -65,7 +65,7 @@ class ConfModelXController extends Controller
         return view('confModelX', [
             'modelX'=> $getInfoMX,
             'typeModelX'=> $getModelXMoto,
-            'motorisationMX'=> Motorisation::find(8),
+            'motorisationMX'=> Motorisation::find(7),
             'optionsMX'=> $getOptionMX,
             'optionCouleurMX'=>$getOptionCouleur,
             'optionDescMX'=>$getOptionDescription
