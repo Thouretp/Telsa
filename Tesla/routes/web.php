@@ -49,7 +49,14 @@ Route::get('/essai',[EssaiController::class, 'showEssai']);
 Route::get('/okFormulaire', function(){
     return view('okFormulaire');
 });
-Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
-Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
+
+
+// LES ROUTES POUR LES PDF DES CONFIG
+
+Route::post('/modifModelS', [ConfMSController::class,'modifModelS'])->name('modifModelS');
+Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modifModel3');
+Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
+Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
+
