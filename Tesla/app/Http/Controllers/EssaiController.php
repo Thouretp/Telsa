@@ -62,7 +62,7 @@ class EssaiController extends Controller
             echo "L'email n'est pas valide !";
         }
 
-        if(preg_match('#^0[6-7]{1}\d{8}$#', $newClient['tel'])){
+        if(preg_match("#/^[0-9-]*$/#", $newClient['tel'])){
           $verifTel = true;  
         }else{
             echo "Le tel n'est pas valide ";
@@ -108,7 +108,7 @@ class EssaiController extends Controller
             'nummodel' => EssaiController::RecupIdModel($newClient['modele'])
         ]);
 
-        if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){
+        if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
             return view('okFormulaire');
         }
 
@@ -117,12 +117,10 @@ class EssaiController extends Controller
 
     public function RecupNumMax($nameTable, $id){ // Fonction qui permet de déterminer le prochain numcompte de la table client
         $val = DB::table($nameTable)->max($id);         // on va chercher l'id max de la table demandé
-        return $val + 1;                           // On retourne la valeur
+        return $val + 1;                           // On retourne la valeur + 1
     }
-    public function RecupIdModel($nameModel){
-        //dd($nameModel);
+    public function RecupIdModel($nameModel){   // Fonction qui permet de récuper l'id du model selectionner dans l'esssai 
         $idModel = DB::table('modele')->where('libellemodel', '=', $nameModel)->get();
-        // dd($idModel);
         return $idModel[0]->nummodel;
     }
 

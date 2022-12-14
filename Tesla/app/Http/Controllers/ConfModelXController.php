@@ -11,6 +11,7 @@ use App\Models\Option;
 use Illuminate\Http\Request;
 
 
+
 class ConfModelXController extends Controller
 {
     
@@ -19,7 +20,7 @@ class ConfModelXController extends Controller
     //     $pdf = PDF::loadView('pdf.generation');
     //     return $pdf->download('configuration_personnelle.pdf');
     // }
-    public function modif(){
+    public function modifModelX(){
         $modelChoisi = $_POST['model'];
         $couleurChoisie = $_POST['color'];
         $janteChoisie = $_POST['jantes'];
@@ -27,10 +28,10 @@ class ConfModelXController extends Controller
 
         
         $pdf = PDF::loadHTML('<html>
-        <link rel="stylesheet" href="{{asset("css/confModelX.css")}}" type="text/css">
+        <link rel="stylesheet" href="{{asset("css/confModel.css")}}" type="text/css">
         
         <head>
-        <title>Config Perso</title>
+        <title class="title">Config Perso</title>
         </head>
         <body>
         <h3>Modèle</h3>
@@ -41,6 +42,8 @@ class ConfModelXController extends Controller
         <p>'.$janteChoisie.'</p>
         <h3>Intérieur</h3>
         <p>'.$interieurChoisi.'</p>
+        <h3>Prix</h3>
+        <p>'.$interieurChoisi.' euros</p>
         
         </body>
         </html>');
@@ -58,18 +61,17 @@ class ConfModelXController extends Controller
 
         $getInfoMX = DB::table('detient')-> leftJoin('option', 'detient.numoption', '=', 'option.numoption')->get();
         $getModelXMoto = Motorisation::where('nummodel', '=', 3)->get();
-        $getOptionMX = DB::table('detient')->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
-        $getOptionCouleur = Detient::select("option.detailcaracteristique")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
-        $getOptionDescription = Detient::select("option.description_option")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
+        $getOptionMX = DB::table('detient')->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 7)->get();
+        $getOptionCouleur = Detient::select("option.detailcaracteristique")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 7)->get();
+        $getOptionDescription = Detient::select("option.description_option")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 7)->get();
 
         return view('confModelX', [
             'modelX'=> $getInfoMX,
             'typeModelX'=> $getModelXMoto,
-            'motorisationMX'=> Motorisation::find(8),
+            'motorisationMX'=> Motorisation::find(7),
             'optionsMX'=> $getOptionMX,
             'optionCouleurMX'=>$getOptionCouleur,
             'optionDescMX'=>$getOptionDescription
         ]);
     }
 }
-

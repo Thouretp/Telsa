@@ -850,9 +850,9 @@ section {
 }
 
 /* Make visable when hover */
-.btn-container:hover .ease{
-	width: 100%;
-	max-width: 500px;
-	background-color: rgb(101, 77, 255);
-	border: 0;
+.btn-container:hover .ease {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(101, 77, 255);
+    border: 0;
 }
