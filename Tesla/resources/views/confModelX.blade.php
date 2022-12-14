@@ -1,5 +1,5 @@
 @include('header')
-<link rel="stylesheet" href="{{asset('css/confModelX.css')}}" type="text/css">
+<link rel="stylesheet" href="{{asset('css/confModel.css')}}" type="text/css">
     <title>Model X</title>
 </head>
 <body>
@@ -58,21 +58,21 @@
 
         
         <div class="options">
-            <form action="{{'modif'}}" method="post">
+             <form action="{{'modifModelX'}}" method="post"> <!-- Appelle Modif dans web.php -->
             @csrf
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">
                 <div class="contenu">
                     <h2>Motorisation</h2>   
                     <fieldset >
-                        <div>
-                            <input type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked"></input>
-                            <label for="modelPlaid">Modele X Plaid</label><br>
+                        <div class="boutons__options">
+                            <input class="radio__options" type="radio" name="model" id="modelPlaid" value="Modèle X Plaid" checked="checked"></input>
+                            <label class="label__clickable" id="bouton_modelX_plaid"for="modelPlaid">Modele X Plaid</label><br>
                         </div>
 
-                        <div>
-                            <input type="radio" name="model" id="modelXstandart" value="Modèle X" >
-                            <label for="modelXstandart">Model X <span class="italic">(2023)</span></label><br>
+                        <div class="boutons__options">
+                            <input class="radio__options"type="radio" name="model" id="modelXstandart" value="Modèle X" >
+                            <label class="label__clickable" id ="bouton_modelX" for="modelXstandart">Model X <span class="italic">(2023)</span></label><br>
                         </div>
 
                     </fieldset>
@@ -88,27 +88,29 @@
 
                 <fieldset>
                     <div class="d__flex">
-                        <input class="radio__color" type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}}" checked="checked">
-                        <label for="blanc"><div class="couleur"id="W"></div></label>
+                        <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}}" checked="checked">
+                        <label  for="blanc"><div id="white" class="W"></div></label>
                     </div>
                     <div class="d__flex">
-                        <input class="radio__color" type="radio" name="color" id="bleu" value="{{$optionCouleurMX[3]->detailcaracteristique}}" >
-                        <label for="bleu"><div class="couleur"id="Blue"></div></label>
+                        <input class="radio__options" type="radio" name="color" id="bleu" value="{{$optionCouleurMX[3]->detailcaracteristique}}" >
+                        <label for="bleu"><div id="blue"  class="Blue"></div></label>
                     </div>
                     <div class="d__flex">
-                        <input class="radio__color"  type="radio" name="color" id="gris" value="{{$optionCouleurMX[2]->detailcaracteristique}}" >
-                        <label for="gris"><div class="couleur"id="G"></div></label>
+                        <input class="radio__options"  type="radio" name="color" id="gris" value="{{$optionCouleurMX[2]->detailcaracteristique}}" >
+                        <label  for="gris"><div id="grey" class="G"></div></label>
                     </div>
                     <div class="d__flex">
-                        <input class="radio__color" type="radio" name="color" id="noir" value="{{$optionCouleurMX[1]->detailcaracteristique}}" >
-                        <label for="noir"><div class="couleur"id="Black"></div></label>
+                        <input class="radio__options" type="radio" name="color" id="noir" value="{{$optionCouleurMX[1]->detailcaracteristique}}" >
+                        <label  for="noir"><div  id="black" class="Black"></div></label>
                     </div>
                     <div class="d__flex">
-                        <input class="radio__color" type="radio" name="color" id="rouge" value="{{$optionCouleurMX[4]->detailcaracteristique}}" >
-                        <label for="rouge"><div class="couleur"id="R"></div></label>
+                        <input class="radio__options" type="radio" name="color" id="rouge" value="{{$optionCouleurMX[4]->detailcaracteristique}}" >
+                        <label  for="rouge"><div id="red" class="R"></div></label>
                     </div>
                 </fieldset>
             </div>
+            <div id="desc2" class="invisible">Sélectionner une couleur</div>
+
 
             
             <div class="jantes">
@@ -121,12 +123,12 @@
                 </div> -->
                 <fieldset>
                     <div>  
-                        <input type="radio" name="jantes" id="jantes1" value="{{$optionDescMX[5]->description_option}}" checked="checked">
-                        <label for="jantes1">{{$optionDescMX[5]->description_option}}</label><br>
+                        <input class="radio__options" type="radio" name="jantes" id="jantes1" value="{{$optionDescMX[5]->description_option}}" checked="checked">
+                        <label class="label__clickable" id="bouton_jantes1"for="jantes1">{{$optionDescMX[5]->description_option}}</label><br>
                     </div>
                     <div>
-                        <input type="radio" name="jantes" id="jantes2" value="{{$optionDescMX[6]->description_option}}" >
-                        <label for="jantes2">{{$optionDescMX[6]->description_option}}</label><br>
+                        <input class="radio__options" type="radio" name="jantes" id="jantes2" value="{{$optionDescMX[6]->description_option}}" >
+                        <label class="label__clickable" id="bouton_jantes2" for="jantes2">{{$optionDescMX[6]->description_option}}</label><br>
                     </div>
                 </fieldset>
                 <div id="desc3" class="invisible">Sélectionner un type de jante</div>
@@ -140,16 +142,16 @@
             
                 <fieldset>
                     <div>
-                        <input class="radio__color" type="radio" name="interieur" id="interieur1" value="{{$optionCouleurMX[8]->detailcaracteristique}}" checked="checked">
-                        <label for="interieur1"><div class="couleur"id="Black"></div></label><br>
+                        <input class="radio__options" type="radio" name="interieur" id="interieur1" value="{{$optionCouleurMX[8]->detailcaracteristique}}" checked="checked">
+                        <label  for="interieur1"><div id="bouton_interieur_1" class="Black2"></div></label><br>
                     </div>
                     <div>
-                        <input class="radio__color" type="radio" name="interieur" id="interieur2" value="{{$optionCouleurMX[9]->detailcaracteristique}}">
-                        <label for="interieur2"><div class="couleur"id="W"></div></label><br>
+                        <input class="radio__options" type="radio" name="interieur" id="interieur2" value="{{$optionCouleurMX[9]->detailcaracteristique}}">
+                        <label  for="interieur2"><div id="bouton_interieur_2"class="W2"></div></label><br>
                     </div>
                     <div>
-                        <input class="radio__color" type="radio" name="interieur" id="interieur3" value="{{$optionCouleurMX[10]->detailcaracteristique}}">
-                        <label for="interieur3"><div class="couleur"id="Beige"></div></label><br>
+                        <input class="radio__options" type="radio" name="interieur" id="interieur3" value="{{$optionCouleurMX[10]->detailcaracteristique}}">
+                        <label  for="interieur3"><div id="bouton_interieur_3" class="Beige"></div></label><br>
                     </div>
                 </fieldset>
                 <div id="desc4" class="invisible">Sélectionner une couleur</div>
@@ -261,6 +263,5 @@
     </div>
     <script src="{{asset('js/confModelX.js')}}"></script>
     <script src="{{asset('js/hamburgeur.js')}}"></script>
-    <script src="{{asset('js/generatePDF.js')}}"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
   
   fieldset {
     background: #191c29;
-    width: 350px;
+    width: 370px;
     height: fit-content;
     position: relative;
     display: flex;
@@ -21,7 +21,6 @@
     border-radius: 6px;
     color: #FFF;
     font-size: 1.5em;
-    cursor: pointer;
   }
   label{
     font-size: 20px;
@@ -36,7 +35,7 @@
     border-radius: 8px;
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
+      , #ffffff, #dfe0e4 43%, #000000);
       position: absolute;
       z-index: -1;
       top: -2%;
@@ -58,7 +57,7 @@
     filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(
       var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
+      , #ffffff, #dfe0e4 43%, #000000);
       opacity: 1;
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
@@ -371,36 +370,60 @@ img{
     justify-content: center;
     align-items: center;
 }
-.couleur {
+
+.W, .W2{
+    background-color: #FFF;
+    border: solid 1px white;
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
 }
-#W{
-    background-color: #FFF;
-    border: solid 1px white;
-}
-#Black{
+.Black, .Black2{
     background-color: black;
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#G{
+.G{
     background-color: rgb(78,80,86);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#Blue{
+.Blue{
     background-color: rgb(2, 41, 98);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#R{
+.R{
     background-color: rgb(121, 0, 0);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#Beige{
+.Beige{
     background-color: rgb(235, 226, 212);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 button{
     cursor: pointer;
@@ -867,6 +890,19 @@ section{
     padding: 5px;
 }
 
-.radio__color{
+.radio__options{
     display: none;
+}
+
+.label__clickable{
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boutons__options{
+    margin: 10px;
+}
+
+.clické{
+	background-color: rgb(101, 77, 255);
 }
