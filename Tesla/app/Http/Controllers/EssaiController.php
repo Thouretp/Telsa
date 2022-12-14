@@ -12,9 +12,6 @@ class EssaiController extends Controller
     public function showEssai(){
         return view('essai');
     }
-    public function imageOkRDV(Request $request){
-        return redirect('okFormulaire');
-    }
 
     public function store(Request $request){
         $newClient = array(                                 // Récupération des données du formulaire Essai 
@@ -111,12 +108,10 @@ class EssaiController extends Controller
         if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
             return view('okFormulaire');
         }
-
-        
     }
 
     public function RecupNumMax($nameTable, $id){ // Fonction qui permet de déterminer le prochain numcompte de la table client
-        $val = DB::table($nameTable)->max($id);         // on va chercher l'id max de la table demandé
+        $val = DB::table($nameTable)->max($id);  // on va chercher l'id max de la table demandé
         return $val + 1;                           // On retourne la valeur + 1
     }
     public function RecupIdModel($nameModel){   // Fonction qui permet de récuper l'id du model selectionner dans l'esssai 

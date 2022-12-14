@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/essai.css')}}">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
     <title>essaiTesla</title>
@@ -38,6 +38,15 @@
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Se deconnecter') }}
+                    </x-responsive-nav-link>
+                </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
 

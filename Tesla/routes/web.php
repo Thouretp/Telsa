@@ -51,7 +51,7 @@ Route::get('/okFormulaire', function(){
 });
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
-
+Route::post('/essai', [EssaiController::class, 'store']);
 
 // LES ROUTES POUR LES PDF DES CONFIG
 

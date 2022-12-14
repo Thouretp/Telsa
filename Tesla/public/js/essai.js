@@ -39,11 +39,11 @@ textEmail.addEventListener('change', function () {
     if (isValidEmail(textEmail.value) == false) {
         textEmail.style.color = '#EC2222';
         var uneErreur = create('p', erreur, "L'adresse n'est pas valide")
+        
     } else {
         console.log("Adresse valide")
         textEmail.style.color = '#22EC87';
         erreur.remove()
-
     }
 
 })
