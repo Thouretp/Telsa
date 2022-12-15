@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    min-width: 100%;
+    padding: 20px;
+    position: fixed;
+    z-index: 120;
+    transform: translate(-50%,-50%);
+    top: 5%;
+    left: 50%;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.left {
+    width: 20%;
+    height: 50px;
+    justify-content: flex-start;
+    margin-left: 70px;
+    display: flex;
+}
+
+.left img {
+    width: 150px;
+    height: 50px;
+}
+
+
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.noZindex {
+    opacity: 0;
+}
+
+.see {
+    opacity: 1;
+}
+
+.hamburgeur {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 20px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburgeur .bar,
+.hamburgeur:after,
+.hamburgeur:before {
+    content: '';    
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.hamburgeur.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+    color: black;
+    background-color: black;
+}
+
+.hamburgeur.is-active:after {
+    transform: rotate(45deg) translate(-8px, -6px);
+    color: black;
+    background-color: black;
+}
+
+.hamburgeur.is-active .bar {
+    opacity: 0;
+    color: black;
+    background-color: black;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 30%;
+    min-height: 100vh;
+    display: block;
+    z-index: 3;
+    background-color: white;
+    padding-top: 120px;
+    transition: 0.4s;
+    display: block;
+    flex-direction: column;
+}
+
+.mobile-nav.is-active {
+    left: 70%;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 110px;
+    height: 40px;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 16px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.4s ease-out;
+}
+
+.mobile-nav a:hover {
+    transform: translateX(15px);
+}
+
+.mobile-nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.mobile-nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.ajt-mobile-nav a {
+    width: 200px;
+}
+
+.right img {
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Titre shop */
+#title_shop {
+    color: white;
+    margin-top: 13px;
+    margin-left: 5px;
+  }
+  /* Le pip pour faire la séparation avec le logo */
+  #title_pip {
+    color: white;
+    margin-top: 11px;
+    margin-left: 5px;
+    margin-right: 6px;
+  }
+  /* Le menu des categories */
+  .center {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 12px;
+  }
+  .categorie_menu_label {
+    color: white;
+    text-decoration: none;
+  }
+  .categorie_menu_list {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    z-index: 200;
+  }
+  .clothes_man {
+    display: flex;
+    flex-direction: column;
+  }
+  .clothes_woman {
+    display: flex;
+    flex-direction: column;
+  }
+  .clothes_child {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    margin-top: 80px;
+  }
+  .container img {
+    width: 200px;
+    height: 200px;
+  }
+
+.tshirt div h2 {
+    font-size: 18px;
+}
+.tshirt div {
+    border: solid 2px black;
+    width: 203px;
+    height: 224px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.tshirt {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -24,6 +24,7 @@
   }
   label{
     font-size: 20px;
+    padding: 5px;
   }
  
   
@@ -887,9 +888,12 @@ section{
 
 .d__flex{
     display: flex;
-    padding: 5px;
+    justify-content: space-around;
 }
-
+.d__flex2{
+    display: flex;
+    align-items: center;
+}
 .radio__options{
     display: none;
 }

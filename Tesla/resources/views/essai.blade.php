@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/essai.css')}}">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" defer></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
     <title>essaiTesla</title>
@@ -36,24 +36,23 @@
         <a href="#help">Assistance</a>
         <span class="ajt-mobile-nav">
             @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
-                    <form method="POST" action="{{ route('logout') }}">
-                    @csrf
+            @auth
+            <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Se deconnecter') }}
-                    </x-responsive-nav-link>
-                </form>
-                @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
+                    {{ __('Se deconnecter') }}
+                </x-responsive-nav-link>
+            </form>
+            @else
+            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
-                    @endif
-                @endauth
+            @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
+            @endif
+            @endauth
             @endif
         </span>
     </nav>
@@ -80,30 +79,30 @@
                 <div class="container-form-essai">
                     <div class="left-form">
                         <div>
-                            <div class="group">      
-                                <input type="text" class="text-area-form-essai" name="prenom" required>
+                            <div class="group">
+                                <input type="text" class="text-area-form-essai" id="prenom" name="prenom" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Prénom</label>
                             </div>
                         </div>
                         <div>
-                            <div class="group">      
-                                <input type="text" class="text-area-form-essai" name="nom" required>
+                            <div class="group">
+                                <input type="text" class="text-area-form-essai" id="nom" name="nom" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Nom</label>
                             </div>
                         </div>
                         <div>
-                            <div class="group">      
+                            <div class="group">
                                 <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
                             </div>
                         </div>
-                        <div class="erreurs">
+                        <div class="erreursMail">
                         </div>
                         <div>
                             <div class="group">
@@ -117,6 +116,8 @@
                                 <label class="label-form-essai">Télephone</label> -->
 
                             </div>
+                        </div>
+                        <div class="erreursMail"> 
                         </div>
                     </div>
                     <div class="right-form">
@@ -151,27 +152,24 @@
                             </div>
                         </div>
                         <div>
-                            <div class="group">      
+                            <div class="group">
                                 <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label id="modelLabel" class="label-form-essai">Modele</label>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="btn-submit-form-essai">
-                <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a></input>
-                
+                    <a href="/okFormulaire"><input type="submit" value="Envoyer" class="btn-submit"></a>
+                </div>
             </form>
         </div>
-    </div>
-    </div>
     </div>
 
     <script src="{{asset('js/hamburgeur.js')}}"></script>
     <script src="{{asset('js/essai.js')}}"></script>
-
     <script src="{{asset('buildPhone/js/intlTelInput.js')}}"></script>
     <script>
         var input = document.querySelector("#phone"),
@@ -207,7 +205,7 @@
             preferredCountries: ['FR', 'GB', 'US'],
             separateDialCode: true,
         });
-        
+
         var reset = function() {
             input.classList.remove("error");
             errorMsg.innerHTML = "";
@@ -221,7 +219,7 @@
             if (input.value.trim()) {
                 if (iti.isValidNumber()) {
                     validMsg.classList.remove("hide");
-                    input.value = iti.selectedCountryData.dialCode + " " + input.value;
+                    input.value = iti.selectedCountryData.dialCode + input.value;
                 } else {
                     input.classList.add("error");
                     var errorCode = iti.getValidationError();
@@ -238,4 +236,4 @@
 </body>
 
 </html>
-<script src="{{asset('js/autoclompleteAddress.js')}}"></script>
+<!-- <script src="{{asset('js/autoclompleteAddress.js')}}" defer></script> -->

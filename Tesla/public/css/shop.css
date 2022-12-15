@@ -4,12 +4,10 @@
   padding: 0;
 }
 
-
-
 h2{
   color: #FFF;
   position: absolute;
-  top: 80px;
+  top: 120px;
 }
 
 body {
@@ -39,18 +37,21 @@ header {
   display: flex;
   min-width: 100%;
   padding: 20px;
-  position: absolute;
+  position: fixed;
   z-index: 120;
   transform: translate(-50%,-50%);
   top: 5%;
   left: 50%;
+  justify-content: space-between;
+  background-color: black;
 }
 
 .left {
-  width: 50%;
+  width: 20%;
   height: 50px;
   justify-content: flex-start;
   margin-left: 70px;
+  display: flex;
 }
 
 .left img {
@@ -59,10 +60,9 @@ header {
 }
 
 .right {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 70px;
   margin-top: 10px;
 }
 
@@ -191,11 +191,14 @@ header {
   cursor: pointer;
 }
 
+.radio_buttons{
+  margin-top: 100px;
+}
 
 
 main#carousel {
   position: relative;
-  top: 15%;
+  top: 25%;
   grid-row: 1 / 2;
   grid-column: 1 / 8;
   width: 100vw;
@@ -294,7 +297,7 @@ input:nth-of-type(5):checked ~ main#carousel {
   position: absolute;
   z-index: 3;
   opacity: 0;
-  bottom: 18%;
+  bottom: 10%;
   width: 150px;
   height: 35px;
   border-radius: 15px;
@@ -316,14 +319,61 @@ input:nth-of-type(5):checked ~ main#carousel {
 }
 
 .form__control{
-  height: 100%;
-  width: 300px;
+  height: 30px;
+  width: 200px;
 }
 .btn__info{
-  width: 50px;
+  width: 30px;
+  height: 30px;
 }
 .d__flex{
   display: flex;
+}
+
+/* Titre shop */
+#title_shop {
+  color: white;
+  margin-top: 13px;
+  margin-left: 5px;
+}
+/* Le pip pour faire la séparation avec le logo */
+#title_pip {
+  color: white;
+  margin-top: 11px;
+  margin-left: 5px;
+  margin-right: 6px;
+}
+/* Le menu des categories */
+.center {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 12px;
+}
+.categorie_menu_label {
+  color: white;
+  text-decoration: none;
+}
+.categorie_menu_list {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  z-index: 200;
+}
+.clothes_man {
+  display: flex;
+  flex-direction: column;
+}
+.clothes_woman {
+  display: flex;
+  flex-direction: column;
+}
+.clothes_child {
+  display: flex;
+  flex-direction: column;
 }
 
 .affiche__accessoires{

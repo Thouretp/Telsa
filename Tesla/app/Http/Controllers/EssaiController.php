@@ -26,11 +26,11 @@ class EssaiController extends Controller
 
         );
 
+        // dd($newClient["tel"]);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
         $numadresse_max = EssaiController::RecupNumMax("adresse", "numadresse");
-
 
 
         // Vérification des données récolés : 
@@ -59,13 +59,11 @@ class EssaiController extends Controller
             echo "L'email n'est pas valide !";
         }
 
-        if(preg_match("#/^[0-9-]*$/#", $newClient['tel'])){
-          $verifTel = true;  
+        if(preg_match('#^[0-9 -]+[0-9]$#', $newClient['tel'])){
+          $verifTel = true;
         }else{
             echo "Le tel n'est pas valide ";
         }
-
-
 
         // INSERT DANS LA BASE DE DONNEE si les données ont été vérifié
             // INSERT CLIENT
