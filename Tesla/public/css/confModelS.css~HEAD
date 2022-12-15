@@ -1,3 +1,89 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+
+  
+  fieldset {
+    background: #191c29;
+    width: 370px;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 6px;
+    color: #FFF;
+    font-size: 1.5em;
+  }
+  label{
+    font-size: 20px;
+    padding: 5px;
+  }
+ 
+  
+  fieldset::before {
+    position: absolute;
+    content: "";
+    width: 102%;
+    height: 104%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #ffffff, #dfe0e4 43%, #000000);
+      position: absolute;
+      z-index: -1;
+      top: -2%;
+      left: -1%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  fieldset::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #ffffff, #dfe0e4 43%, #000000);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  .italic{
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  h2{
+    padding-bottom: 10px;
+  }
+
+
+
 
 *{
     box-sizing: border-box;
@@ -9,6 +95,7 @@ body{
     height: 400vh;
     background-color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
 }
 
 html{
@@ -280,48 +367,64 @@ img{
     margin-top: 15px;
     width: 50px;
     height: 50px;
-    
-    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.checkedColor{margin-top:10px;
-    color: rgb(101, 77, 255);
-    border: solid 6px;
-    border-radius: 10px;}
 
-.couleur {
+.W, .W2{
+    background-color: #FFF;
+    border: solid 1px white;
     position: relative;
-    background-color: white;
     width: 40px;
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
 }
-#W{
-    background-color: #FFF;
-    border: solid 1px white;
-}
-#Black{
+.Black, .Black2{
     background-color: black;
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#G{
+.G{
     background-color: rgb(78,80,86);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#Blue{
+.Blue{
     background-color: rgb(2, 41, 98);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#R{
+.R{
     background-color: rgb(121, 0, 0);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-#Beige{
+.Beige{
     background-color: rgb(235, 226, 212);
     border: solid 1px white;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 button{
     cursor: pointer;
@@ -616,7 +719,8 @@ legend {
 .buttonToggle{
     display: flex;
     justify-content: space-around;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+    padding-top: 20px;
 }
 .switch {
     position: relative;
@@ -766,3 +870,46 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModelS.css~HEAD
+========
+#btn_valid{
+    margin-top: 30px;
+    background: transparent;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+    border: solid #FFF;
+    color: white;
+    cursor: pointer;
+}
+#btn_valid:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
+.d__flex{
+    display: flex;
+    justify-content: space-around;
+}
+.d__flex2{
+    display: flex;
+    align-items: center;
+}
+.radio__options{
+    display: none;
+}
+
+.label__clickable{
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boutons__options{
+    margin: 10px;
+}
+
+.clické{
+	background-color: rgb(101, 77, 255);
+}
+>>>>>>>> main:Tesla/public/css/confModel.css

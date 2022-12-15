@@ -7,11 +7,9 @@ window.addEventListener('scroll', function(){
 
     let barre = position * 100
     
-
     document.getElementById("movement").style.height = barre/2.6987477201895126 + "%"
     document.getElementById("GP").style.top = barre/2.6987477201895126 + "%" 
 
-   
 })
 
 let j=0
@@ -173,13 +171,63 @@ if(document.getElementById('checkCrochet').checked){
 }
 else{document.getElementById('afficheCrochet').innerHTML = "Non"}
 
+if(document.getElementById('checkAutoPilot').checked){
+    autopilotchoisi = document.getElementById('checkAutoPilot').value;
+    document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
+}
+else{document.getElementById('afficheAutoPilot').innerHTML = "Non"}
+if(document.getElementById('checkSelfDriving').checked){
+    autonomeChoisi = document.getElementById('checkSelfDriving').value;
+    document.getElementById('afficheConduite').innerHTML = autonomeChoisi
+}
+else{document.getElementById('afficheConduite').innerHTML = "Non"}
 
+if(document.getElementById('checkRecharge').checked){
+    rechargeChoisi = document.getElementById('checkRecharge').value;
+    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+}
+else{document.getElementById('afficheRecharge').innerHTML = "Non"}
 
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
+else{document.getElementById('afficheCrochet').innerHTML = "Non"}
 
+if(document.getElementById('checkRecharge').checked){
+    rechargeChoisi = document.getElementById('checkRecharge').value;
+    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+}
+else{document.getElementById('afficheRecharge').innerHTML = "Non"}
 
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
+else{document.getElementById('afficheCrochet').innerHTML = "Non"}
 
+if(document.getElementById('checkAutoPilot').checked){
+    autopilotchoisi = document.getElementById('checkAutoPilot').value;
+    document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi
+}
+else{document.getElementById('afficheAutoPilot').innerHTML = "Non"}
+if(document.getElementById('checkSelfDriving').checked){
+    autonomeChoisi = document.getElementById('checkSelfDriving').value;
+    document.getElementById('afficheConduite').innerHTML = autonomeChoisi
+}
+else{document.getElementById('afficheConduite').innerHTML = "Non"}
 
+if(document.getElementById('checkRecharge').checked){
+    rechargeChoisi = document.getElementById('checkRecharge').value;
+    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+}
+else{document.getElementById('afficheRecharge').innerHTML = "Non"}
 
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
+else{document.getElementById('afficheCrochet').innerHTML = "Non"}
 
 
 window.addEventListener('change',function(){

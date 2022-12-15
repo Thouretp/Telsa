@@ -7,11 +7,9 @@ window.addEventListener('scroll', function(){
 
     let barre = position * 100
     
-
     document.getElementById("movement").style.height = barre/2.6987477201895126 + "%"
     document.getElementById("GP").style.top = barre/2.6987477201895126 + "%" 
 
-   
 })
 
 let j=0

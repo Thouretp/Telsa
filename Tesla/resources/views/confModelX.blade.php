@@ -58,7 +58,7 @@
 
         
         <div class="options">
-             <form action="{{'modifModel3'}}" method="post"> <!-- Appelle Modif dans web.php -->
+             <form action="{{'modifModelX'}}" method="post"> <!-- Appelle Modif dans web.php -->
             @csrf
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">

@@ -53,7 +53,7 @@ class ConfMYController extends Controller
         return view('confModelY', [
             'modelY'=> $getInfoMY,
             'typeModelY'=> $getModelYMoto,
-            'motorisationMY'=> Motorisation::find(7),
+            'motorisationMY'=> Motorisation::find(1),
             'optionsMY'=> $getOptionMY,
             'optionCouleurMY'=>$getOptionCouleur,
             'optionDescMY'=>$getOptionDescription

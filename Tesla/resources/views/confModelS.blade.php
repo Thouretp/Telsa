@@ -57,7 +57,7 @@
 
         
         <div class="options">
-             <form action="{{'modifModel3'}}" method="post"> <!-- Appelle Modif dans web.php -->
+             <form action="{{'modifModelS'}}" method="post"> <!-- Appelle Modif dans web.php -->
             @csrf
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">
@@ -77,13 +77,10 @@
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
                 </div>
             </div>
-
             
             <div class="couleurs">
                 <h2 id="color">Couleur</h2>
-                
-                
-
+            
                 <fieldset>
                     <div class="d__flex">
                         <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMS[0]->detailcaracteristique}} " checked="checked">
@@ -109,9 +106,6 @@
                 </fieldset>
                 <div id="desc2" class="invisible">Sélectionner une couleur</div>
             </div>
-            
-
-
             
             <div class="jantes">
                 <h2 id="Wheels">Jantes</h2>
