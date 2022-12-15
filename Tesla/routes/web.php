@@ -58,4 +58,3 @@ Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'Affi
 Route::post('/modif', [ConfModelXController::class,'modif'])->name('modif');
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
-

@@ -45,51 +45,51 @@
     document.getElementById('btn_add-4').classList.remove("visible");
     document.getElementById('btn_add-5').classList.add("visible");
   }
-  
+
   document.getElementById('btn_add-1').addEventListener('click',function(){
     console.log('zza');
   })
-  
-  
-  
-  
-  window.addEventListener('change',function(){
-    
-    if(document.getElementById('radio1').checked){
-      document.getElementById('btn_add-1').classList.add("visible");
-      document.getElementById('btn_add-2').classList.remove("visible");
-      document.getElementById('btn_add-3').classList.remove("visible");
-      document.getElementById('btn_add-4').classList.remove("visible");
-      document.getElementById('btn_add-5').classList.remove("visible");
-    }
 
-    if(document.getElementById('radio2').checked){
-      document.getElementById('btn_add-1').classList.remove("visible");
-      document.getElementById('btn_add-2').classList.add("visible");
-      document.getElementById('btn_add-3').classList.remove("visible");
-      document.getElementById('btn_add-4').classList.remove("visible");
-      document.getElementById('btn_add-5').classList.remove("visible");
-    }
-    
-    if(document.getElementById('radio3').checked){
-      document.getElementById('btn_add-1').classList.remove("visible");
-      document.getElementById('btn_add-2').classList.remove("visible");
-      document.getElementById('btn_add-3').classList.add("visible");
-      document.getElementById('btn_add-4').classList.remove("visible");
-      document.getElementById('btn_add-5').classList.remove("visible");
-    }
-    
-    if(document.getElementById('radio4').checked){
-      document.getElementById('btn_add-1').classList.remove("visible");
-      document.getElementById('btn_add-2').classList.remove("visible");
-      document.getElementById('btn_add-3').classList.remove("visible");
-      document.getElementById('btn_add-4').classList.add("visible");
-      document.getElementById('btn_add-5').classList.remove("visible");
-    }
-    
-    if(document.getElementById('radio5').checked){
-      document.getElementById('btn_add-1').classList.remove("visible");
-      document.getElementById('btn_add-2').classList.remove("visible");
+
+
+
+window.addEventListener('change',function(){
+
+  if(document.getElementById('radio1').checked){
+    document.getElementById('btn_add-1').classList.add("visible");
+    document.getElementById('btn_add-2').classList.remove("visible");
+    document.getElementById('btn_add-3').classList.remove("visible");
+    document.getElementById('btn_add-4').classList.remove("visible");
+    document.getElementById('btn_add-5').classList.remove("visible");
+  }
+
+  if(document.getElementById('radio2').checked){
+    document.getElementById('btn_add-1').classList.remove("visible");
+    document.getElementById('btn_add-2').classList.add("visible");
+    document.getElementById('btn_add-3').classList.remove("visible");
+    document.getElementById('btn_add-4').classList.remove("visible");
+    document.getElementById('btn_add-5').classList.remove("visible");
+  }
+
+  if(document.getElementById('radio3').checked){
+    document.getElementById('btn_add-1').classList.remove("visible");
+    document.getElementById('btn_add-2').classList.remove("visible");
+    document.getElementById('btn_add-3').classList.add("visible");
+    document.getElementById('btn_add-4').classList.remove("visible");
+    document.getElementById('btn_add-5').classList.remove("visible");
+  }
+
+  if(document.getElementById('radio4').checked){
+    document.getElementById('btn_add-1').classList.remove("visible");
+    document.getElementById('btn_add-2').classList.remove("visible");
+    document.getElementById('btn_add-3').classList.remove("visible");
+    document.getElementById('btn_add-4').classList.add("visible");
+    document.getElementById('btn_add-5').classList.remove("visible");
+  }
+
+  if(document.getElementById('radio5').checked){
+    document.getElementById('btn_add-1').classList.remove("visible");
+    document.getElementById('btn_add-2').classList.remove("visible");
     document.getElementById('btn_add-3').classList.remove("visible");
     document.getElementById('btn_add-4').classList.remove("visible");
     document.getElementById('btn_add-5').classList.add("visible");
