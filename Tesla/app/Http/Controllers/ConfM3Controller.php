@@ -22,7 +22,7 @@ class ConfM3Controller extends Controller
         $charge = $_POST['charge_'];
         $crochet = $_POST['crochett'];
 
-
+        $dateActuelle = date('d-m-Y');
         
         $pdf = PDF::loadHTML('<html>
         <link rel="stylesheet" href="{{asset("css/confModel.css")}}" type="text/css">
@@ -33,6 +33,8 @@ class ConfM3Controller extends Controller
         <body>
 
         <h1>Configuration de votre Modèle 3</h1>
+        <p>Date : '.$dateActuelle.'</p>
+
         <h2>Caractéristiques</h2>
         <h3>Modèle</h3>
         <p>'.$modelChoisi.'</p>
