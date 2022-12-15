@@ -6,7 +6,7 @@ $("#Rue").keyup(function(event) {
           let rue = $("#Rue").val();
           $.get('https://api-adresse.data.gouv.fr/search/', {
               q: rue,
-              limit: 15,
+              limit: 12,
               autocomplete: 1
           }, function (data, status, xhr) {
               let liste = "";
@@ -32,6 +32,16 @@ $("#Rue").keyup(function(event) {
   
                   $('.adress-feedback ul').empty();
               });
+              $('body').on("click", function(event) {
+                // Si l'élément cible de l'événement n'est pas un <a>,
+                // supprimer tous les éléments enfants de l'élément <ul>
+                if (!$(event.target).is("a")) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $('.adress-feedback ul').empty();
+                }
+              });
+              
   
           }).error(function () {
               // alert( "error" );

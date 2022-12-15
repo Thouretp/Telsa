@@ -1,5 +1,4 @@
   <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
-  <link rel="stylesheet" href="{{asset('buildPhone/css/demo.css')}}">
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -73,7 +72,7 @@
       validMsg = document.querySelector("#valid-msg");
 
     // here, the index maps to the error code returned from getValidationError - see readme
-    var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+    var errorMap = ["Numéro invalide", "Code pays invalide", "Trop court", "Trop long", "Numéro invalide"];
 
     // initialise plugin
     var iti = window.intlTelInput(input, {

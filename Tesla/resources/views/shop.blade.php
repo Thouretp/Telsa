@@ -16,12 +16,12 @@
         <div class="center">
             <a class="categorie_menu_label">Recharge</a>
             <a class="categorie_menu_label">Accessoires pour les véhicules</a>
-            <a class="categorie_menu_label" href="{{route('vetements_homme')}}">Vêtements</a>
+            <a class="categorie_menu_label" href="/vetements_homme">Vêtements</a>
             <a class="categorie_menu_label">Lifestyle</a>
         </div>
         <div class="right">
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
-            <img class="see" src="{{asset('Models/bagv2.png')}}">
+            <a href="#"><img class="see" src="{{asset('Models/cart_icon.png')}}"></a>
             <button class="hamburgeur">
             <div class="bar"></div>
         </div>        
@@ -80,11 +80,11 @@
 
     <h2>Meilleures ventes</h2>
 
-<input id="radio1" type="radio" name="position"  />
-<input id="radio2" type="radio" name="position" />
-<input id="radio3" type="radio" name="position" checked />
-<input id="radio4" type="radio" name="position" />
-<input id="radio5" type="radio" name="position" />
+<input id="radio1" class="radio_buttons" type="radio" name="position"  />
+<input id="radio2" class="radio_buttons" type="radio" name="position" />
+<input id="radio3" class="radio_buttons" type="radio" name="position" checked />
+<input id="radio4" class="radio_buttons" type="radio" name="position" />
+<input id="radio5" class="radio_buttons" type="radio" name="position" />
 
 <button class=add__basket id="btn_add-1">Ajouter au panier</button>
 <button class=add__basket id="btn_add-2">Ajouter au panier</button>
@@ -124,6 +124,36 @@
         <h3>PRIX</h3>
     </div>
 </main>
+<div class=affiche__accessoires>
+    <table class="tableau-style">
+    <thead>
+        <tr>
+            <td>Nom</td>
+            <td>DESC</td>
+            <td>PRIX</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($accessoires as $accessoire)
+        <tr>
+            <td>{{$accessoire->nomaccessoire}}</td>
+            <td>{{$accessoire->desciptionaccessoire}}</td>
+            <td>{{$accessoire->prixaccessoire}}</td>
+        </tr>
+        @endforeach
+        
+    </tbody>
+
+    </table>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
 
 
 

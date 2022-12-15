@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-
-
 h2{
   color: #FFF;
   position: absolute;
@@ -193,6 +191,9 @@ header {
   cursor: pointer;
 }
 
+.radio_buttons{
+  margin-top: 100px;
+}
 
 
 main#carousel {
@@ -375,3 +376,14 @@ input:nth-of-type(5):checked ~ main#carousel {
   flex-direction: column;
 }
 
+.affiche__accessoires{
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%,0%);
+  left: 50%;
+  height: fit-content;
+  width: 60%;
+  z-index: 999;
+  border-radius: 15px;
+  padding: 2%;
+}
