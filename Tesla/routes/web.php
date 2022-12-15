@@ -44,12 +44,13 @@ Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime'])
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
 Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+Route::get('/vetements_homme', function(){
+    return view('shopClothesMan');
+});
 
 Route::post('essai', [EssaiController::class, 'store']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
-
-
 
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 
