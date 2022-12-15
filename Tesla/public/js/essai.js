@@ -4,9 +4,13 @@ var modelY = document.getElementById('btn-modelY')
 var TextModel = document.getElementById('TextModel')
 var labelModel = document.getElementById('modelLabel')
 
-var erreur = document.querySelector('.erreurs')
+var erreurMail = document.querySelector('.erreursMail')
+var erreurTel = document.querySelector('.erreursTel')
 
 var textEmail = document.getElementById('textEmail')
+var textTel = document.getElementById('phone');
+var textPrenom = document.getElementById('prenom');
+var textNom = document.getElementById('nom');
 
 var imageModel = document.querySelector('.image-voiture img')
 
@@ -35,10 +39,18 @@ modelY.addEventListener("click", function () {
     }
 });
 
+textPrenom.addEventListener('change', function(){
+    textPrenom.value = textPrenom.value[0].toUpperCase() + textPrenom.value.substring(1);;
+})
+
+textNom.addEventListener('change', function(){
+    textNom.value = textNom.value[0].toUpperCase() + textNom.value.substring(1);;
+})
+
 textEmail.addEventListener('change', function () {
     if (isValidEmail(textEmail.value) == false) {
         textEmail.style.color = '#EC2222';
-        var uneErreur = create('p', erreur, "L'adresse n'est pas valide")
+        var uneErreur = create('p', erreurMail, "L'adresse n'est pas valide")
     } else {
         console.log("Adresse valide")
         textEmail.style.color = '#22EC87';
@@ -54,6 +66,10 @@ function isValidEmail(email) {
     return pattern.test(email);
 }
 
+function isValidPhoneNumber(tel){
+    var pattern = /^[0-9 -]+[0-9]$/;
+    return pattern.test(tel);
+}
 
 function create(tag, parent, text = null, classs = null, id = null) { //Function qui permet de crée un élément
     let element = document.createElement(tag)   // On crée un element avec un Tag (exemple: p, h1, h2, article, etc...)
@@ -66,14 +82,6 @@ function create(tag, parent, text = null, classs = null, id = null) { //Function
         element.id = id
     return element  // on retourne l'element
 }
-
-
-
-
-// if (clickedmY == false) {
-//     modelY.classList.remove('isSelected');
-//     console.log("C'est pas toggle")
-// }
 
 
 
