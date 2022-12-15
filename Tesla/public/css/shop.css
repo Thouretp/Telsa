@@ -374,3 +374,4 @@ input:nth-of-type(5):checked ~ main#carousel {
   display: flex;
   flex-direction: column;
 }
+

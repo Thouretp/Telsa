@@ -16,9 +16,8 @@
         <div class="center">
             <a class="categorie_menu_label">Recharge</a>
             <a class="categorie_menu_label">Accessoires pour les véhicules</a>
-            <a class="categorie_menu_label">Vêtements</a>
+            <a class="categorie_menu_label" href="{{route('vetements_homme')}}">Vêtements</a>
             <a class="categorie_menu_label">Lifestyle</a>
-            <a class="categorie_menu_label">Github c'est nul</a>
         </div>
         <div class="right">
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
@@ -56,14 +55,6 @@
             <a href="">Casquettes et bonnets</a>
             <a href="">Chaussettes</a>
         </div>
-    </div>
-    <div class="categorie_menu_list noZindex">
-        <ul>
-            <li>aaaaaaaaaaaa</li>
-            <li>jejejejej</li>
-            <li>aiaiaiiaia</li>
-            <li>rorororoor</li>
-        </ul>
     </div>
     <nav class="mobile-nav">
         <a href="/#modelS">Model S</a>
@@ -146,5 +137,6 @@
 
 <script src="{{asset('js/hamburgeur.js')}}"></script>
 <script src="{{asset('js/shop.js')}}"></script>
+<script src="{{asset('js/shopListHeader.js')}}"></script>
 
 </html>
