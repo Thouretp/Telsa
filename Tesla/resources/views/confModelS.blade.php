@@ -57,7 +57,7 @@
 
         
         <div class="options">
-             <form action="{{'modifModelS'}}" method="post"> <!-- Appelle Modif dans web.php -->
+             <form action="{{'modifModel3'}}" method="post"> <!-- Appelle Modif dans web.php -->
             @csrf
             <input type="button" class="more_info" value="i"></input> 
             <div class="motorisation" id="motorisation">
@@ -66,14 +66,13 @@
                     <fieldset >
                         <div class="boutons__options">
                             <input class="radio__options" type="radio" name="model" id="modelPlaid" value="Modèle S Plaid" checked="checked"></input>
-                            <label class="label__clickable" id="bouton_modelX_plaid"for="modelPlaid">Modele S Plaid 209 000€</label><br>
+                            <label class="label__clickable" id="bouton_modelX_plaid"for="modelPlaid">Modele S Plaid</label><br>
                         </div>
 
                         <div class="boutons__options">
                             <input class="radio__options"type="radio" name="model" id="modelXstandart" value="Modèle S" >
-                            <label class="label__clickable" id ="bouton_modelX" for="modelXstandart">Model S <span class="italic">(2023)</span></label><br>
+                            <label class="label__clickable" id ="bouton_modelX" for="modelXstandart">Modèle S</label><br>
                         </div>
-
                     </fieldset>
                     <div id="desc1" class="invisible">Choisir une motorisation</div>
                 </div>
@@ -87,9 +86,10 @@
 
                 <fieldset>
                     <div class="d__flex">
-                        <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMS[0]->detailcaracteristique}}" checked="checked">
+                        <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMS[0]->detailcaracteristique}} " checked="checked">
                         <label  for="blanc"><div id="white" class="W"></div></label>
                     </div>
+                    
                     <div class="d__flex">
                         <input class="radio__options" type="radio" name="color" id="bleu" value="{{$optionCouleurMS[3]->detailcaracteristique}}" >
                         <label for="bleu"><div id="blue"  class="Blue"></div></label>
@@ -107,8 +107,9 @@
                         <label  for="rouge"><div id="red" class="R"></div></label>
                     </div>
                 </fieldset>
+                <div id="desc2" class="invisible">Sélectionner une couleur</div>
             </div>
-            <div id="desc2" class="invisible">Sélectionner une couleur</div>
+            
 
 
             
@@ -157,12 +158,30 @@
                     <label>Parking auto</label>
                     <label>Sortie auto</label>
                     <label>Sortie auto intelligente</label>
-                    <div class="buttonToggle">
-                        <label class="switch">
-                            <input type="checkbox" id="checkAutoPilot" value="Sélectionné">
-                            <span class="slider-toggle round"></span>
-                        </label>
+                    <div class="d__flex">
+                        <div class="d__flex2">
+                            <h4>NON</h4>
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input  type="radio" name="autopilot_" id="checkAutoPilot2" value="Non Sélectionné" checked="checked">
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                        <div class="d__flex2">
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input  type="radio" name="autopilot_" id="checkAutoPilot" value="Sélectionné">
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                            <h4>OUI</h4>
+                            </div>
+                        </div>
+                    
                     </div>
+                    
                 </fieldset>
                 <div id="desc5" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
@@ -173,13 +192,30 @@
                 <fieldset>
                     <label>Fonctionnalités de l'Autopilot de base et de l'Autopilot amélioré.</label>
                     <label>Reconnaissance et réaction aux feux de signalisation et aux panneaux stop.</label>
-
-                    <div class="buttonToggle">
-                        <label class="switch">
-                            <input type="checkbox" id="checkSelfDriving" value="Sélectionné">
-                            <span class="slider-toggle round"></span>
-                        </label>
+                    <div class="d__flex">
+                        <div class="d__flex2">
+                            <h4>NON</h4>
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                <input type="radio" id="checkSelfDriving2" name="selfdriving_" value="Non Sélectionné" checked="checked">
+                                <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                        <div class="d__flex2">
+                                <div class="buttonToggle">
+                                <label class="switch">
+                                <input type="radio" id="checkSelfDriving" name="selfdriving_"value="Sélectionné">
+                                <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                            <h4>OUI</h4>
+                            </div>
+                        </div>
+                    
                     </div>
+                    
                 </fieldset>
                 <div id="desc6" class="invisible">Sur l'autoroute, le changement de voie auto positionne votre véhicule dans la meilleure voie pour préparer les insertions et sorties, ainsi que le dépassement des véhicules lents. Les conducteurs bénéficient d'informations claires sur les changements de voie à venir et sur la personnalisation de la fonctionnalité Changement de voie auto.</div>
             </div>
@@ -188,12 +224,30 @@
                 <h2 id="recharge">Chargeur mural</h2>
                 <fieldset>
                     <label>Chargeur attaché au mur pour recharger votre Tesla dans le comfort de votre maison.</label>
-                    <div class="buttonToggle">
-                        <label class="switch">
-                            <input type="checkbox" id="checkRecharge" value="Sélectionné"> 
-                            <span class="slider-toggle round"></span>
-                        </label>
+                    <div class="d__flex">
+                        <div class="d__flex2">
+                            <h4>NON</h4>
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input type="radio"  id="checkRecharge1" name="charge_" value="Non Sélectionné" checked="checked"> 
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                        <div class="d__flex2">
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input type="radio" name="charge_" id="checkRecharge" value="Sélectionné"> 
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                            <h4>OUI</h4>
+                            </div>
+                        </div>
+                    
                     </div>
+                    
                 </fieldset>
                 <div id="desc7" class="invisible">Notre solution de recharge à domicile recommandée. Avec une vitesse de recharge allant jusqu'à 71 kilomètres d'autonomie supplémentaire par heure en fonction du modèle de véhicule, une conception polyvalente pour l'intérieur et l'extérieur ainsi qu'un câble de 7,3 mètres, le Wall Connector est notre moyen le plus rapide et le plus pratique de recharger son véhicule à domicile. Installation requise et non incluse.</div>
             </div>
@@ -201,15 +255,32 @@
                 <H2 id="Option-Sup">Crochet d'attelage</H2>
                 <fieldset>
                 <label for="">Barre d’attelage en acier haute résistance de classe II, capable de tracter jusqu'à 2 250 kg</label>
-                <div class="buttonToggle">
-                    <label class="switch">
-                        <input type="checkbox" id="checkCrochet" value="Sélectionné">
-                        <span class="slider-toggle round"></span>
-                    </label>
-                </div>
+                <div class="d__flex">
+                        <div class="d__flex2">
+                            <h4>NON</h4>
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input type="radio"  id="checkCrochet2" name="crochett" value="Non Sélectionné" checked="checked">
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                        <div class="d__flex2">
+                            <div class="buttonToggle">
+                                <label class="switch">
+                                    <input type="radio" name="crochett" id="checkCrochet" value="Sélectionné">
+                                    <span class="slider-toggle round"></span>
+                                </label>
+                            </div>
+                            <h4>OUI</h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
                 </fieldset>
             </div>
-
 
             
             <div class="commander" >
