@@ -113,8 +113,7 @@
                     </div>
                 </fieldset>
                 <div id="desc2" class="invisible">Sélectionner une couleur</div>
-            </div>
-            
+            </div>            
             <div class="jantes">
                 <h2 id="Wheels">Jantes</h2>
                 <fieldset>
@@ -140,10 +139,6 @@
                     <div>
                         <input class="radio__options" type="radio" name="interieur" id="interieur2" value="{{$optionCouleurM3[9]->detailcaracteristique}}">
                         <label  for="interieur2"><div id="bouton_interieur_2"class="W2"></div></label><br>
-                    </div>
-                    <div>
-                        <input class="radio__options" type="radio" name="interieur" id="interieur3" value="{{$optionCouleurM3[10]->detailcaracteristique}}">
-                        <label  for="interieur3"><div id="bouton_interieur_3" class="Beige"></div></label><br>
                     </div>
                 </fieldset>
                 <div id="desc4" class="invisible">Sélectionner une couleur</div>

@@ -66,4 +66,3 @@ Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
 
 
-
