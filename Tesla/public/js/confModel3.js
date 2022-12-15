@@ -146,6 +146,12 @@ if(document.getElementById('interieur2').checked){
     document.getElementById('bouton_interieur_2').style.border = " solid 5px rgb(101, 77, 255)"
 }
 else{document.getElementById('bouton_interieur_2').style.border = " solid 1px #FFF"}
+if(document.getElementById('interieur3').checked){
+    interieurChoisi = document.getElementById('interieur3').value;
+    document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+    document.getElementById('bouton_interieur_3').style.border = " solid 5px rgb(101, 77, 255)"
+}
+else{document.getElementById('bouton_interieur_3').style.border = " solid 1px #FFF"}
 
 if(document.getElementById('checkAutoPilot').checked){
     autopilotchoisi = document.getElementById('checkAutoPilot').value;
@@ -157,6 +163,18 @@ if(document.getElementById('checkSelfDriving').checked){
     document.getElementById('afficheConduite').innerHTML = autonomeChoisi
 }
 else{document.getElementById('afficheConduite').innerHTML = "Non"}
+
+if(document.getElementById('checkRecharge').checked){
+    rechargeChoisi = document.getElementById('checkRecharge').value;
+    document.getElementById('afficheRecharge').innerHTML = rechargeChoisi
+}
+else{document.getElementById('afficheRecharge').innerHTML = "Non"}
+
+if(document.getElementById('checkCrochet').checked){
+    crochetChoisi = document.getElementById('checkCrochet').value;
+    document.getElementById('afficheCrochet').innerHTML = crochetChoisi
+}
+else{document.getElementById('afficheCrochet').innerHTML = "Non"}
 
 if(document.getElementById('checkRecharge').checked){
     rechargeChoisi = document.getElementById('checkRecharge').value;
@@ -286,7 +304,13 @@ window.addEventListener('change',function(){
         document.getElementById('bouton_interieur_2').style.border = " solid 5px rgb(101, 77, 255)"
     }
     else{document.getElementById('bouton_interieur_2').style.border = " solid 1px #FFF"}
-   
+    if(document.getElementById('interieur3').checked){
+        interieurChoisi = document.getElementById('interieur3').value;
+        document.getElementById('afficheInterieur').innerHTML = interieurChoisi
+        document.getElementById('bouton_interieur_3').style.border = " solid 5px rgb(101, 77, 255)"
+    }
+    else{document.getElementById('bouton_interieur_3').style.border = " solid 1px #FFF"}
+
     if(document.getElementById('checkAutoPilot').checked){
         autopilotchoisi = document.getElementById('checkAutoPilot').value;
         document.getElementById('afficheAutoPilot').innerHTML = autopilotchoisi

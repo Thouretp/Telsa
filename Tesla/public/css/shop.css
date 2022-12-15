@@ -375,3 +375,14 @@ input:nth-of-type(5):checked ~ main#carousel {
   flex-direction: column;
 }
 
+.affiche__accessoires{
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%,0%);
+  left: 50%;
+  height: fit-content;
+  width: 60%;
+  z-index: 999;
+  border-radius: 15px;
+  padding: 2%;
+}

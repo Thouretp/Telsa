@@ -51,9 +51,11 @@ Route::get('/vetements_homme', function(){
 Route::post('essai', [EssaiController::class, 'store']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
-
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
-
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
 
 
 // LES ROUTES POUR LES PDF DES CONFIG
