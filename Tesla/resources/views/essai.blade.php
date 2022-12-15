@@ -81,7 +81,7 @@
                     <div class="left-form">
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" name="prenom" required>
+                                <input type="text" class="text-area-form-essai" id="prenom" name="prenom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Prénom</label>
@@ -89,7 +89,7 @@
                         </div>
                         <div>
                             <div class="group">      
-                                <input type="text" class="text-area-form-essai" name="nom" required>
+                                <input type="text" class="text-area-form-essai" id="nom" name="nom" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Nom</label>
@@ -103,7 +103,7 @@
                                 <label class="label-form-essai">E-mail</label>
                             </div>
                         </div>
-                        <div class="erreurs">
+                        <div class="erreursMail">
                         </div>
                         <div>
                             <div class="group">
@@ -117,6 +117,8 @@
                                 <label class="label-form-essai">Télephone</label> -->
 
                             </div>
+                        </div>
+                        <div class="erreursTel">
                         </div>
                     </div>
                     <div class="right-form">

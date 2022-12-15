@@ -4,9 +4,15 @@ var modelY = document.getElementById('btn-modelY')
 var TextModel = document.getElementById('TextModel')
 var labelModel = document.getElementById('modelLabel')
 
-var erreur = document.querySelector('.erreurs')
+var erreurMail = document.querySelector('.erreursMail')
+var erreurTel = document.querySelector('.erreursTel')
 
 var textEmail = document.getElementById('textEmail')
+var textTel = document.getElementById('phone');
+var textPrenom = document.getElementById('prenom');
+var textNom = document.getElementById('nom');
+
+
 
 var imageModel = document.querySelector('.image-voiture img')
 
@@ -35,10 +41,18 @@ modelY.addEventListener("click", function () {
     }
 });
 
+textPrenom.addEventListener('change', function(){
+    textPrenom.value = textPrenom.value[0].toUpperCase() + textPrenom.value.substring(1);;
+})
+
+textNom.addEventListener('change', function(){
+    textNom.value = textNom.value[0].toUpperCase() + textNom.value.substring(1);;
+})
+
 textEmail.addEventListener('change', function () {
     if (isValidEmail(textEmail.value) == false) {
         textEmail.style.color = '#EC2222';
-        var uneErreur = create('p', erreur, "L'adresse n'est pas valide")
+        var uneErreur = create('p', erreurMail, "L'adresse n'est pas valide")
     } else {
         console.log("Adresse valide")
         textEmail.style.color = '#22EC87';
@@ -48,10 +62,35 @@ textEmail.addEventListener('change', function () {
 
 })
 
+textTel.addEventListener('change', function(){
+    if(isValidPhoneNumber(textTel.value) == false){
+        textTel.style.color = '#EC2222';
+        var uneErreur = create('p', erreurTel, "le tel n'est pas valide")
+    }else{
+        console.log("Tel validé")
+        textTel.style.color = '#22EC87';
+        erreurTel.remove()
+    }
+        
+})
+
+
+
+
+
+
+
+
+
 function isValidEmail(email) {
     // Vérifiez si l'adresse e-mail contient un signe "@", des points (.) et des chiffres
     const pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return pattern.test(email);
+}
+
+function isValidPhoneNumber(tel){
+    var pattern = /^(07|06)\d{8}$/;
+    return pattern.test(tel);
 }
 
 

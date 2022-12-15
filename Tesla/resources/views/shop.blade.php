@@ -60,12 +60,12 @@
 <input id="radio3" type="radio" name="position" checked />
 <input id="radio4" type="radio" name="position" />
 <input id="radio5" type="radio" name="position" />
-
+<!-- 
 <button class=add__basket id="btn_add-1">Ajouter au panier</button>
 <button class=add__basket id="btn_add-2">Ajouter au panier</button>
 <button class=add__basket id="btn_add-3">Ajouter au panier</button>
 <button class=add__basket id="btn_add-4">Ajouter au panier</button>
-<button class=add__basket id="btn_add-5">Ajouter au panier</button>
+<button class=add__basket id="btn_add-5">Ajouter au panier</button> -->
 
 <main id="carousel">
     <div id="zazaza"class="item">
@@ -99,36 +99,25 @@
         <h3>PRIX</h3>
     </div>
 </main>
+
 <div class=affiche__accessoires>
-    <table class="tableau-style">
-    <thead>
-        <tr>
-            <td>Nom</td>
-            <td>DESC</td>
-            <td>PRIX</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($accessoires as $accessoire)
-        <tr>
-            <td>{{$accessoire->nomaccessoire}}</td>
-            <td>{{$accessoire->desciptionaccessoire}}</td>
-            <td>{{$accessoire->prixaccessoire}}</td>
-        </tr>
-        @endforeach
-        
-    </tbody>
-
-    </table>
-    
-    
-    
-    
-    
-    
-    
+    <div class="container-card">
+        <div class="title-item">
+            <h2>{{$accessoires[20]->nomaccessoire}}</h2>
+        </div>
+        <div class="img">
+            <img src="" alt="">
+        </div>
+        <div class="price-btnMore">
+            <div class="price">
+                <p>{{$accessoires[20]->prixaccessoire}}</p>
+            </div>
+            <div class="btn-more">
+                <button type="submit"> Voir Plus</button>
+            </div>
+        </div>
+    </div>
 </div>
-
 
 
 
