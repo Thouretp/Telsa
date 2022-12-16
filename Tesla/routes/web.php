@@ -44,15 +44,18 @@ Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime'])
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
 Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+Route::get('/vetements_homme', function(){
+    return view('shopClothesMan');
+});
 
 Route::post('essai', [EssaiController::class, 'store']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
-
-
-
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
-
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
 
 
 // LES ROUTES POUR LES PDF DES CONFIG
@@ -61,6 +64,5 @@ Route::post('/modifModelS', [ConfMSController::class,'modifModelS'])->name('modi
 Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modifModel3');
 Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
-
 
 

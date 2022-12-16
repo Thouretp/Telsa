@@ -12,8 +12,6 @@ var textTel = document.getElementById('phone');
 var textPrenom = document.getElementById('prenom');
 var textNom = document.getElementById('nom');
 
-
-
 var imageModel = document.querySelector('.image-voiture img')
 
 var clickedmY = false
@@ -62,26 +60,6 @@ textEmail.addEventListener('change', function () {
 
 })
 
-textTel.addEventListener('change', function(){
-    if(isValidPhoneNumber(textTel.value) == false){
-        textTel.style.color = '#EC2222';
-        var uneErreur = create('p', erreurTel, "le tel n'est pas valide")
-    }else{
-        console.log("Tel validé")
-        textTel.style.color = '#22EC87';
-        erreurTel.remove()
-    }
-        
-})
-
-
-
-
-
-
-
-
-
 function isValidEmail(email) {
     // Vérifiez si l'adresse e-mail contient un signe "@", des points (.) et des chiffres
     const pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -89,10 +67,9 @@ function isValidEmail(email) {
 }
 
 function isValidPhoneNumber(tel){
-    var pattern = /^(07|06)\d{8}$/;
+    var pattern = /^[0-9 -]+[0-9]$/;
     return pattern.test(tel);
 }
-
 
 function create(tag, parent, text = null, classs = null, id = null) { //Function qui permet de crée un élément
     let element = document.createElement(tag)   // On crée un element avec un Tag (exemple: p, h1, h2, article, etc...)
@@ -105,14 +82,6 @@ function create(tag, parent, text = null, classs = null, id = null) { //Function
         element.id = id
     return element  // on retourne l'element
 }
-
-
-
-
-// if (clickedmY == false) {
-//     modelY.classList.remove('isSelected');
-//     console.log("C'est pas toggle")
-// }
 
 
 
