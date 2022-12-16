@@ -19,14 +19,14 @@ class EssaiController extends Controller
             'nom'=> $request->input("nom"),
             'mail'=> $request->input("mail"),
             'tel'=> $request->input("tel"),
-            'adresse'=> $request->input("adresse"),
-            'cp'=> $request->input("cp"),
-            'ville'=> $request->input("ville"),
+            'adresse'=> $request->input("Rue"),
+            'cp'=> $request->input("CodePostal"),
+            'ville'=> $request->input("Ville"),
             'modele' => $request->input("model")
 
         );
 
-        // dd($newClient["tel"]);
+        dd($newClient);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
