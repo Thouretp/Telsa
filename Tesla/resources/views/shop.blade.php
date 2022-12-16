@@ -125,33 +125,19 @@
     </div>
 </main>
 <div class=affiche__accessoires>
-    <table class="tableau-style">
-    <thead>
-        <tr>
-            <td>Nom</td>
-            <td>DESC</td>
-            <td>PRIX</td>
-        </tr>
-    </thead>
-    <tbody>
         @foreach($accessoires as $accessoire)
-        <tr>
-            <td>{{$accessoire->nomaccessoire}}</td>
-            <td>{{$accessoire->desciptionaccessoire}}</td>
-            <td>{{$accessoire->prixaccessoire}}</td>
-        </tr>
-        @endforeach
-        
-    </tbody>
-
-    </table>
-    
-    
-    
-    
-    
-    
-    
+            <div class="card__accessoire">
+                <div class="section__image">
+                        <!-- <img src="" alt=""> -->
+                        <div class="ease"><p>Plus de détails</p></div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$accessoire->nomaccessoire}}</p>
+                    <!-- <p>{{$accessoire->desciptionaccessoire}}</p> -->
+                    <p>{{$accessoire->prixaccessoire}} €</p>
+                </div>
+            </div>
+        @endforeach    
 </div>
 
 
