@@ -142,6 +142,9 @@
             <form action="confModelY">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
+            <form action="essai">
+                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
+            </form>
 
             <div class="img">
                 <img src="Models/MY_1.jpg" alt="">
