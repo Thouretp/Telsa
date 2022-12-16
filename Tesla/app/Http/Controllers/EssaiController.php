@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class EssaiController extends Controller
 {
     public function showEssai(){
-        return view('essai');
+        return view('Essai.essai');
     }
 
     public function store(Request $request){

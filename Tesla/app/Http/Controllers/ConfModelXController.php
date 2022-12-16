@@ -65,7 +65,7 @@ class ConfModelXController extends Controller
         $getOptionCouleur = Detient::select("option.detailcaracteristique")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 7)->get();
         $getOptionDescription = Detient::select("option.description_option")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 7)->get();
 
-        return view('confModelX', [
+        return view('Configuration.confModelX', [
             'modelX'=> $getInfoMX,
             'typeModelX'=> $getModelXMoto,
             'motorisationMX'=> Motorisation::find(7),
