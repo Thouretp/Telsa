@@ -19,7 +19,7 @@
     <form method="post" action="{{ route('adresse.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
-
+        
         <!-- adresserue -->
         <div>
             <x-input-label for="adresserue" :value="__('Adresse rue')" />

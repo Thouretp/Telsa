@@ -33,7 +33,7 @@ class ConfM3Controller extends Controller
         <body>
 
         <h1>Configuration de votre Modèle 3</h1>
-        <p>Date : '.$dateActuelle.'</p>
+        <h5>Date : '.$dateActuelle.'</h5>
 
         <h2>Caractéristiques</h2>
         <h3>Modèle</h3>

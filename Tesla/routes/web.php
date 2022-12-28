@@ -65,4 +65,15 @@ Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modi
 Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
 
-
+Route::get('/connectionAuth',function(){
+    return view('logAuthGoogle');
+});
+Route::get('/connect',function(){
+    return view('connect');
+});
+Route::get('/secret',function(){
+    return view('secretAuth');
+});
+Route::get('/logAuth',function(){
+    return view('logAuthGoogle');
+});
