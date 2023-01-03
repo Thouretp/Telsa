@@ -19,11 +19,11 @@ class EssaiController extends Controller
             'nom'=> $request->input("nom"),
             'mail'=> $request->input("mail"),
             'tel'=> $request->input("tel"),
-            'adresse'=> $request->input("adresse"),
-            'cp'=> $request->input("cp"),
-            'ville'=> $request->input("ville"),
+            'adresse'=> $request->input("Rue"),
+            'cp'=> $request->input("CodePostal"),
+            'ville'=> $request->input("Ville"),
+            'pays'=> $request->input("Pays"),
             'modele' => $request->input("model")
-
         );
 
         // dd($newClient["tel"]);
@@ -86,7 +86,8 @@ class EssaiController extends Controller
             'numadresse' => $numadresse_max,
             'adresserue1' => $newClient['adresse'],
             'ville' => $newClient['ville'],
-            'cp' => $newClient['cp']
+            'cp' => $newClient['cp'],
+            'pays' => $newClient['pays']
         ]);
 
             //INSERT SE SITUE

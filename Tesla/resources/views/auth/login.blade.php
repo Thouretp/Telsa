@@ -3,7 +3,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
+                <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie">
             </a>
         </x-slot>
         <!-- Session Status -->
@@ -35,7 +35,7 @@
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                    <span class="ml-2 text-sm text-gray-100">{{ __('Se souvenir de moi') }}</span>
+                    <span class="ml-2 text-sm text-gray">{{ __('Se souvenir de moi') }}</span>
                 </label>
             </div>
             <div class="flex items-center justify-between mt-4">
@@ -55,5 +55,22 @@
                 </x-primary-button>
             </div>
         </form>
+        <div class="text-center my-4">
+            <hr class="my-2">
+            <span class="text-center font-bold">Or</span>
+            <div class="w-3/5 mx-auto mt-4">
+                <a href="{{route('google-auth')}}"
+                    class="focus:ring-2 focus:ring-indigo-800 focus:ring-offset-4 bg-gray-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="current"
+                    class="bi bi-google ml-2" viewbox="0 0 16 16">
+                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87">
+
+                </svg>
+                <span class="text-sm text-left ml-4">Continue with Google</span>
+                </a>
+
+            </div>
+
+        </div>
     </x-auth-card>
 </x-guest-layout>

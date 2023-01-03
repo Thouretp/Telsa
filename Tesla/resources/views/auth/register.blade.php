@@ -3,7 +3,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
+                <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie">
             </a>
         </x-slot>
 
@@ -114,6 +114,7 @@
         if (input.value.trim()) {
             if (iti.isValidNumber()) {
                 validMsg.classList.remove("hide");
+                input.value = iti.selectedCountryData.dialCode + input.value;
             } else {
                 input.classList.add("error");
                 var errorCode = iti.getValidationError();
