@@ -28,6 +28,7 @@
 </header>
 
 <body>
+
     <div class="categorie_menu_list noZindex">
         <div class="clothes_man">
             <a href="">Homme</a>
@@ -124,21 +125,31 @@
         <h3>PRIX</h3>
     </div>
 </main>
-<div class=affiche__accessoires>
+
+
+
+    <div class=affiche__accessoires>
         @foreach($accessoires as $accessoire)
+        
             <div class="card__accessoire">
                 <div class="section__image">
-                        <!-- <img src="" alt=""> -->
-                        <div class="ease"><p>Plus de détails</p></div>
+                    <img src="" alt="">     
+                    <div class="ease">
+                    
+                        <a href="shop/{{$accessoire->numaccessoire}}">Plus de détails</a>
+                    </div>
                 </div>
                 <div class="content_accessoire">
                     <p>{{$accessoire->nomaccessoire}}</p>
+                    <p>{{$accessoire->numaccessoire}}</p>
                     <!-- <p>{{$accessoire->desciptionaccessoire}}</p> -->
                     <p>{{$accessoire->prixaccessoire}} €</p>
                 </div>
             </div>
-        @endforeach    
-</div>
+        @endforeach  
+    </div>
+
+
 
 
 

@@ -4,11 +4,7 @@
   padding: 0;
 }
 
-h2{
-  color: #FFF;
-  position: absolute;
-  top: 120px;
-}
+
 
 body {
   height: 400vh;
@@ -403,8 +399,9 @@ input:nth-of-type(5):checked ~ main#carousel {
 }
 
 .section__image{
-  position: relative;
-  background-color: transparent;  width: 414px;
+  z-index: 0;
+  background-color: transparent;  
+  width: 414px;
   height: 414px;
   float:left;
 	max-width:414px;
@@ -451,6 +448,61 @@ input:nth-of-type(5):checked ~ main#carousel {
 .section__image:hover .ease{
   opacity: 1;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.396);
+	background-color: rgba(255, 255, 255, 0.096);
 	border: 0;
 }
+
+#soubmite{
+  display: none;
+}
+
+label{
+  cursor: pointer;
+}
+
+/* DETAILS ACCESSOIRES */
+.container{
+  margin-top: 375px;
+
+  display: flex;
+}
+
+.image{
+  margin-left: 4vw;
+  margin-right: 4vw;
+  width: 55vw;
+  height: 90vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.content__details{
+
+  width: 35vw;
+  height: 400px;
+  overflow-wrap: break-word;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+.content__details button{
+  height: 30px;
+  width: 50%;
+  background-color: #FFF;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  margin-top: 20px;
+}
+
+.content__details button:hover{
+  background-color: #232323;
+  color: #FFF;
+}
+
+.content__details #tititre{
+  margin-bottom: 10px;
+ 
+}
+
+

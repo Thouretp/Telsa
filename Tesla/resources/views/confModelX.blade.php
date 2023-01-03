@@ -87,7 +87,7 @@
 
                 <fieldset>
                     <div class="d__flex">
-                        <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}} " checked="checked">
+                        <input class="radio__options" type="radio" name="color" id="blanc" value="{{$optionCouleurMX[0]->detailcaracteristique}}" checked="checked">
                         <label  for="blanc"><div id="white" class="W"></div></label>
                     </div>
                     
