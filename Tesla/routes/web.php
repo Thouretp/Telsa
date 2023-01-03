@@ -9,7 +9,11 @@ use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ShopController;
+use FontLib\Table\Type\name;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,15 +69,6 @@ Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modi
 Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
 
-Route::get('/connectionAuth',function(){
-    return view('logAuthGoogle');
-});
-Route::get('/connect',function(){
-    return view('connect');
-});
-Route::get('/secret',function(){
-    return view('secretAuth');
-});
-Route::get('/logAuth',function(){
-    return view('logAuthGoogle');
-});
+Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
+Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle']);
+
