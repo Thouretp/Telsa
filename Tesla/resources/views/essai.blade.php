@@ -79,8 +79,8 @@
                 <div class="container-form-essai">
                     <div class="left-form">
                         <div>
-                            <div class="group" id="top" >
-                                <input type="text" class="text-area-form-essai" id="prenom" name="prenom" required autofocus autofocus>
+                            <div class="group">
+                                <input type="text" class="text-area-form-essai" id="prenom" name="prenom" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Prénom</label>
@@ -88,7 +88,7 @@
                         </div>
                         <div>
                             <div class="group">
-                                <input type="text" class="text-area-form-essai" id="nom" name="nom" required autofocus autofocus>
+                                <input type="text" class="text-area-form-essai" id="nom" name="nom" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">Nom</label>
