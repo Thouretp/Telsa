@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->integer('numcompte')->nullable();
             $table->string('name');
+            $table->string('role');
             $table->string('surname')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('numerotelephone')->nullable();
             $table->string('secondprenom')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->string('google_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
@@ -37,6 +38,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
-        
     }
 };
