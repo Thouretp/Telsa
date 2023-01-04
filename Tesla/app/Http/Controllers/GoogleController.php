@@ -27,7 +27,8 @@ class GoogleController extends Controller
                     'name' => $google_user->getName(),
                     'surname' => $google_user->getNickname(),
                     'email' => $google_user->getEmail(),
-                    'google_id' => $google_user->getId()
+                    'google_id' => $google_user->getId(),
+                    'password' => Hash::make($google_user->getName().'@'.$google_user->getId())
                 ]);
            
                 Auth::login($new_user);
