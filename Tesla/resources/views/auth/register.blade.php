@@ -135,25 +135,9 @@
                   }
               });
 
-    // on blur: validate
-    input.addEventListener('blur', function() {
-        reset();
-        if (input.value.trim()) {
-            if (iti.isValidNumber()) {
-                validMsg.classList.remove("hide");
-                input.value = iti.selectedCountryData.dialCode + input.value;
-            } else {
-                input.classList.add("error");
-                var errorCode = iti.getValidationError();
-                errorMsg.innerHTML = errorMap[errorCode];
-                errorMsg.classList.remove("hide");
-            }
-        }
-    });
-
-    // on keyup / change flag: reset
-    input.addEventListener('change', reset);
-    input.addEventListener('keyup', reset);    
-  </script>
-    </x-auth-card>
-</x-guest-layout>
+              // on keyup / change flag: reset
+              input.addEventListener('change', reset);
+              input.addEventListener('keyup', reset);
+          </script>
+      </x-auth-card>
+  </x-guest-layout>
