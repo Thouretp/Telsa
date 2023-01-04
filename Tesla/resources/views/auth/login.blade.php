@@ -1,4 +1,3 @@
-
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -23,10 +22,7 @@
             <div class="mt-4 ">
                 <x-input-label for="password" :value="__('Mot de passe')" />
 
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
@@ -39,15 +35,15 @@
                 </label>
             </div>
             <div class="flex items-center justify-between mt-4">
-                
+
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                        {{ __('Créer un compte') }}
+                    {{ __('Créer un compte') }}
                 </a>
-                
+
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Mot de passe oublié ?') }}
-                    </a>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                    {{ __('Mot de passe oublié ?') }}
+                </a>
                 @endif
 
                 <x-primary-button class="ml-3">
@@ -59,14 +55,12 @@
             <hr class="my-2">
             <span class="text-center font-bold">Or</span>
             <div class="w-3/5 mx-auto mt-4">
-                <a href="{{route('google-auth')}}"
-                    class="focus:ring-2 focus:ring-indigo-800 focus:ring-offset-4 bg-gray-800 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="current"
-                    class="bi bi-google ml-2" viewbox="0 0 16 16">
-                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87">
-
-                </svg>
-                <span class="text-sm text-left ml-4">Continue with Google</span>
+                <a href="{{route('google-auth')}}" 
+                class="focus:ring-2 focus:ring-indigo-800 focus:ring-offset-4 bg-gray-800 text-white flex items-center rounded">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="46" height="28" class="bi bi-google ml-2" > 
+                        <path d="m17.76 12.24a6.12 6.12 90 11-1.56-3.6m2.4 4.44h-6.36" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+                    </svg>
+                    <span class="text-sm text-left ml-4">Continue with Google</span>
                 </a>
 
             </div>
