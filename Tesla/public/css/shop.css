@@ -345,45 +345,11 @@ input:nth-of-type(5):checked ~ main#carousel {
 }
 /* Le menu des categories */
 .center {
-  display: flex;
-  justify-content: space-between;
   width: 40%;
   margin-top: 12px;
 }
-.categorie_menu_label {
+
+.center li {
   color: white;
   text-decoration: none;
-}
-.categorie_menu_list {
-  background-color: white;
-  display: flex;
-  justify-content: space-evenly;
-  position: fixed;
-  width: 100%;
-  top: 80px;
-  z-index: 200;
-}
-.clothes_man {
-  display: flex;
-  flex-direction: column;
-}
-.clothes_woman {
-  display: flex;
-  flex-direction: column;
-}
-.clothes_child {
-  display: flex;
-  flex-direction: column;
-}
-
-.affiche__accessoires{
-  position: absolute;
-  background-color: #fff;
-  transform: translate(-50%,0%);
-  left: 50%;
-  height: fit-content;
-  width: 60%;
-  z-index: 999;
-  border-radius: 15px;
-  padding: 2%;
 }

@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Motorisation;
 use App\Models\Detient;
 use App\Models\Option;
+use App\Models\Photo;
+use App\Models\TypeAccessoire;
+
 
 class ShopController extends Controller
 {
@@ -30,6 +33,17 @@ class ShopController extends Controller
             // 'optionCouleurM3'=>$getOptionCouleur,
             // 'optionDescM3'=>$getOptionDescription
 
+        ]);
+    }
+
+    public function showClothesMan()
+    {
+        $getTypeAccessoires = DB::table('typeaccessoire')->get();
+        $getImageAccessoires = Photo::select('typeaccessoire.nomaccessoire','typeaccessoire.desciptionaccessoire', 'typeaccessoire.prixaccessoire', 'photo.lienphoto')->join('typeaccessoire', 'typeaccessoire.numaccessoire', '=', 'photo.numaccessoire')->get();
+
+
+        return view('shopClothesMan', [
+            'accessoires' => $getImageAccessoires
         ]);
     }
 }

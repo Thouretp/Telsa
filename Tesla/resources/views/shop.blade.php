@@ -14,10 +14,35 @@
             <p id="title_shop">Shop</p>
         </div>
         <div class="center">
-            <a class="categorie_menu_label">Recharge</a>
-            <a class="categorie_menu_label">Accessoires pour les véhicules</a>
-            <a class="categorie_menu_label" href="/vetements_homme">Vêtements</a>
-            <a class="categorie_menu_label">Lifestyle</a>
+            <ul>
+                <li>
+                    <a href="" title="Recharge">Recharge</a>
+                </li>
+                <li>
+                    <a href="" title="Accessoire">Accessoire</a>
+                </li>
+                <li>
+                    <a href="" title="Vêtements">Vêtements</a>
+                    <ul>
+                        <li>
+                            <a href="">Homme</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Femme</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Enfant</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Lifestyle">Lifestyle</a>
+                </li>
+            </ul>
         </div>
         <div class="right">
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
@@ -28,35 +53,7 @@
 </header>
 
 <body>
-    <div class="categorie_menu_list noZindex">
-        <div class="clothes_man">
-            <a href="">Homme</a>
-            <a href="">T-shirts</a>
-            <a href="">Vêtements de sport pour homme</a>
-            <a href="">Sweat-shirts</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-        <div class="clothes_woman">
-            <a href="">Femme</a>
-            <a href="">T-shirts</a>
-            <a href="">Vêtements de sport pour homme</a>
-            <a href="">Sweat-shirts</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-        <div class="clothes_child">
-            <a href="">Homme</a>
-            <a href="">T-shirts</a>
-            <a href="">Combinaison</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-    </div>
-    <nav class="mobile-nav">
+        <nav class="mobile-nav">
         <a href="/#modelS">Model S</a>
         <a href="/#model3">Model 3</a>
         <a href="/#modelX">Model X</a>

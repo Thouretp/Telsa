@@ -43,10 +43,8 @@ Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTim
 Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
-Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
-Route::get('/vetements_homme', function(){
-    return view('shopClothesMan');
-});
+Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');
+Route::get('/vetements_homme', [ShopController::class, 'showClothesMan'])->name('vetements_homme');
 
 Route::post('essai', [EssaiController::class, 'store']);
 

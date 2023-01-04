@@ -82,7 +82,15 @@
         <div class="man">
             <h2>T-shirts</h2>
             <div class="tshirt">
+
+                @foreach($accessoires as $accessoire)
                 <div>
+                    <h2>{{$accessoire->nomaccessoire}}</h2>
+                    <img src="{{$accessoire->lienphoto}}" alt="">
+                    <p>{{$accessoire->desciptionaccessoire}}</p>
+                </div>
+                @endforeach
+                <!-- <div>
                     <h2>T-shirt Haha Yes</h2>
                     <img src="{{asset('Models/Images/Shop/Clothing/Man/T_Shirts/T_Shirt_Haha_Yes/1.avif')}}" alt="">
                 </div>
@@ -101,7 +109,7 @@
                 <div>
                     <h2>T-shirt Small Emblem</h2>
                     <img src="{{asset('Models/Images/Shop/Clothing/Man/T_Shirts/T_Shirt_Small_Emblem/Black/1.avif')}}" alt="">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
