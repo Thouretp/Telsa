@@ -1,10 +1,19 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConfModelsController;
+use App\Http\Controllers\ConfMSController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ConfModelXController;
+use App\Http\Controllers\ConfM3Controller;
+use App\Http\Controllers\ConfMYController;
+use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\ShopController;
+use FontLib\Table\Type\name;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,10 +43,32 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/confModelX', [HomeController::class, 'goToConfModelX']);
-Route::get('/confModelS', [HomeController::class, 'goToConfModelS']);
-Route::get('/confModel3', [HomeController::class, 'goToConfModel3']);
-Route::get('/confModelY', [HomeController::class, 'goToConfModelY']);
+Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
+Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
+Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
+Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+Route::get('/vetements_homme', function(){
+    return view('shopClothesMan');
+});
 
-Route::get('/confModelX_PDF', [ConfModelXController::class,'confModelX_PDF'])->name('confModelX_PDF');
-Route::get('/pdf.generation', [\App\Http\Controllers\FormController::class,'AfficheRecap']);
+Route::post('essai', [EssaiController::class, 'store']);
+
+Route::get('/essai',[EssaiController::class, 'showEssai']);
+Route::get('/okFormulaire', function(){
+    return view('okFormulaire');
+});
+Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
+Route::post('/essai', [EssaiController::class, 'store']);
+
+// LES ROUTES POUR LES PDF DES CONFIG
+
+Route::post('/modifModelS', [ConfMSController::class,'modifModelS'])->name('modifModelS');
+Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modifModel3');
+Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
+Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
+
+Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
+Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle']);
+

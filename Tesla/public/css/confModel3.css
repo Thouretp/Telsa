@@ -1,11 +1,10 @@
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     height: 400vh;
     background-color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,7 +52,8 @@ html{
 
 /*-----LE SCROLL-----*/
 
-.title{/* les titres de models*/
+.title {
+    /* les titres de models*/
     position: absolute;
     z-index: 3;
     font-size: 45px;
@@ -109,10 +109,22 @@ img{
     z-index: 1;
 }
 
-#MS{height: 225px;}
-#M3{height: 200px;}
-#MX{height: 234px;}
-#MY{height: 234px;}
+#MS {
+    height: 525px;
+}
+
+#M3 {
+    height: 200px;
+}
+
+#MX {
+    height: 234px;
+}
+
+#MY {
+    height: 234px;
+}
+
 /*----IMAGES-----*/
 
 
@@ -152,17 +164,44 @@ img{
     width: 14px;
     transform: translate(-50%, -50%);
 }
-.point:nth-child(1){top:0%;}
-.point:nth-child(2){top:12.4%;}
-.point:nth-child(3){top:26%;}
-.point:nth-child(4){top:38.2%;}
-.point:nth-child(5){top:50.6%;}
-.point:nth-child(6){top:63%;}
-.point:nth-child(7){top:75.4%;}
-.point:nth-child(8){top:87.5%;}
-.point:nth-child(9){top:100%;}
 
-#GP{
+.point:nth-child(1) {
+    top: 0%;
+}
+
+.point:nth-child(2) {
+    top: 12.4%;
+}
+
+.point:nth-child(3) {
+    top: 26%;
+}
+
+.point:nth-child(4) {
+    top: 38.2%;
+}
+
+.point:nth-child(5) {
+    top: 50.6%;
+}
+
+.point:nth-child(6) {
+    top: 63%;
+}
+
+.point:nth-child(7) {
+    top: 75.4%;
+}
+
+.point:nth-child(8) {
+    top: 87.5%;
+}
+
+.point:nth-child(9) {
+    top: 100%;
+}
+
+#GP {
     background-color: black;
     position: absolute;
     border-radius: 50%;
