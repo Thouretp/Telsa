@@ -62,7 +62,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" width="46" height="28" class="bi bi-google ml-2">
                               <path d="m17.76 12.24a6.12 6.12 90 11-1.56-3.6m2.4 4.44h-6.36" stroke="#FFFFFF" stroke-width="3" fill="none" />
                           </svg>
-                          <span class="text-sm text-left ml-4">Continue with Google</span>
+                          <span class="text-sm text-left ml-4">Continuer avec Google</span>
                       </a>
                   </div>
               </div>
