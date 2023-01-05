@@ -48,8 +48,6 @@ let autonomeChoisi;
 let rechargeChoisi;
 let crochetChoisi;
 
-var imageModel = document.getElementById('M3')
-
 let tous_les_boutons = document.querySelectorAll("label__clickable")
 
 
@@ -86,18 +84,13 @@ if(document.getElementById('blanc').checked){
     couleurChoisie = document.getElementById('blanc').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("white").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_White_18.jpg";
 }
-else{
-    document.getElementById("white").style.border = " solid 1px #FFF"
-}
+else{document.getElementById("white").style.border = " solid 1px #FFF"}
 
 if(document.getElementById('bleu').checked){
     couleurChoisie = document.getElementById('bleu').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("blue").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Blue_18.jpg"
-    console.log("fumier");
 }
 else{document.getElementById("blue").style.border = " solid 1px #FFF"}
 
@@ -105,7 +98,6 @@ if(document.getElementById('gris').checked){
     couleurChoisie = document.getElementById('gris').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("grey").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Gray_18.jpg";
 }
 else{document.getElementById("grey").style.border = " solid 1px #FFF"}
 
@@ -113,7 +105,6 @@ if(document.getElementById('noir').checked){
     couleurChoisie = document.getElementById('noir').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("black").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Black_18.jpg";
 }
 else{document.getElementById("black").style.border = " solid 1px #FFF"}
 
@@ -121,7 +112,6 @@ if(document.getElementById('rouge').checked){
     couleurChoisie = document.getElementById('rouge').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("red").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Red_18.jpg";
 }
 else{document.getElementById("red").style.border = " solid 1px #FFF"}
 

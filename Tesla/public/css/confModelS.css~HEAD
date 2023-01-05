@@ -649,7 +649,7 @@ button{
 
 .more_info{
     position: fixed;
-    z-index: 500;
+    z-index: 9;
     width: 40px;
     height: 40px;
     top: 1%;
@@ -870,6 +870,8 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModelS.css~HEAD
+========
 #btn_valid{
     margin-top: 30px;
     background: transparent;
@@ -910,3 +912,4 @@ section{
 .clické{
 	background-color: rgb(101, 77, 255);
 }
+>>>>>>>> main:Tesla/public/css/confModel.css
