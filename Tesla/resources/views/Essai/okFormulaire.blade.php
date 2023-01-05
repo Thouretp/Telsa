@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Votre réservation a bien été prise en compte</h1>
-    <a href="{{url('/')}}">Back Home</a>
+    <h1> Votre réservation a été bien pris en compte </h1>
+    <a href="/"> Back Home </a>
 </body>
 </html>

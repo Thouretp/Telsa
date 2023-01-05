@@ -195,7 +195,7 @@ header {
 
 .image-voiture img {
     text-align: center;
-    width: 65%;
+    width: 58%;
     height: auto;
     transition: all 0.4s ease-in;
 }
@@ -204,7 +204,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .essai-button-model input {
@@ -265,8 +265,8 @@ header {
 }
 
 .title-form-essai {
-    padding-top: 60px;
-    margin-bottom: 50px;
+    padding-top: 30px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,7 +301,7 @@ header {
 
 .group {
     position: relative;
-    margin-top: 45px;
+    margin-top: 30px;
 }
 
 #adresse{
@@ -386,25 +386,27 @@ header {
 
 /* --------------------------------------------------------------------------- */
 .proposition {
-    height: 0;  
+    height: 0;
     z-index: 20;
-    
+
 }
-.adress-feedback ul{
+
+.adress-feedback ul {
     list-style-type: none;
     background-color: white;
     /* border-left: solid 1px black;
     border-right: solid 1px black;
     border-bottom: solid 1px black;  */
-    
+
 }
-.adress-feedback ul a{
+
+.adress-feedback ul a {
     text-decoration: none;
     color: #000;
     font-size: 14px;
-} 
+}
 
-.adress-feedback ul a:hover{
+.adress-feedback ul a:hover {
     color: blue;
 } 
 

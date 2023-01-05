@@ -8,8 +8,10 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Client;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\DB;
 
 class RegisteredUserController extends Controller
 {
@@ -36,7 +38,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'numerotelephone' => ['string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -48,11 +50,12 @@ class RegisteredUserController extends Controller
             'numerotelephone' =>$request->numerotelephone,
             'password' => Hash::make($request->password),
         ]);
-
         event(new Registered($user));
 
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
+
     }
 }
+

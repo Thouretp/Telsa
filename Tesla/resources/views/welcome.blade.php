@@ -1,3 +1,14 @@
+
+<?php
+    if(isset($_GET['accepte-cookie'])){
+        setcookie('accepte-cookie', true, time()+365*12*3600);
+        header('Location:./');
+    }
+    if(isset($_GET['false-cookie'])){
+        setcookie('accepte-cookie', false);
+        header('Location:./');
+    }
+?>
 @include('header')
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
     <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css"/>
@@ -142,6 +153,9 @@
             <form action="confModelY">
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
+            <form action="essai">
+                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
+            </form>
 
             <div class="img">
                 <img src="Models/MY_1.jpg" alt="">
@@ -150,6 +164,60 @@
             </div>
         </div>
     </div>
+    <?php
+        if(!isset($_COOKIE['accepte-cookie'])){
+    ?>
+    <div class="container-cookie">
+        <div class="nav-cookie">
+            <p>Consentement</p>
+            <p>Détails</p>
+            <p id="rightSide-cookie">A propos des cookies</p>
+        </div>
+        <div class="details">
+            <p> <strong> Ce site Utilise des cookies. <br></strong>
+                Les cookies nous permettent de personnaliser le contenu et les annonces, d'offrir des fonctionnalités
+                relatives aux
+                médias sociaux e d'analyser notre trafic. Nous partageons également des informations sur l'utilisaion de
+                notre site
+                avec nos partenaires de médias sociaux, de publicité et d'analyse, quin peuvent combiner celles-ci avec
+                d'autres
+                informations que vous leur avez fournies ou qu'ils ont collectées lors de votre utilisation de leur
+                services.</p>
+        </div>
+        <div class="buttonTurn-cookie">
+            <div class="nameButtonToggle-cookie">
+                <p class="turnOverButton"> Nécessaires</p>
+                <p class="turnOverButton"> Préférences</p>
+                <p class="turnOverButton"> Statistique</p>
+                <p class="turnOverButton"> Marketing</p>
+            </div>
+            <div class="buttonToggle-cookie">
+                <label class="switch-cookie">
+                    <input type="checkbox">
+                    <span class="slider-cookie round"></span>
+                </label>
+                <label class="switch-cookie">
+                    <input type="checkbox">
+                    <span class="slider-cookie round"></span>
+                </label>
+                <label class="switch-cookie">
+                    <input type="checkbox">
+                    <span class="slider-cookie round"></span>
+                </label>
+                <label class="switch-cookie">
+                    <input type="checkbox" checkbox="checked">
+                    <span class="slider-cookie round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="submit">
+            <a href="?false-cookie" class="clasic-cookie">Refuser</a>
+            <input class="clasic-cookie" type="button" value="Autoriser la selection" />
+            <a href="?accepte-cookie" class="check-cookie">Tout autoriser</a>
+    </div>
+<?php
+        }
+?>
 
     <script src="{{asset('js/hamburgeur.js')}}"></script>
     <script src="{{asset('js/home.js')}}"></script>

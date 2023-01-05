@@ -51,7 +51,7 @@ class ConfMSController extends Controller
 
 
 
-        return view('confModelS', [
+        return view('Configuration.confModelS', [
             'modelS'=> $getInfoMS,
             'typeModelS'=> $getModelSMoto,
             'motorisationMS'=> Motorisation::find(8),

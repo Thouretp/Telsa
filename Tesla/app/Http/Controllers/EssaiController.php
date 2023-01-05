@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class EssaiController extends Controller
 {
     public function showEssai(){
-        return view('essai');
+        return view('Essai.essai');
     }
 
     public function store(Request $request){
@@ -22,11 +22,10 @@ class EssaiController extends Controller
             'adresse'=> $request->input("Rue"),
             'cp'=> $request->input("CodePostal"),
             'ville'=> $request->input("Ville"),
-            'pays'=> $request->input("Pays"),
             'modele' => $request->input("model")
         );
 
-        // dd($newClient["tel"]);
+        // dd($newClient);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
@@ -105,7 +104,7 @@ class EssaiController extends Controller
         ]);
 
         if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
-            return view('okFormulaire');
+            return view('Essai.okFormulaire');
         }
     }
 
