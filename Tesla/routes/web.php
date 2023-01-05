@@ -10,6 +10,8 @@ use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\CartController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,7 +48,8 @@ Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime'])
 
 Route::get('/shop', [ShopController::class, 'showAccessoires', 'RecupTime'])->name('shop');
 // Route::post('DetailsAccessoire', [ShopController::class, 'DetailsAccessoire'])->name('DetailsAccessoire');
-Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire']);
+Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire'])->name('accessoire');
+Route::get('/vetementsH', [ShopController::class, 'showVetementsHomme', 'RecupTime'])->name('vetementsH');
 
 
 Route::get('/vetements_homme', function(){
@@ -71,3 +74,13 @@ Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
 
 
+//ROUTES POUR LE PANIER
+
+Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart');
+Route::get('/panier', [CartController::class, 'index'])->name('cart_index');
+
+
+
+// Route::get('/shop',function(){
+//     Cart::destroy();
+// });
