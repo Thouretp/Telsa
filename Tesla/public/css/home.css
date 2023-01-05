@@ -301,3 +301,165 @@ img {
     text-decoration: underline;
     color: white;
 }
+
+.container-cookie {
+    position: fixed;
+    margin: 20px;
+    left: 20%;
+    top: 50%;
+    height: 380px;
+    width: 60%;
+    border: solid 2px black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 999;
+    background-color: white;
+}
+
+.nav-cookie {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+    height: 40px;
+}
+
+.nav-cookie p {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: solid 2px gray;
+
+}
+
+.nav-cookie p:hover {
+    color: rgb(101, 77, 255);
+    border-bottom: solid 3px rgb(101, 77, 255);
+
+}
+
+.details-cookie {
+    padding: 5px;
+    border-bottom: solid 2px gray;
+}
+
+.details-cookie p {
+    width: 100%;
+}
+
+.buttonTurn-cookie {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: solid 2px gray;
+}
+
+.nameButtonToggle-cookie {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px
+}
+
+.buttonToggle-cookie {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.switch-cookie {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch-cookie input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider-cookie {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider-cookie:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider-cookie {
+    background-color: rgb(101, 77, 255);
+}
+
+input:focus+.slider-cookie {
+    box-shadow: 0 0 1px rgb(101, 77, 255);
+}
+
+input:checked+.slider-cookie:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-cookie.round {
+    border-radius: 34px;
+}
+
+.slider-cookie.round:before {
+    border-radius: 50%;
+}
+
+.submit {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.submit input {
+    width: 200px;
+    cursor: pointer;
+    margin-left: 2px;
+    height: 30px;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.clasic-cookie {
+    background: white;
+}
+
+.check-cookie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    cursor: pointer;
+    margin-left: 2px;
+    height: 30px;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-weight: bold;
+    background: black;
+    color: white;
+    text-decoration: none;
+}

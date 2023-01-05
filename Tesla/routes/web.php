@@ -10,6 +10,7 @@ use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\CommandeControler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,8 @@ Route::get('/', [HomeController::class, 'showInfo', 'RecupTime']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/commande', [CommandeControler::class, 'index'])->middleware(['auth', 'verified'])->name('commande');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

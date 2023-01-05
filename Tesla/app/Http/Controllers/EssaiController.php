@@ -26,7 +26,7 @@ class EssaiController extends Controller
 
         );
 
-        dd($newClient);
+        // dd($newClient);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
