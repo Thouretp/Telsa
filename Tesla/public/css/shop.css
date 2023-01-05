@@ -386,6 +386,8 @@ input:nth-of-type(5):checked ~ main#carousel {
 /* La section qui affiche les accessoires */
 .affiche__accessoires{
   position: absolute;
+  justify-content: center;
+  align-items: center;
   transform: translate(-50%,0%);
   color: #FFF;
   top: 25%;
@@ -602,3 +604,50 @@ input[type=number] {
   transform: translate(-50%,0%);
   left: 50%;
 }
+
+header li {
+  display: inline-block;
+  vertical-align: top;
+  
+}
+header li a{
+  display: block;
+  padding: 20px;
+}
+
+.wrapper ul li a:hover{
+  background-color: white;
+  color: black
+}  
+
+.wrapper ul li:hover .sub-menu{
+  display: flex;
+  flex-direction: column;
+}
+header li:hover .container-sub-menu{
+  border: solid 2px white;
+}
+.wrapper ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu{
+  display: none;
+  width: 800px;
+  padding: 10px;
+}
+.sub-menu h3{
+  border-bottom: solid 4px black;
+  width: 150px;
+}
+
+.container-sub-menu{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;  
+}
+
