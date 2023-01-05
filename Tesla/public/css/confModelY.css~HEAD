@@ -79,6 +79,7 @@
   }
 
   h2{
+
     padding-bottom: 10px;
   }
 
@@ -197,7 +198,7 @@ img{
 }
 
 #MS{height: 225px;}
-#M3{height: 200px;}
+#M3{height: 650px;}
 #MX{height: 234px;}
 #MY{height: 234px;}
 /*----IMAGES-----*/
@@ -649,7 +650,7 @@ button{
 
 .more_info{
     position: fixed;
-    z-index: 500;
+    z-index: 9;
     width: 40px;
     height: 40px;
     top: 1%;
@@ -870,6 +871,7 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModel.css
 #btn_valid{
     margin-top: 30px;
     background: transparent;
@@ -910,3 +912,5 @@ section{
 .clické{
 	background-color: rgb(101, 77, 255);
 }
+========
+>>>>>>>> Timote:Tesla/public/css/confModelY.css~HEAD
