@@ -9,8 +9,13 @@ use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ShopController;
+use FontLib\Table\Type\name;
 use App\Http\Controllers\CommandeControler;
+use App\Http\Controllers\CartController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,7 +51,13 @@ Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTim
 Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
-Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+
+Route::get('/shop', [ShopController::class, 'showAccessoires', 'RecupTime'])->name('shop');
+// Route::post('DetailsAccessoire', [ShopController::class, 'DetailsAccessoire'])->name('DetailsAccessoire');
+Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire'])->name('accessoire');
+Route::get('/vetementsH', [ShopController::class, 'showVetementsHomme', 'RecupTime'])->name('vetementsH');
+
+
 Route::get('/vetements_homme', function(){
     return view('shopClothesMan');
 });
@@ -58,7 +69,8 @@ Route::get('/okFormulaire', function(){
     return view('okFormulaire');
 });
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
-
+Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
+Route::post('/essai', [EssaiController::class, 'store']);
 
 // LES ROUTES POUR LES PDF DES CONFIG
 
@@ -67,4 +79,17 @@ Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modi
 Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
 
+Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
+Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle']);
 
+
+//ROUTES POUR LE PANIER
+
+Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart');
+Route::get('/panier', [CartController::class, 'index'])->name('cart_index');
+
+
+
+// Route::get('/shop',function(){
+//     Cart::destroy();
+// });

@@ -94,7 +94,7 @@
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée"></input>
             </form>
             <form action="essai">
-                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
+                <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai"></input>
             </form>
 
         </div>
@@ -154,7 +154,7 @@
                 <input type="submit" class="visu" id="btn1" value="Configuration personalisée" />
             </form>
             <form action="essai">
-                <input type="submit" class="test-drive" id="btn2" value="Réservez un essai"></input>
+                <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai"></input>
             </form>
 
             <div class="img">

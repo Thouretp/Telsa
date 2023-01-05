@@ -289,18 +289,12 @@ img {
     position: relative;
     top: 200%;
     text-align: center;
-    background-color: #000;
-    color: white;
     font-size: 15px;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    background-color: black;
     z-index: 999;
 }
 
-.test-drive:hover {
-    text-decoration: underline;
-    color: white;
-}
 
 .container-cookie {
     position: fixed;

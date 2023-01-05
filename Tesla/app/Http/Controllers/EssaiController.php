@@ -23,7 +23,6 @@ class EssaiController extends Controller
             'cp'=> $request->input("CodePostal"),
             'ville'=> $request->input("Ville"),
             'modele' => $request->input("model")
-
         );
 
         // dd($newClient);
@@ -86,7 +85,8 @@ class EssaiController extends Controller
             'numadresse' => $numadresse_max,
             'adresserue1' => $newClient['adresse'],
             'ville' => $newClient['ville'],
-            'cp' => $newClient['cp']
+            'cp' => $newClient['cp'],
+            'pays' => $newClient['pays']
         ]);
 
             //INSERT SE SITUE
