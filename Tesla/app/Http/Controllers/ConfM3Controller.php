@@ -71,7 +71,7 @@ class ConfM3Controller extends Controller
 
 
 
-        return view('confModel3', [
+        return view('Configuration.confModel3', [
             'model3'=> $getInfoM3,
             'typeModel3'=> $getModel3Moto,
             'motorisationM3'=> Motorisation::find(4),

@@ -13,6 +13,8 @@ use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ShopController;
 use FontLib\Table\Type\name;
+use App\Http\Controllers\CommandeControler;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +37,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/commande', [CommandeControler::class, 'index'])->middleware(['auth', 'verified'])->name('commande');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -47,7 +51,13 @@ Route::get('/confModelX', [ConfModelXController::class, 'showOptions', 'RecupTim
 Route::get('/confModelS', [ConfMSController::class, 'showOptions', 'RecupTime']);
 Route::get('/confModel3', [ConfM3Controller::class, 'showOptions', 'RecupTime']);
 Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime']);
-Route::get('/shop', [ShopController::class, 'showOptions', 'RecupTime'])->name('shop');;
+
+Route::get('/shop', [ShopController::class, 'showAccessoires', 'RecupTime'])->name('shop');
+// Route::post('DetailsAccessoire', [ShopController::class, 'DetailsAccessoire'])->name('DetailsAccessoire');
+Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire'])->name('accessoire');
+Route::get('/vetementsH', [ShopController::class, 'showVetementsHomme', 'RecupTime'])->name('vetementsH');
+
+
 Route::get('/vetements_homme', function(){
     return view('shopClothesMan');
 });
@@ -72,3 +82,14 @@ Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modi
 Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
 Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle']);
 
+
+//ROUTES POUR LE PANIER
+
+Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart');
+Route::get('/panier', [CartController::class, 'index'])->name('cart_index');
+
+
+
+// Route::get('/shop',function(){
+//     Cart::destroy();
+// });
