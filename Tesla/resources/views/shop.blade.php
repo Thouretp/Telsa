@@ -128,7 +128,6 @@
                 </div>
         @endif 
 
-    <button id="titreMeilleuresV">Meilleures ventes</button>
 
     <div class=affiche__accessoires>
         @foreach($accessoires as $accessoire)
@@ -147,6 +146,26 @@
             </div>
         @endforeach  
     </div>
+    <h1 id="titrecasquetes">Casquettes et Bonnets Homme</h1>
+    <div class=affiche__bonnets>
+        @foreach($accessoires as $accessoire)
+        
+            <div class="card__accessoire">
+                <div class="section__image">
+                    <img class="images__galerie" src="/Models/Images/Shop/All/{{$accessoire->numaccessoire}}.avif">     
+                    <div class="ease">
+                        <a href="shop/{{$accessoire->numaccessoire}}">Plus de détails</a>
+                    </div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$accessoire->nomaccessoire}}</p>
+                    <p>{{$accessoire->prixaccessoire}} €</p>
+                </div>
+            </div>
+        @endforeach  
+    </div>
+
+
 
 
 

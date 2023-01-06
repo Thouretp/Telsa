@@ -372,7 +372,7 @@ input:nth-of-type(5):checked ~ main#carousel {
   display: flex;
   flex-direction: column;
 }
-#titreMeilleuresV{
+.titreMeilleuresV{
   position: absolute;
   width: 400px;
   font-size: 25px;
@@ -390,6 +390,19 @@ input:nth-of-type(5):checked ~ main#carousel {
   transform: translate(-50%,0%);
   color: #FFF;
   top: 25%;
+  left: 50%;
+  height: fit-content;
+  width: 90%;
+  z-index: 1;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.affiche__bonnets{
+  position: absolute;
+  transform: translate(-50%,0%);
+  color: #FFF;
+  top: 1415%;
   left: 50%;
   height: fit-content;
   width: 90%;
@@ -602,4 +615,12 @@ input[type=number] {
   position: absolute;
   transform: translate(-50%,0%);
   left: 50%;
+}
+
+#titrecasquetes{
+  color: #FFF;
+  position: absolute;
+  transform: translate(-50%,0%);
+  left: 21%;
+  top: 1410%;
 }
