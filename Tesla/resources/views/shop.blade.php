@@ -14,10 +14,53 @@
             <a href="{{route('shop')}}" id="title_shop">Shop</a>
         </div>
         <div class="center">
-            <a class="categorie_menu_label">Recharge</a>
-            <a class="categorie_menu_label">Accessoires pour les véhicules</a>
-            <a class="categorie_menu_label" href="{{route('vetementsH')}}">Vêtements</a>
-            <a class="categorie_menu_label">Lifestyle</a>
+        <nav class="wrapper"> 
+            <ul>
+                <li>
+                    <a href="">Recharge</a>
+                </li>
+                <li>
+                    <a href="">Accessoires Vehicules</a>
+                </li>
+                <li>
+                    <a href="">Vêtements</a>
+                    <div class="container-sub-menu">
+                        <ul class="sub-menu">
+                            <h3>Homme</h3>
+                            <li>Meilleurs ventes</li>
+                            <li>T-shirts</li>
+                            <li>Vêtements de sport</li>
+                            <li>Sweat-shirt</li>
+                            <li>Vestes</li>
+                            <li><a href="#titrecasquetes">Casquettes et bonnets</a></li>
+                            <li>Chausettes</li>
+                        </ul>
+                        <ul class="sub-menu">
+                            <h3>Femme</h3>
+                            <li>Meilleurs ventes</li>
+                            <li>T-shirts</li>
+                            <li>Vêtements de sport</li>
+                            <li>Sweat-shirt</li>
+                            <li>Vestes</li>
+                            <li>Casquettes et bonnets</li>
+                            <li>Chausettes</li>
+                        </ul>
+                        <ul class="sub-menu">
+                            <h3>Enfant</h3>
+                            <li>Meilleurs ventes</li>
+                            <li>T-shirts</li>
+                            <li>Combinaisons</li>
+                            <li>Vestes</li>
+                            <li>Casquettes et bonnets</li>
+                            <li>Chausettes</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">Lifestyle</a>
+                </li>
+            </ul>
+        </nav>
         </div>
         <div class="right">
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
@@ -29,35 +72,6 @@
 </header>
 
 <body>
-
-    <div class="categorie_menu_list noZindex">
-        <div class="clothes_man">
-            <a href="">Homme</a>
-            <a href="">T-shirts</a>
-            <a href="">Vêtements de sport pour homme</a>
-            <a href="">Sweat-shirts</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-        <div class="clothes_woman">
-            <a href="">Femme</a>
-            <a href="">T-shirts</a>
-            <a href="">Vêtements de sport pour homme</a>
-            <a href="">Sweat-shirts</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-        <div class="clothes_child">
-            <a href="">Homme</a>
-            <a href="">T-shirts</a>
-            <a href="">Combinaison</a>
-            <a href="">Vestes</a>
-            <a href="">Casquettes et bonnets</a>
-            <a href="">Chaussettes</a>
-        </div>
-    </div>
     <nav class="mobile-nav">
         <a href="/#modelS">Model S</a>
         <a href="/#model3">Model 3</a>
@@ -145,9 +159,27 @@
                     <p>{{$accessoire->prixaccessoire}} €</p>
                 </div>
             </div>
-        @endforeach  
+        @endforeach 
     </div>
 
+    <h1 id="titrecasquetes">Casquettes et Bonnets Homme</h1>
+    <div class=affiche__bonnets>
+        @foreach($casquetteBonnets as $uneCasquetteOuBonnet)
+        
+            <div class="card__accessoire">
+                <div class="section__image">
+                    <img class="images__galerie" src="/Models/Images/Shop/All/{{$uneCasquetteOuBonnet->numaccessoire}}.avif">     
+                    <div class="ease">
+                        <a href="shop/{{$uneCasquetteOuBonnet->numaccessoire}}">Plus de détails</a>
+                    </div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$uneCasquetteOuBonnet->nomaccessoire}}</p>
+                    <p>{{$uneCasquetteOuBonnet->prixaccessoire}} €</p>
+                </div>
+            </div>
+        @endforeach  
+    </div>
 
 
 
