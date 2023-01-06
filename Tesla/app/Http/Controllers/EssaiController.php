@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class EssaiController extends Controller
 {
     public function showEssai(){
-        return view('essai');
+        return view('Essai.essai');
     }
 
     public function store(Request $request){
@@ -19,14 +19,13 @@ class EssaiController extends Controller
             'nom'=> $request->input("nom"),
             'mail'=> $request->input("mail"),
             'tel'=> $request->input("tel"),
-            'adresse'=> $request->input("adresse"),
-            'cp'=> $request->input("cp"),
-            'ville'=> $request->input("ville"),
+            'adresse'=> $request->input("Rue"),
+            'cp'=> $request->input("CodePostal"),
+            'ville'=> $request->input("Ville"),
             'modele' => $request->input("model")
-
         );
 
-        // dd($newClient["tel"]);
+        // dd($newClient);
         //INIIATION DES ID RECUPERER 
 
         $numclient_max = EssaiController::RecupNumMax("client", "numclient");
@@ -86,7 +85,8 @@ class EssaiController extends Controller
             'numadresse' => $numadresse_max,
             'adresserue1' => $newClient['adresse'],
             'ville' => $newClient['ville'],
-            'cp' => $newClient['cp']
+            'cp' => $newClient['cp'],
+            'pays' => $newClient['pays']
         ]);
 
             //INSERT SE SITUE
@@ -104,7 +104,7 @@ class EssaiController extends Controller
         ]);
 
         if($insertClient && $insertAdresse && $insertSeSitue && $insertEssaye){ // Si les inserts sont bien passé retourne la vue comme quoi c'est
-            return view('okFormulaire');
+            return view('Essai.okFormulaire');
         }
     }
 

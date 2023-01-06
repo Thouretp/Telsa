@@ -50,7 +50,7 @@ class ConfMYController extends Controller
 
 
 
-        return view('confModelY', [
+        return view('Configuration.confModelY', [
             'modelY'=> $getInfoMY,
             'typeModelY'=> $getModelYMoto,
             'motorisationMY'=> Motorisation::find(1),

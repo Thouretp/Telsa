@@ -24,9 +24,11 @@
             <form novalidate>
               <div class="form-row">
                 <label>Adresse</label>
+                <div class="autocomplete-container" id="autocomplete-container"></div>
                 <input type="text" class="block mt-1 w-full" class="form-control" id="Rue" name="Rue" placeholder="Adresse">
                 <input type="text" class="form-control" pattern="^[0-9]{1}[0-9a-bA-B]{1}[0-9]{3}$" id="CodePostal" minlength="5" maxlength="5" placeholder="Code Postal">
                 <input type="text" class="form-control" id="Ville" name="Ville" placeholder="Ville">
+                <input type="text" class="form-control" id="Pays" name="Pays" placeholder="Pays">
               </div>
             </form>
           </div>
@@ -40,4 +42,5 @@
 </body>
 
 </html>
-<script src="{{asset('js/autoclompleteAddress.js')}}"></script>
+
+<script src="{{asset('js/api.js')}}"></script>

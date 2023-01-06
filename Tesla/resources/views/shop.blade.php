@@ -11,49 +11,54 @@
         <div class="left">
             <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
             <p id="title_pip">|</p>
-            <p id="title_shop">Shop</p>
+            <a href="{{route('shop')}}" id="title_shop">Shop</a>
         </div>
         <div class="center">
-            <ul>
-                <li>
-                    <a href="" title="Recharge">Recharge</a>
-                </li>
-                <li>
-                    <a href="" title="Accessoire">Accessoire</a>
-                </li>
-                <li>
-                    <a href="" title="Vêtements">Vêtements</a>
-                    <ul>
-                        <li>
-                            <a href="">Homme</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="">Femme</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="">Enfant</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="" title="Lifestyle">Lifestyle</a>
-                </li>
-            </ul>
+            <a class="categorie_menu_label">Recharge</a>
+            <a class="categorie_menu_label">Accessoires pour les véhicules</a>
+            <a class="categorie_menu_label" href="{{route('vetementsH')}}">Vêtements</a>
+            <a class="categorie_menu_label">Lifestyle</a>
         </div>
         <div class="right">
             <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
-            <a href="#"><img class="see" src="{{asset('Models/cart_icon.png')}}"></a>
+            <<a href="{{route('cart_index')}}"><img class="see" src="{{asset('Models/cart_icon.png')}}"></a>
+            <div class="compteur_cart" id="compteurcart"><p>{{Cart::count()}}</p></div>
             <button class="hamburgeur">
             <div class="bar"></div>
         </div>        
 </header>
 
 <body>
-        <nav class="mobile-nav">
+
+    <div class="categorie_menu_list noZindex">
+        <div class="clothes_man">
+            <a href="">Homme</a>
+            <a href="">T-shirts</a>
+            <a href="">Vêtements de sport pour homme</a>
+            <a href="">Sweat-shirts</a>
+            <a href="">Vestes</a>
+            <a href="">Casquettes et bonnets</a>
+            <a href="">Chaussettes</a>
+        </div>
+        <div class="clothes_woman">
+            <a href="">Femme</a>
+            <a href="">T-shirts</a>
+            <a href="">Vêtements de sport pour homme</a>
+            <a href="">Sweat-shirts</a>
+            <a href="">Vestes</a>
+            <a href="">Casquettes et bonnets</a>
+            <a href="">Chaussettes</a>
+        </div>
+        <div class="clothes_child">
+            <a href="">Homme</a>
+            <a href="">T-shirts</a>
+            <a href="">Combinaison</a>
+            <a href="">Vestes</a>
+            <a href="">Casquettes et bonnets</a>
+            <a href="">Chaussettes</a>
+        </div>
+    </div>
+    <nav class="mobile-nav">
         <a href="/#modelS">Model S</a>
         <a href="/#model3">Model 3</a>
         <a href="/#modelX">Model X</a>
@@ -75,7 +80,7 @@
         </span>
     </nav>
 
-    <h2>Meilleures ventes</h2>
+    <!-- <h2>Meilleures ventes</h2>
 
 <input id="radio1" class="radio_buttons" type="radio" name="position"  />
 <input id="radio2" class="radio_buttons" type="radio" name="position" />
@@ -92,64 +97,58 @@
 <main id="carousel">
     <div id="zazaza"class="item">
         <h3>NOM</h3>
-        <img src="" alt="">
         <h3>DESC</h3>
         <h3>PRIX</h3>
     </div>
     <div class="item">
         <h3>NOM</h3>
-        <img src="" alt="">
         <h3>DESC</h3>
         <h3>PRIX</h3>
     </div>
     <div class="item">
         <h3>NOM</h3>
-        <img src="" alt="">
         <h3>DESC</h3>
         <h3>PRIX</h3>
     </div>
     <div class="item">
         <h3>NOM</h3>
-        <img src="" alt="">
         <h3>DESC</h3>
         <h3>PRIX</h3>
     </div>
     <div class="item">
         <h3>NOM</h3>
-        <img src="" alt="">
         <h3>DESC</h3>
         <h3>PRIX</h3>
     </div>
-</main>
-<div class=affiche__accessoires>
-    <table class="tableau-style">
-    <thead>
-        <tr>
-            <td>Nom</td>
-            <td>DESC</td>
-            <td>PRIX</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($accessoires as $accessoire)
-        <tr>
-            <td>{{$accessoire->nomaccessoire}}</td>
-            <td>{{$accessoire->desciptionaccessoire}}</td>
-            <td>{{$accessoire->prixaccessoire}}</td>
-        </tr>
-        @endforeach
-        
-    </tbody>
+</main> -->
 
-    </table>
-    
-    
-    
-    
-    
-    
-    
-</div>
+        @if (session('success'))
+                <div class="alert alert_success">
+                    {{ session('success')}}
+                </div>
+        @endif 
+
+    <button id="titreMeilleuresV">Meilleures ventes</button>
+
+    <div class=affiche__accessoires>
+        @foreach($accessoires as $accessoire)
+        
+            <div class="card__accessoire">
+                <div class="section__image">
+                    <img class="images__galerie" src="/Models/Images/Shop/All/{{$accessoire->numaccessoire}}.avif">     
+                    <div class="ease">
+                        <a href="shop/{{$accessoire->numaccessoire}}">Plus de détails</a>
+                    </div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$accessoire->nomaccessoire}}</p>
+                    <p>{{$accessoire->prixaccessoire}} €</p>
+                </div>
+            </div>
+        @endforeach  
+    </div>
+
+
 
 
 

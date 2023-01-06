@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/shopClothesMan.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/shop.css')}}" type="text/css">
     <title>Document</title>
 </head>
 <header>
         <div class="left">
             <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
             <p id="title_pip">|</p>
-            <p id="title_shop">Shop</p>
+            <a href="{{route('shop')}}"id="title_shop">Shop</a>
         </div>
         <div class="center">
             <a class="categorie_menu_label">Recharge</a>
@@ -77,20 +77,12 @@
         </span>
     </nav>
 
-    <div class="container">
+    <!-- <div class="container">
         <h1>Homme</h1>
         <div class="man">
             <h2>T-shirts</h2>
             <div class="tshirt">
-
-                @foreach($accessoires as $accessoire)
                 <div>
-                    <h2>{{$accessoire->nomaccessoire}}</h2>
-                    <img src="{{$accessoire->lienphoto}}" alt="">
-                    <p>{{$accessoire->desciptionaccessoire}}</p>
-                </div>
-                @endforeach
-                <!-- <div>
                     <h2>T-shirt Haha Yes</h2>
                     <img src="{{asset('Models/Images/Shop/Clothing/Man/T_Shirts/T_Shirt_Haha_Yes/1.avif')}}" alt="">
                 </div>
@@ -109,10 +101,29 @@
                 <div>
                     <h2>T-shirt Small Emblem</h2>
                     <img src="{{asset('Models/Images/Shop/Clothing/Man/T_Shirts/T_Shirt_Small_Emblem/Black/1.avif')}}" alt="">
-                </div> -->
+                </div>
             </div>
         </div>
+    </div> -->
+
+    <div class=affiche__accessoires>
+        
+            <div class="card__accessoire">
+                <div class="section__image">
+                    <img class="images__galerie" src="Models/Images/Shop/All/{{$accessoire->numaccessoire}}.avif" >     
+                    <div class="ease">
+                        <a href="shop/{{$accessoire->numaccessoire}}">Plus de détails</a>
+                    </div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$accessoire->nomaccessoire}}</p>
+                    <p>{{$accessoire->prixaccessoire}} €</p>
+                </div>
+            </div>
+         
     </div>
+
+
 </body>
 
 <script src="{{asset('js/hamburgeur.js')}}"></script>

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypeAccessoire extends Model
 {
-    
-    protected $table = "typeaccessoire";
+    use HasFactory;
+    protected $table = "typeacccessoire";
     protected $primaryKey = "numaccessoire";
     public $timestamps = false;
 }
