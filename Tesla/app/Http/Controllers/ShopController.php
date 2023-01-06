@@ -37,8 +37,6 @@ class ShopController extends Controller
 
     public function DetailsAccessoire($numaccessoire){
 
-        
-
         return view('accessoire', [
             'accessoire' => Accessoire::find($numaccessoire),
             
@@ -48,7 +46,6 @@ class ShopController extends Controller
     public function showVetementsHomme(){
 
         $getTypeAccessoires = DB::table('typeaccessoire')->get();
-        
         return view('shopClothesMan', [
             'accessoires' => $getTypeAccessoires,
         ]);

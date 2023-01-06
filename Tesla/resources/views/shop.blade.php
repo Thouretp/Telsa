@@ -181,16 +181,6 @@
         @endforeach  
     </div>
 
-
-
-
-
-
-
-
-    
-
-
 </body>
 
 <script src="{{asset('js/hamburgeur.js')}}"></script>

@@ -197,7 +197,7 @@ img{
 }
 
 #MS{height: 225px;}
-#M3{height: 650px;}
+#M3{height: 200px;}
 #MX{height: 234px;}
 #MY{height: 234px;}
 /*----IMAGES-----*/
@@ -870,6 +870,8 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModelS.css~HEAD
+========
 #btn_valid{
     margin-top: 30px;
     background: transparent;
@@ -910,3 +912,4 @@ section{
 .clické{
 	background-color: rgb(101, 77, 255);
 }
+>>>>>>>> main:Tesla/public/css/confModel.css

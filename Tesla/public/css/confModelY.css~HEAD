@@ -870,6 +870,7 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModel.css
 #btn_valid{
     margin-top: 30px;
     background: transparent;
@@ -910,3 +911,5 @@ section{
 .clické{
 	background-color: rgb(101, 77, 255);
 }
+========
+>>>>>>>> Timote:Tesla/public/css/confModelY.css~HEAD

@@ -87,6 +87,8 @@ Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle'])
 
 Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart');
 Route::get('/panier', [CartController::class, 'index'])->name('cart_index');
+Route::delete('/panier{rowId}', [CartController::class, 'destroy'])->name('destroy');
+
 
 
 
