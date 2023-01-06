@@ -32,7 +32,7 @@
                             <li>Vêtements de sport</li>
                             <li>Sweat-shirt</li>
                             <li>Vestes</li>
-                            <li>Casquettes et bonnets</li>
+                            <li><a href="#titrecasquetes">Casquettes et bonnets</a></li>
                             <li>Chausettes</li>
                         </ul>
                         <ul class="sub-menu">
@@ -159,9 +159,27 @@
                     <p>{{$accessoire->prixaccessoire}} €</p>
                 </div>
             </div>
-        @endforeach  
+        @endforeach 
     </div>
 
+    <h1 id="titrecasquetes">Casquettes et Bonnets Homme</h1>
+    <div class=affiche__bonnets>
+        @foreach($casquetteBonnets as $uneCasquetteOuBonnet)
+        
+            <div class="card__accessoire">
+                <div class="section__image">
+                    <img class="images__galerie" src="/Models/Images/Shop/All/{{$uneCasquetteOuBonnet->numaccessoire}}.avif">     
+                    <div class="ease">
+                        <a href="shop/{{$uneCasquetteOuBonnet->numaccessoire}}">Plus de détails</a>
+                    </div>
+                </div>
+                <div class="content_accessoire">
+                    <p>{{$uneCasquetteOuBonnet->nomaccessoire}}</p>
+                    <p>{{$uneCasquetteOuBonnet->prixaccessoire}} €</p>
+                </div>
+            </div>
+        @endforeach  
+    </div>
 
 
 
