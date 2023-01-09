@@ -197,7 +197,7 @@ img{
 }
 
 #MS{height: 225px;}
-#M3{height: 200px;}
+#M3{height: 650px;}
 #MX{height: 234px;}
 #MY{height: 234px;}
 /*----IMAGES-----*/
@@ -649,7 +649,7 @@ button{
 
 .more_info{
     position: fixed;
-    z-index: 500;
+    z-index: 9;
     width: 40px;
     height: 40px;
     top: 1%;
