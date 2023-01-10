@@ -45,12 +45,13 @@ class ConfMSController extends Controller
 
         $getInfoMS = DB::table('detient')-> leftJoin('option', 'detient.numoption', '=', 'option.numoption')->get();
         $getModelSMoto = Motorisation::where('nummodel', '=', 1)->get();
-        $getOptionMS = DB::table('option')-> leftJoin('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
+        $getOptionMS = DB::table('detient')->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
         $getOptionCouleur = Detient::select("option.detailcaracteristique")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
         $getOptionDescription = Detient::select("option.description_option")->join('option', 'detient.numoption', '=', 'option.numoption')->where('nummoteur', '=', 8)->get();
 
 
-        return view('confModelS', [
+
+        return view('Configuration.confModelS', [
             'modelS'=> $getInfoMS,
             'typeModelS'=> $getModelSMoto,
             'motorisationMS'=> Motorisation::find(8),

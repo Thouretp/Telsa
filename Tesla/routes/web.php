@@ -9,7 +9,11 @@ use App\Http\Controllers\ConfModelXController;
 use App\Http\Controllers\ConfM3Controller;
 use App\Http\Controllers\ConfMYController;
 use App\Http\Controllers\EssaiController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ShopController;
+use FontLib\Table\Type\name;
+use App\Http\Controllers\CommandeControler;
 use App\Http\Controllers\CartController;
 
 /*
@@ -32,6 +36,8 @@ Route::get('/', [HomeController::class, 'showInfo', 'RecupTime']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/commande', [CommandeControler::class, 'index'])->middleware(['auth', 'verified'])->name('commande');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -64,7 +70,7 @@ Route::get('/okFormulaire', function(){
 });
 Route::get('/addresse',[AddressController::class,'viewAddress'])->name('adresse.update');
 Route::post('/EssaiController','App\Http\Controllers\EssaiController@imageOkRDV');
-
+Route::post('/essai', [EssaiController::class, 'store']);
 
 // LES ROUTES POUR LES PDF DES CONFIG
 
@@ -72,6 +78,9 @@ Route::post('/modifModelS', [ConfMSController::class,'modifModelS'])->name('modi
 Route::post('/modifModel3', [ConfM3Controller::class,'modifModel3'])->name('modifModel3');
 Route::post('/modifModelX', [ConfModelXController::class,'modifModelX'])->name('modifModelX');
 Route::post('/modifModelY', [ConfMYController::class,'modifModelY'])->name('modifModelY');
+
+Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
+Route::get('auth/google/call-back/',[GoogleController::class, 'callbackGoogle']);
 
 
 //ROUTES POUR LE PANIER

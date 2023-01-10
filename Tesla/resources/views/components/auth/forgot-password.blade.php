@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img src="{{asset('Models/teslalogoV2.png')}}" alt="logo la tes en folie">
+                <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie">
             </a>
         </x-slot>
 

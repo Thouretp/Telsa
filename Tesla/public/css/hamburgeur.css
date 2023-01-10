@@ -18,6 +18,7 @@ html {
     /* On cache la barre de scroll*/
     display: none;
 }
+
 header {
     display: flex;
     min-width: 100%;
@@ -44,6 +45,7 @@ header {
     justify-content: flex-end;
     margin-right: 70px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .noZindex {
@@ -169,4 +171,13 @@ header {
     height: 32px;
     margin-left: 20px;
     cursor: pointer;
+}
+
+.right img:hover {
+    content: "Shop";
+}
+
+.text-hover-icon {
+    display: block;
+    color: white;
 }

@@ -10,7 +10,7 @@
             <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
         </div>
         <div class="right">
-            <a href="/profile"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
+            <a href="/profile"><img  id="iconCompte" class="see" src="{{asset('Models/Userv2.png')}}"></a>
             <a href="/shop"><img class="see" src="{{asset('Models/bagv2.png')}}"></a>
             <button class="hamburgeur">
                 <div class="bar"></div>

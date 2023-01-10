@@ -1,4 +1,7 @@
 let menuHamburgeur = document.querySelector(".menuH")
+var iconCompte = document.getElementById('iconCompte');
+var rightBarHeader = document.querySelector('.right')
+
 
 window.onload = function () {
 
@@ -26,6 +29,18 @@ window.onload = function () {
         }
     })
 }
+
+
+// iconCompte.addEventListener("mouseenter", function () {
+//     var hoverText = create("p", rightBarHeader, "Compte", "text-hover-icon");
+
+//     iconCompte.addEventListener("mouseleave", function () {
+//         hoverText.remove();
+//     })
+// })
+
+
+
 
 function create(tag, parent, text = null, classs = null, id = null) { //Function qui permet de crée un élément
     let element = document.createElement(tag)   // On crée un element avec un Tag (exemple: p, h1, h2, article, etc...)

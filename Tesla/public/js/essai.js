@@ -51,18 +51,20 @@ textEmail.addEventListener('change', function () {
     if (isValidEmail(textEmail.value) == false) {
         textEmail.style.color = '#EC2222';
         var uneErreur = create('p', erreurMail, "L'adresse n'est pas valide")
+        uneErreur.style.color = '#EC2222';
     } else {
         console.log("Adresse valide")
         textEmail.style.color = '#22EC87';
         erreur.remove()
-
     }
 
 })
 
 function isValidEmail(email) {
     // Vérifiez si l'adresse e-mail contient un signe "@", des points (.) et des chiffres
-    const pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var pattern = /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z]{2,}$/;
+    
+
     return pattern.test(email);
 }
 
