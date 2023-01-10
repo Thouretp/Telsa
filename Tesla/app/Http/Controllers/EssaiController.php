@@ -22,6 +22,7 @@ class EssaiController extends Controller
             'adresse'=> $request->input("Rue"),
             'cp'=> $request->input("CodePostal"),
             'ville'=> $request->input("Ville"),
+            'pays'=> $request->input("Pays"),
             'modele' => $request->input("model")
         );
 
