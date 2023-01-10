@@ -56,7 +56,11 @@
                 <div class="section__image">
                     <img class="images__galerie" src="/Models/Images/Shop/All/{{$product->id}}.avif">     
                     <div class="ease">
-                        <a href="shop/{{$product->id}}">Retirer du panier</a>
+                        <form action="{{route('destroy', $product->rowId)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" >Retirer du panier</button>
+                        </form>
                     </div>
                 </div>
                 <div class="content_accessoire">
