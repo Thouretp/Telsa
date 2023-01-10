@@ -18,7 +18,14 @@ setInterval(function(){
     j = (j+1)%(carrouselModelX.length);
 },1000000)
 
-let btnInfo = document.querySelector(".more_info")
+let btnInfo1 = document.getElementById("more_info1")
+let btnInfo2 = document.getElementById("more_info2")
+let btnInfo3 = document.getElementById("more_info3")
+let btnInfo4 = document.getElementById("more_info4")
+let btnInfo5 = document.getElementById("more_info5")
+let btnInfo6 = document.getElementById("more_info6")
+let btnInfo7 = document.getElementById("more_info7")
+
 let infos1 = document.querySelector("#desc1")
 let infos2 = document.querySelector("#desc2")
 let infos3 = document.querySelector("#desc3")
@@ -27,14 +34,31 @@ let infos5 = document.querySelector("#desc5")
 let infos6 = document.querySelector("#desc6")
 let infos7 = document.querySelector("#desc7")
 
-
-btnInfo.addEventListener("click", function(){
+btnInfo1.addEventListener("click", function(){
     infos1.classList.toggle("invisible")
+})
+
+btnInfo2.addEventListener("click", function(){
     infos2.classList.toggle("invisible")
+})
+
+btnInfo3.addEventListener("click", function(){
     infos3.classList.toggle("invisible")
-    infos4.classList.toggle("invisible")    
+})
+
+btnInfo4.addEventListener("click", function(){
+    infos4.classList.toggle("invisible")
+})
+
+btnInfo5.addEventListener("click", function(){
     infos5.classList.toggle("invisible")
+})
+
+btnInfo6.addEventListener("click", function(){
     infos6.classList.toggle("invisible")
+})
+
+btnInfo7.addEventListener("click", function(){
     infos7.classList.toggle("invisible")
 })
 
