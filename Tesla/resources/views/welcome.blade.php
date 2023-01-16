@@ -97,9 +97,6 @@
             <form action="essai">
                 <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai" title="Réserver un essai"></input>
             </form>
-            <form action="essai">
-                <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai"></input>
-            </form>
 
         </div>
 

@@ -31,6 +31,35 @@
 </header>
 
 <body>
+<nav class="mobile-nav">
+        <a href="/#modelS" title="Model S">Model S</a>
+        <a href="/#model3" title="Model 3">Model 3</a>
+        <a href="/#modelX" title="Model X">Model X</a>
+        <a href="/#modelY" title="Model Y">Model Y</a>
+        <a href="{{route('shop')}}" title="Magasin">Magasin</a>
+        <a href="#help" title="Assistance">Assistance</a>
+        <span class="ajt-mobile-nav">
+            @if (Route::has('login'))
+                @auth
+                    <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Mon compte">Mon compte</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')" title="Se deconnecter" onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                        {{ __('Se deconnecter') }}
+                    </x-responsive-nav-link>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Se connecter">Se connecter</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline" title="S'inscrire">S'inscrire</a>
+                    @endif
+                @endauth
+            @endif
+        </span>
+    </nav>
     <div class="container">
         <div class="image">
             <img class="img__spécifique" src="/Models/Images/Shop/All/{{$accessoire->numaccessoire}}.avif" title="{{$accessoire->nomaccessoire}}" alt="{{$accessoire->nomaccessoire}}">

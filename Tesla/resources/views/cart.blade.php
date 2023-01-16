@@ -36,6 +36,14 @@
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Mon compte">Mon compte</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')" title="Se deconnecter" onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                        {{ __('Se deconnecter') }}
+                    </x-responsive-nav-link>
+                    </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Se connecter">Se connecter</a>
 
