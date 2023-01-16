@@ -10,8 +10,9 @@
     }
 ?>
 @include('header')
-    <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
     <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css"/>
+    <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
+    <title>Lates</title>
 
     <div id="bar">
         <div id="movement"></div>
@@ -55,7 +56,7 @@
             <h1 class="title" id="correction_titre">Model S</h1>
             <img src="Models/Model S.jpg" id="MS" />
             <form action="confModelS">
-                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée"></input>
+                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée du model S"></input>
             </form>
 
             <div class="img">
@@ -91,7 +92,7 @@
             <h1 class="title">Model 3</h1>
             <img src="Models/Model 3.jpg" id="M3">
             <form action="confModel3">
-                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée"></input>
+                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée du model 3"></input>
             </form>
             <form action="essai">
                 <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai" title="Réserver un essai"></input>
@@ -125,7 +126,7 @@
             <div class="circle"></div>
             <h1 class="title">Model X</h1>
             <img src="Models/Model X.jpg" id="MX">
-            <a href="/confModelX"><input type="button" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée"></input></a>
+            <a href="/confModelX"><input type="button" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée du model X"></input></a>
         </div>
 
         <div class="slider" id="modelY">
@@ -154,7 +155,7 @@
             <h1 class="title">Model Y</h1>
             <img src="Models/Model Y.jpg" id="MY">
             <form action="confModelY">
-                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée"/>
+                <input type="submit" class="visu" id="btn1" value="Configuration personalisée" title="Configuration personnalisée du model Y"/>
             </form>
             <form action="essai">
                 <input type="submit" class="test-drive visu" id="btn2" value="Réservez un essai" title="Réserver un essai"></input>

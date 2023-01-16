@@ -18,7 +18,7 @@ class ShopController extends Controller
         $getTypeAccessoires = DB::table('typeaccessoire')->orderby('numaccessoire')->get();
         $getCasquetteBonnets = DB::table('typeaccessoire')->where('numaccessoire', '>=', 16, 'and')->where('numaccessoire', '<=', 20)->get();
 
-        return view('shop', [
+        return view('Shop.shop', [
             'accessoires' => $getTypeAccessoires,
             'casquetteBonnets'=> $getCasquetteBonnets
         ]);
@@ -42,14 +42,4 @@ class ShopController extends Controller
             
         ]);
     }
-
-    public function showVetementsHomme(){
-
-        $getTypeAccessoires = DB::table('typeaccessoire')->get();
-        return view('shopClothesMan', [
-            'accessoires' => $getTypeAccessoires,
-        ]);
-    }
 }
-
-

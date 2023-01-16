@@ -79,7 +79,6 @@ header {
   background: none;
   outline: none;
   border: none;
-
 }
 
 .hamburgeur .bar,
@@ -498,7 +497,7 @@ label {
 
 /* DETAILS ACCESSOIRES */
 .container {
-  margin-top: 375px;
+  margin-top: 100px;
 
   display: flex;
 }
@@ -711,5 +710,6 @@ header li:hover .container-sub-menu {
   position: absolute;
   transform: translate(-50%, 0%);
   left: 21%;
-  padding-top: 350px;
+  margin-top: 200px;
+  padding-top: 100px;
 }
