@@ -12,7 +12,10 @@
 @include('header')
     <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
     <link rel="stylesheet" href="{{asset('css/home.css')}}" type="text/css"/>
-
+    
+    <!-- <div class="alert alert_success">
+                    Vous ne pouvez pas descendre avec la souris, utilisez les boutons sur votre gauche 
+                </div> -->
     <div id="bar">
         <div id="movement"></div>
         <div class="point"></div>
@@ -21,12 +24,17 @@
         <div class="point"></div>
         <div id="GP"></div>
     </div>
-
     <nav class="menu">
         <p id="lienModelS" class="menuLat"><a href="#modelS">Model S</a></p>
+        <div class="line-wobble dl1"></div>
+        <!-- <img id="arrow" src="Models/flèche-bas.png" alt=""> -->
         <p id="lienModel3" class="menuLat"><a href="#model3">Model 3</a></p>
+        <div class="line-wobble dl2"></div>
         <p id="lienModelX" class="menuLat"><a href="#modelX">Model X</a></p>
+        <div class="line-wobble dl3"></div>
         <p id="lienModelY" class="menuLat"><a href="#modelY">Model Y</a></p>
+        <div class="line-wobble dl4"></div>
+        
     </nav>
 
     <div class="container">
