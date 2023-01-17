@@ -13,6 +13,9 @@
 ========
     <h1> Votre réservation a bien été prise en compte</h1>
     <a href="{{url('/')}}">Back Home</a>
+<<<<<<<< HEAD:Tesla/resources/views/Essai/okFormulaire.blade.php
 >>>>>>>> Timote:Tesla/resources/views/okFormulaire.blade.php
+========
+>>>>>>>> Loulou:Tesla/resources/views/okFormulaire.blade.php
 </body>
 </html>

@@ -1,9 +1,12 @@
   <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
+  <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
+  <title>Lates : Inscription</title>
+
   <x-guest-layout>
       <x-auth-card>
           <x-slot name="logo">
               <a href="/">
-                  <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie">
+                  <img src="{{asset('Models/teslalogoV2White.png')}}" alt="Logo Lates" title="Accueil">
               </a>
           </x-slot>
 

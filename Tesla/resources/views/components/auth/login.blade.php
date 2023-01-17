@@ -1,8 +1,11 @@
+<link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}"/>
+<title>Lates : Connexion</title>
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie">
+                <img src="{{asset('Models/teslalogoV2White.png')}}" alt="Logo Lates" title="Accueil">
             </a>
         </x-slot>
         <!-- Session Status -->

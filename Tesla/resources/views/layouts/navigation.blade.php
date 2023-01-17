@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center ">
                     <a href="/">
-                        <img src="{{asset('Models/teslalogoV2White.png')}}" alt="logo la tes en folie" class="block h-9 w-auto fill-current text-gray-800">
+                        <img src="{{asset('Models/teslalogoV2White.png')}}" alt="Logo Lates" title="Accueil" class="block h-9 w-auto fill-current text-gray-800">
                     </a>
                 </div>
 

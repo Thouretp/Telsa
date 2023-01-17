@@ -16,41 +16,41 @@
 <body>
     <header>
         <div class="left">
-          <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="logo_tesla"></a>
+          <a href="/"><img src="{{asset('Models/teslalogoV2.png')}}" alt="Logo Lates" title="Accueil"></a>
         </div>
         <div class="right">
-            <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}"></a>
-            <a href="/shop"><img class="see" src="{{asset('Models/bagv2.png')}}"></a>
-            <button class="hamburgeur">
+            <a href="/login"><img class="see" src="{{asset('Models/Userv2.png')}}" title="Mon compte"></a>
+            <a href="/shop"><img class="see" src="{{asset('Models/bagv2.png')}}" title="Magasin"></a>
+            <button class="hamburgeur" title="Menu">
                 <div class="bar"></div>
         </div>
         </div>
     </header>
 
     <nav class="mobile-nav">
-        <a href="/#modelS">Model S</a>
-        <a href="/#model3">Model 3</a>
-        <a href="/#modelX">Model X</a>
-        <a href="/#modelY">Model Y</a>
-        <a href="#shop">Shop</a>
-        <a href="#help">Assistance</a>
+        <a href="/#modelS" title="Model S">Model S</a>
+        <a href="/#model3" title="Model 3">Model 3</a>
+        <a href="/#modelX" title="Model X">Model X</a>
+        <a href="/#modelY" title="Model Y">Model Y</a>
+        <a href="#shop" title="Magasin">Magasin</a>
+        <a href="#help" title="Assistance">Assistance</a>
         <span class="ajt-mobile-nav">
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Mon compte</a>
+            <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Mon compte">Mon compte</a>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
-                <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+                <x-responsive-nav-link :href="route('logout')" title="Se deconnecter" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                     {{ __('Se deconnecter') }}
                 </x-responsive-nav-link>
             </form>
             @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se connecter</a>
+            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="Se connecter">Se connecter</a>
 
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">S'inscrire</a>
+            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline" title="S'inscrire">S'inscrire</a>
             @endif
             @endauth
             @endif
@@ -97,8 +97,6 @@
                         <div>
                             <div class="group">
                                 <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required autofocus>
-                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required>
-                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
@@ -110,7 +108,6 @@
                             <div class="group">
                                 <!-- <label for="numerotelephone" :value="__('Numero de telephone')"> -->
                                 <input id="phone" name="tel" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
-                                <input id="phone" name="tel" type="tel" :value="old('phone')" maxlength="9" class="text-area-form-essai" autofocus required />
                                 <span id="valid-msg" class="hide">✓ Valide</span>
                                 <span id="error-msg" class="hide"></span>
                                 <!-- <input id="phone" type="tel" class="text-area-form-essai" required>
@@ -167,8 +164,6 @@
                         </div>
                         <div>
                             <div class="group">
-                                <input id="Pays" type="text" name="Pays" class="text-area-form-essai" required autofocus> 
-                                <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly>
                                 <input id="Pays" type="text" name="Pays" class="text-area-form-essai" required autofocus> 
                                 <span class="highlight"></span>
                                 <span class="bar"></span>

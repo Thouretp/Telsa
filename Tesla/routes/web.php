@@ -55,7 +55,6 @@ Route::get('/confModelY', [ConfMYController::class, 'showOptions', 'RecupTime'])
 Route::get('/shop', [ShopController::class, 'showAccessoires', 'RecupTime'])->name('shop');
 // Route::post('DetailsAccessoire', [ShopController::class, 'DetailsAccessoire'])->name('DetailsAccessoire');
 Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire'])->name('accessoire');
-Route::get('/vetementsH', [ShopController::class, 'showVetementsHomme', 'RecupTime'])->name('vetementsH');
 
 Route::post('essai', [EssaiController::class, 'store']);
 
