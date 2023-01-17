@@ -107,7 +107,7 @@
                         <div>
                             <div class="group">
                                 <!-- <label for="numerotelephone" :value="__('Numero de telephone')"> -->
-                                <input id="phone" name="tel" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
+                                <input id="phone" name="tel" type="tel" :value="old('phone')" maxlength="9" class="text-area-form-essai" autofocus required />
                                 <span id="valid-msg" class="hide">✓ Valide</span>
                                 <span id="error-msg" class="hide"></span>
                                 <!-- <input id="phone" type="tel" class="text-area-form-essai" required>

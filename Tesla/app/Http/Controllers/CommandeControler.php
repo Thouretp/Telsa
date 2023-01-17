@@ -21,8 +21,18 @@ class CommandeControler extends Controller
     }
 
     public function GetCommande($idUser){
-        $commande = $getOptionM3 = DB::table('commande_vetement')->join('fait_une', 'commande_vetement.numcommandevetement', '=', 'fait_une.numcommandevetement')->where('id', '=', $idUser)->get();
+        $commande = $getOptionM3 = DB::table('achataccessoire')->where('id', '=', $idUser)->get();
         return $commande;
+    }
+
+    public static function GetMethodePaiement($nummethodepaiement){
+        if($nummethodepaiement == 1){
+            return 'CB';
+        }else if ($nummethodepaiement == 2){
+            return 'Paypal';
+        }else{
+            return 'Apple Pay';
+        }
     }
 
     public static function GetStatut($statut){
