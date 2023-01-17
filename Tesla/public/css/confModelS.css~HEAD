@@ -648,24 +648,18 @@ button{
 }
 
 .more_info{
-    position: absolute;
-    z-index: 500;
+    position: fixed;
+    z-index: 9;
     width: 40px;
     height: 40px;
-    top: 5%;
-    right: 5%;
+    top: 1%;
+    right: 1%;
     background-color: transparent;
     color: #FFF;
     border-radius: 50%;
     border:solid #FFF;
     font-size: 30px;
-    cursor: pointer;
     
-}
-
-.more_info:hover{
-    background-color: #FFF;
-    color: #000000;
 }
 
 .invisible{opacity: 0;}
@@ -876,6 +870,8 @@ section{
 	border: 0;
 }
 
+<<<<<<<< HEAD:Tesla/public/css/confModelS.css~HEAD
+========
 #btn_valid{
     margin-top: 30px;
     background: transparent;
@@ -916,3 +912,4 @@ section{
 .clické{
 	background-color: rgb(101, 77, 255);
 }
+>>>>>>>> main:Tesla/public/css/confModel.css

@@ -18,7 +18,14 @@ setInterval(function(){
     j = (j+1)%(carrouselModelX.length);
 },1000000)
 
-let btnInfo = document.querySelector(".more_info")
+let btnInfo1 = document.getElementById("more_info1")
+let btnInfo2 = document.getElementById("more_info2")
+let btnInfo3 = document.getElementById("more_info3")
+let btnInfo4 = document.getElementById("more_info4")
+let btnInfo5 = document.getElementById("more_info5")
+let btnInfo6 = document.getElementById("more_info6")
+let btnInfo7 = document.getElementById("more_info7")
+
 let infos1 = document.querySelector("#desc1")
 let infos2 = document.querySelector("#desc2")
 let infos3 = document.querySelector("#desc3")
@@ -28,13 +35,31 @@ let infos6 = document.querySelector("#desc6")
 let infos7 = document.querySelector("#desc7")
 
 
-btnInfo.addEventListener("click", function(){
+btnInfo1.addEventListener("click", function(){
     infos1.classList.toggle("invisible")
+})
+
+btnInfo2.addEventListener("click", function(){
     infos2.classList.toggle("invisible")
+})
+
+btnInfo3.addEventListener("click", function(){
     infos3.classList.toggle("invisible")
-    infos4.classList.toggle("invisible")    
+})
+
+btnInfo4.addEventListener("click", function(){
+    infos4.classList.toggle("invisible")
+})
+
+btnInfo5.addEventListener("click", function(){
     infos5.classList.toggle("invisible")
+})
+
+btnInfo6.addEventListener("click", function(){
     infos6.classList.toggle("invisible")
+})
+
+btnInfo7.addEventListener("click", function(){
     infos7.classList.toggle("invisible")
 })
 
@@ -47,8 +72,6 @@ let autopilotchoisi;
 let autonomeChoisi;
 let rechargeChoisi;
 let crochetChoisi;
-
-var imageModel = document.getElementById('M3')
 
 let tous_les_boutons = document.querySelectorAll("label__clickable")
 
@@ -86,18 +109,13 @@ if(document.getElementById('blanc').checked){
     couleurChoisie = document.getElementById('blanc').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("white").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_White_18.jpg";
 }
-else{
-    document.getElementById("white").style.border = " solid 1px #FFF"
-}
+else{document.getElementById("white").style.border = " solid 1px #FFF"}
 
 if(document.getElementById('bleu').checked){
     couleurChoisie = document.getElementById('bleu').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("blue").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Blue_18.jpg"
-    console.log("fumier");
 }
 else{document.getElementById("blue").style.border = " solid 1px #FFF"}
 
@@ -105,7 +123,6 @@ if(document.getElementById('gris').checked){
     couleurChoisie = document.getElementById('gris').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("grey").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Gray_18.jpg";
 }
 else{document.getElementById("grey").style.border = " solid 1px #FFF"}
 
@@ -113,7 +130,6 @@ if(document.getElementById('noir').checked){
     couleurChoisie = document.getElementById('noir').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("black").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Black_18.jpg";
 }
 else{document.getElementById("black").style.border = " solid 1px #FFF"}
 
@@ -121,7 +137,6 @@ if(document.getElementById('rouge').checked){
     couleurChoisie = document.getElementById('rouge').value;
     document.getElementById('afficheCouleur').innerHTML = couleurChoisie
     document.getElementById("red").style.border = " solid 5px rgb(101, 77, 255)"
-    imageModel.src = "Models/Models/Model_3/Model_3_Red_18.jpg";
 }
 else{document.getElementById("red").style.border = " solid 1px #FFF"}
 

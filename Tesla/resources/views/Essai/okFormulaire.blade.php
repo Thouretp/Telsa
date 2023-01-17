@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<<< HEAD:Tesla/resources/views/Essai/okFormulaire.blade.php
     <h1> Votre réservation a été bien pris en compte </h1>
     <a href="/"> Back Home </a>
+========
+    <h1> Votre réservation a bien été prise en compte</h1>
+    <a href="{{url('/')}}">Back Home</a>
+>>>>>>>> Timote:Tesla/resources/views/okFormulaire.blade.php
 </body>
 </html>

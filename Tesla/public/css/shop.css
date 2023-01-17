@@ -28,7 +28,6 @@ html {
 
 header {
   display: flex;
-  min-width: 100%;
   padding: 20px;
   position: fixed;
   z-index: 120;
@@ -39,6 +38,17 @@ header {
   background-color: black;
 }
 
+header{
+  display: flex;
+  position: fixed;
+  top: 5%;
+  left:0;
+  width:95%;
+  justify-content: space-between;
+  
+
+  
+}
 .left {
   width: 20%;
   height: 50px;
@@ -343,7 +353,6 @@ input:nth-of-type(5):checked~main#carousel {
   margin-top: 13px;
   margin-left: 5px;
 }
-
 /* Le pip pour faire la séparation avec le logo */
 #title_pip {
   color: white;
@@ -351,7 +360,6 @@ input:nth-of-type(5):checked~main#carousel {
   margin-left: 5px;
   margin-right: 6px;
 }
-
 /* Le menu des categories */
 .center {
   display: flex;
@@ -359,12 +367,10 @@ input:nth-of-type(5):checked~main#carousel {
   width: 40%;
   margin-top: 12px;
 }
-
 .categorie_menu_label {
   color: white;
   text-decoration: none;
 }
-
 .categorie_menu_list {
   background-color: white;
   display: flex;
@@ -374,17 +380,14 @@ input:nth-of-type(5):checked~main#carousel {
   top: 80px;
   z-index: 200;
 }
-
 .clothes_man {
   display: flex;
   flex-direction: column;
 }
-
 .clothes_woman {
   display: flex;
   flex-direction: column;
 }
-
 .clothes_child {
   display: flex;
   flex-direction: column;
