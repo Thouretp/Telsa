@@ -97,6 +97,8 @@
                         <div>
                             <div class="group">
                                 <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required autofocus>
+                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required>
+                                <input type="text" class="text-area-form-essai" id="textEmail" name="mail" required autofocus>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label class="label-form-essai">E-mail</label>
@@ -108,6 +110,7 @@
                             <div class="group">
                                 <!-- <label for="numerotelephone" :value="__('Numero de telephone')"> -->
                                 <input id="phone" name="tel" type="tel" :value="old('phone')" class="text-area-form-essai" autofocus required />
+                                <input id="phone" name="tel" type="tel" :value="old('phone')" maxlength="9" class="text-area-form-essai" autofocus required />
                                 <span id="valid-msg" class="hide">✓ Valide</span>
                                 <span id="error-msg" class="hide"></span>
                                 <!-- <input id="phone" type="tel" class="text-area-form-essai" required>
@@ -119,6 +122,8 @@
                         </div>
                         <div class="erreursMail"> 
                         </div>
+                    </div>
+                    <div class="right-form">
                         <div>
                             <div class="group">
                                 <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly autofocus>
@@ -162,6 +167,8 @@
                         </div>
                         <div>
                             <div class="group">
+                                <input id="Pays" type="text" name="Pays" class="text-area-form-essai" required autofocus> 
+                                <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly>
                                 <input id="Pays" type="text" name="Pays" class="text-area-form-essai" required autofocus> 
                                 <span class="highlight"></span>
                                 <span class="bar"></span>

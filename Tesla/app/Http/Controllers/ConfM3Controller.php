@@ -11,6 +11,14 @@ use App\Models\Option;
 
 class ConfM3Controller extends Controller
 {
+    // public function ChangeCouleur(Request $request){
+    //     $couleurFinObtenu = $request->input("color");
+    //     dd($couleurFinObtenu);
+    // }
+
+
+
+
 
     public function modifModel3(){
         $modelChoisi = $_POST['model'];
