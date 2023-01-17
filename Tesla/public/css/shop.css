@@ -28,19 +28,25 @@ html {
   /* On cache la barre de scroll*/
   display: none;
 }
-header {
+/* header {
   display: flex;
-  min-width: 100%;
   padding: 20px;
   position: fixed;
-  z-index: 120;
-  transform: translate(-50%, -50%);
   top: 5%;
   left: 50%;
-  justify-content: space-between;
-  background-color: black;
-}
+} */
 
+header{
+  display: flex;
+  position: fixed;
+  top: 5%;
+  left:0;
+  width:95%;
+  justify-content: space-between;
+  
+
+  
+}
 .left {
   width: 20%;
   height: 50px;
