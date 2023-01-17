@@ -15,7 +15,7 @@ class ShopController extends Controller
 {
     public function showAccessoires(){
 
-        $getTypeAccessoires = DB::table('typeaccessoire')->get();
+        $getTypeAccessoires = DB::table('typeaccessoire')->orderby('numaccessoire')->get();
         $getCasquetteBonnets = DB::table('typeaccessoire')->where('numaccessoire', '>=', 16, 'and')->where('numaccessoire', '<=', 20)->get();
 
         return view('shop', [

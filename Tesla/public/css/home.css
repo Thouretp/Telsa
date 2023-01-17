@@ -39,10 +39,6 @@ html {
 /*-----LE SCROLL-----*/
 
 
-
-
-
-
 .title {
     /* les titres de models*/
     position: absolute;
@@ -65,18 +61,16 @@ html {
     top: 11.7%;
     color: #FFF;
     background-color: transparent;
-
-
 }
 
-.menuLat a {
+ .menuLat a {
     position: relative;
     background-color: transparent;
     text-align: center;
     color: #FFF;
     text-decoration: none;
 }
-
+/*
 .menuLat a::after {
     content: "";
     display: block;
@@ -86,13 +80,74 @@ html {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s;
+    
 }
 
 .menuLat a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
-}
+    
+} */
 
+.line-wobble {
+    --uib-size: 60px;
+    --uib-speed: 1.75s;
+    --uib-color: white;
+    --uib-line-weight: 3px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--uib-line-weight);
+    width: var(--uib-size);
+    border-radius: calc(var(--uib-line-weight) / 2);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+   }
+   
+   .line-wobble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--uib-color);
+    opacity: 0.1;
+   }
+   
+   .line-wobble::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--uib-line-weight) / 2);
+    animation: wobble var(--uib-speed) ease-in-out infinite;
+    transform: translateX(-90%);
+    background-color: var(--uib-color);
+   }
+   
+   @keyframes wobble {
+    0%,
+     100% {
+     transform: translateX(-90%);
+    }
+   
+    50% {
+     transform: translateX(90%);
+    }
+   }
+.dl1{
+    top: 4%;
+}
+.dl2{
+    top: 36%;
+}
+.dl3{
+    top: 68%;
+}
+.dl4{
+    top: 100%;
+}
 /*-----MENU-----*/
 
 
@@ -457,3 +512,31 @@ input:checked+.slider-cookie:before {
     color: white;
     text-decoration: none;
 }
+.alert {
+    position: absolute;
+    z-index: 14;
+    width: 95%;
+    height: 4%;
+    transform: translate(-50%, -50%);
+    top: 3%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* .alert_success {
+    background-color: rgb(0,0,0);
+    font-weight: bold;
+    color: white;
+}
+#arrow {
+    position: absolute;
+    top:23%;
+    scale: 0.8;
+    
+}
+
+.hide{
+    opacity: 0;
+} */

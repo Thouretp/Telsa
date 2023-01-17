@@ -25,7 +25,7 @@
 							Date de commande
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Quantité
+							Methode de paiement
 						</th>
 						<th scope="col" class="px-6 py-3">
 							Status
@@ -45,19 +45,19 @@
 						<td class="w-4 p-4">
 						</td>
 						<th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-						{{$uneCommande->numcommandevetement}}
+						{{$uneCommande->numachataccessoire}}
 						</th>
 						<td class="px-6 py-4">
-						{{$uneCommande->date_commande}}
+						{{$uneCommande->dateachataccessoire}}
 						</td>
 						<td class="px-6 py-4">
-						{{$uneCommande->numquantite}}
+						{{App\Http\Controllers\CommandeControler::GetMethodePaiement($uneCommande->nummethodepaiement)}}
 						</td>
 						<td class="px-6 py-4">
-						{{App\Http\Controllers\CommandeControler::GetStatut($uneCommande->statut)}}
+						{{App\Http\Controllers\CommandeControler::GetStatut($uneCommande->status)}}
 						</td>
 						<td class="px-6 py-4">
-							{{$uneCommande->prixcommandevetement}} €
+							75€
 						</td>
 						<td class="px-6 py-4 text-right">
                             <a href="" class="remove" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"> Remove</a>

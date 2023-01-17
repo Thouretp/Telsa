@@ -57,11 +57,6 @@ Route::get('/shop', [ShopController::class, 'showAccessoires', 'RecupTime'])->na
 Route::get('/shop/{numaccessoire}', [ShopController::class, 'DetailsAccessoire'])->name('accessoire');
 Route::get('/vetementsH', [ShopController::class, 'showVetementsHomme', 'RecupTime'])->name('vetementsH');
 
-
-Route::get('/vetements_homme', function(){
-    return view('shopClothesMan');
-});
-
 Route::post('essai', [EssaiController::class, 'store']);
 
 Route::get('/essai',[EssaiController::class, 'showEssai']);
