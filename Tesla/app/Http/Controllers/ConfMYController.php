@@ -16,7 +16,12 @@ class ConfMYController extends Controller
         $couleurChoisie = $_POST['color'];
         $janteChoisie = $_POST['jantes'];
         $interieurChoisi = $_POST['interieur'];
+        $selfdrive = $_POST['selfdriving_'];
+        $autopilot = $_POST['autopilot_']; 
+        $charge = $_POST['charge_'];
+        $crochet = $_POST['crochett'];
 
+        $dateActuelle = date('d-m-Y');
         
         $pdf = PDF::loadHTML('<html>
         <link rel="stylesheet" href="{{asset("css/confModel.css")}}" type="text/css">
@@ -25,6 +30,9 @@ class ConfMYController extends Controller
         <title class="title">Config Perso</title>
         </head>
         <body>
+        <h1>Configuration de votre Modèle Y</h1>
+        <p>Date : '.$dateActuelle.'</p>
+        <h2>Caractéristiques</h2>
         <h3>Modèle</h3>
         <p>'.$modelChoisi.'</p>
         <h3>Couleur</h3>
@@ -33,8 +41,18 @@ class ConfMYController extends Controller
         <p>'.$janteChoisie.'</p>
         <h3>Intérieur</h3>
         <p>'.$interieurChoisi.'</p>
-        <h3>Prix</h3>
-        <p>'.$interieurChoisi.' euros</p>
+        <h2>Options supplémentaires</h2>
+        <h3>Autopilot</h3>
+        <p>'.$autopilot.'</p>
+        <h3>Self drive</h3>
+        <p>'.$selfdrive.'</p>
+        <h3>Chargeur mural</h3>
+        <p>'.$charge.'</p>
+        <h3>Crochet mural</h3>
+        <p>'.$crochet.'</p>
+        
+        
+        
         
         </body>
         </html>');

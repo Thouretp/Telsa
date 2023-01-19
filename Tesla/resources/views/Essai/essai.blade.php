@@ -10,7 +10,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css"> -->
     <link rel="stylesheet" href="{{asset('buildPhone/css/intlTelInput.css')}}">
-    <title>essaiTesla</title>
+    <link rel="shortcut icon" href="{{asset('Models/teslalogoPetit.png')}}" />
+    <title>Lates : Essai</title>
 </head>
 
 <body>
@@ -118,18 +119,18 @@
                             </div>
                         </div>
                         <div class="erreursMail"> 
-                        </div>
-                    </div>
-                    <div class="right-form">
-                        <div>
-                            <div class="group">
-                                <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly autofocus>
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label id="modelLabel" class="label-form-essai">Modele</label>
                             </div>
-                        </div>  
-                    </div>
+                            <div>
+                                <div class="group">
+                                    <input type="text" class="text-area-form-essai" id="TextModel" name="model" required readonly autofocus>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label id="modelLabel" class="label-form-essai">Modele</label>
+                                </div>
+                            </div>  
+                        </div>
+                    
+                   
                     <div class="right-form">
                         <div id="autocomplete-container" class="autocomplete-container"></div>
                         <div>

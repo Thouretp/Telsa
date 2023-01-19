@@ -12,7 +12,7 @@ use App\Models\Option;
 class ConfM3Controller extends Controller
 {
 
-    public function modifModel3(){
+    public function modifModelS(){
         $modelChoisi = $_POST['model'];
         $couleurChoisie = $_POST['color'];
         $janteChoisie = $_POST['jantes'];
@@ -31,10 +31,8 @@ class ConfM3Controller extends Controller
         <title class="title">Config Perso</title>
         </head>
         <body>
-
-        <h1>Configuration de votre Modèle 3</h1>
+        <h1>Configuration de votre Modèle S</h1>
         <p>Date : '.$dateActuelle.'</p>
-
         <h2>Caractéristiques</h2>
         <h3>Modèle</h3>
         <p>'.$modelChoisi.'</p>

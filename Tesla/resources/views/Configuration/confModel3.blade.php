@@ -58,7 +58,6 @@
         <div class="options">
              <form action="{{'modifModel3'}}" method="post"> <!-- Appelle Modif dans web.php -->
             @csrf
-            <input type="button" class="more_info" value="i" title="Plus d'informations"></input> 
             <div class="motorisation" id="motorisation">
                 <div class="contenu">
                     <h2>Motorisation</h2>   
